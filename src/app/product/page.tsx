@@ -3,8 +3,9 @@
 import Navbar from '@/components/Navbar';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
+import { LOCAL_API_URL } from '@/configs/app';
 
-const API_URL = '';
+const API_URL = LOCAL_API_URL;
 
 export default function Product() {
     const router = useRouter();
@@ -13,7 +14,7 @@ export default function Product() {
 
     const fetchUsers = async () => {
         try {
-            const response = await fetch('http://127.0.0.1:5000/users/');
+            const response = await fetch(`${API_URL}/users/`);
 
             if (!response.ok) throw new Error('Failed to fetch users');
 
