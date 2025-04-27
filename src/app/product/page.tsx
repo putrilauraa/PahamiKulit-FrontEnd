@@ -4,7 +4,7 @@ import Navbar from '@/components/Navbar';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
-const APIR_URL = '';
+const API_URL = '';
 
 export default function Product() {
     const router = useRouter();
