@@ -1,8 +1,8 @@
 // pages/api/users/index.ts
 import { NextApiRequest, NextApiResponse } from 'next';
-import { API_URL } from '@/configs/app';
+import { LOCAL_API_URL } from '@/configs/app';
 
-const EXTERNAL_API_URL = `${API_URL}/user`
+const EXTERNAL_API_URL = `${LOCAL_API_URL}/user`
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     try {

@@ -2,9 +2,9 @@ import type { Config } from 'tailwindcss';
 
 const config: Config = {
   content: [
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
@@ -21,7 +21,9 @@ const config: Config = {
         'bd-pink': '#FFD5E9',
         'btn-light-blue': '#B5CBF0',
         'btn-blue': '#7293D0',
-        'bd-cream': '#FFF6ED'
+        'bd-cream': '#FFF6ED',
+        'muda': '#B9CEF2',
+        'tua': '#7092CF'
       },
     },
   },
