@@ -1,3 +1,5 @@
+// ignore this due to tailwindCSS v4
+
 import type { Config } from 'tailwindcss';
 
 const config: Config = {
@@ -13,7 +15,7 @@ const config: Config = {
         foreground: 'var(--foreground)',
         'main-light-blue': '#7092CF',
         'main-blue': '#405E93',
-        'main-light-pink': 'F38EB1',
+        'main-light-pink': '#F38EB1',
         'main-pink': '#D64F7E',
         'bd-baby-blue': '#E6EEFC',
         'bd-blue': '#D5E4FF',
