@@ -296,7 +296,7 @@ export default function Home() {
                                 <path
                                     fillRule="evenodd"
                                     d="M9.528 1.718a.75.75 0 0 1 .162.819A8.97 8.97 0 0 0 9 6a9 9 0 0 0 9 9 8.97 8.97 0 0 0 3.463-.69.75.75 0 0 1 .981.98 10.503 10.503 0 0 1-9.694 6.46c-5.799 0-10.5-4.7-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 0 1 .818.162Z"
-                                    clip-rule="evenodd"
+                                    clipRule="evenodd"
                                 />
                             </svg>
 
@@ -364,16 +364,42 @@ export default function Home() {
                         className="absolute w-45 h-auto object-cover z-0 right-0 top-5"
                     />
                     <img
-                        src="/Blue-10.png"
+                        src="/Revised.png"
                         alt="Mascot"
-                        className="absolute w-75 h-auto object-cover left-32 top-37 -scale-x-100"
+                        className="absolute w-77 h-auto object-cover left-35 top-35 -scale-x-100"
                     />
-                    <div className="absolute bg-[#F38EB1] rounded-4xl top-1/2 left-1/2 transform -translate-x-1/2">
+                    <div className="absolute bg-[#F38EB1] rounded-4xl top-98 left-1/2 transform -translate-x-1/2">
                         <p className="text-white text-extrabold text-2xl px-6 py-3">
                             Quiz
                         </p>
                     </div>
-                    <div className="bg-[#FFF6ED] h-100"></div>
+                    <div className="bg-[#FFF6ED] h-88">
+                        <p className="text-black text-2xl font-extrabold text-center pt-18 pb-10">
+                            Apakah kamu tahu fungsi utama moisturizer?
+                        </p>
+                        <div className="relative grid grid-cols-1 md:grid-cols-2 grid-rows-4 md:grid-rows-2 gap-4 px-44">
+                            <div className="bg-white border-2 border-gray-100 hover:border-[#F38EB1] text-black p-5 items-center text-center rounded-xl">
+                                <p className="font-bold text-sm md:text-lg">
+                                    Membersihkan pori-pori
+                                </p>
+                            </div>
+                            <div className="bg-white border-2 border-gray-100 hover:border-[#F38EB1] text-black p-5 items-center text-center rounded-xl">
+                                <p className="font-bold text-sm md:text-lg">
+                                    Mengurangi minyak berlebih
+                                </p>
+                            </div>
+                            <div className="bg-white border-2 border-gray-100 hover:border-[#F38EB1] text-black p-5 items-center text-center rounded-xl">
+                                <p className="font-bold text-sm md:text-lg">
+                                    Melindungi kulit dari sinar UV
+                                </p>
+                            </div>
+                            <div className="bg-white border-2 border-gray-100 hover:border-[#F38EB1] text-black p-5 items-center text-center rounded-xl">
+                                <p className="font-bold text-sm md:text-lg">
+                                    Menjaga kelembaban kulit
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
