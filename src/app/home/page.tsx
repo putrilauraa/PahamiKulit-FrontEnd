@@ -368,7 +368,7 @@ export default function Home() {
                         alt="Mascot"
                         className="absolute w-75 h-auto object-cover left-32 top-37 -scale-x-100"
                     />
-                    <div className="absolute bg-[#F38EB1] top-98 rounded-4xl">
+                    <div className="absolute bg-[#F38EB1] rounded-4xl top-1/2 left-1/2 transform -translate-x-1/2">
                         <p className="text-white text-extrabold text-2xl px-6 py-3">
                             Quiz
                         </p>
