@@ -106,7 +106,7 @@ export default function Home() {
                             alt="Element"
                             className="absolute inset-0 w-135 h-auto object-cover z-0 -scale-x-100 -ml-68 -mt-48"
                         />
-                        <div className="bg-[#FFF6ED] border-3 border-white p-4 flex items-center space-x-4 rounded-3xl h-47 md:h-auto z-30">
+                        <div className="bg-[#FFF6ED] shadow-lg p-4 flex items-center space-x-4 rounded-3xl h-47 md:h-auto z-30">
                             <img
                                 src="/Jenis-Kulit.png"
                                 alt="Jenis Kulit"
@@ -123,7 +123,7 @@ export default function Home() {
                                 </p>
                             </div>
                         </div>
-                        <div className="bg-[#FFF6ED] border-3 border-white p-4 flex items-center space-x-4 rounded-3xl h-47 md:h-auto">
+                        <div className="bg-[#FFF6ED]  shadow-lg p-4 flex items-center space-x-4 rounded-3xl h-47 md:h-auto">
                             <img
                                 src="/Kandungan-Edited.png"
                                 alt="Kandungan Skincare"
@@ -139,7 +139,7 @@ export default function Home() {
                                 </p>
                             </div>
                         </div>
-                        <div className="bg-[#FFF6ED] border-3 border-white p-4 flex items-center space-x-4 rounded-3xl h-47 md:h-auto">
+                        <div className="bg-[#FFF6ED] shadow-lg p-4 flex items-center space-x-4 rounded-3xl h-47 md:h-auto">
                             <img
                                 src="/Masalah-Kulit.png"
                                 alt="Masalah Kulit"
@@ -156,7 +156,7 @@ export default function Home() {
                                 </p>
                             </div>
                         </div>
-                        <div className="bg-[#FFF6ED] border-3 border-white p-4 flex items-center space-x-4 rounded-3xl h-47 md:h-auto">
+                        <div className="bg-[#FFF6ED] shadow-lg p-4 flex items-center space-x-4 rounded-3xl h-47 md:h-auto">
                             <img
                                 src="/Nomor-BPOM.png"
                                 alt="Nomor BPOMt"
@@ -175,21 +175,21 @@ export default function Home() {
                     </div>
 
                     <div className="bg-white rounded-3xl shadow-xl h-140 mx-14 md:mx-0 md:h-78 my-12">
-                        <div className="absolute right-48 py-6 items-end">
+                        <div className="absolute right-57 py-6 items-end">
                             <img
                                 src="/Elements-03.png"
                                 alt="Element"
                                 className="w-45 md:w-50 h-auto -scale-x-100"
                             />
                         </div>
-                        <div className="absolute right-66 py-16 items-end">
+                        <div className="absolute right-73 py-16 items-end">
                             <img
                                 src="/Blue-16.png"
                                 alt="Mascot"
                                 className="w-64 md:w-62 h-auto -scale-x-100"
                             />
                         </div>
-                        <div className="max-w-4xl md:mt-0 mx-14 md:ml-17">
+                        <div className="max-w-4xl md:mt-0 mx-15">
                             <div className="pt-75 md:pt-14 text-3xl font-extrabold">
                                 {' '}
                                 Apa itu Basic Skincare?
@@ -241,11 +241,11 @@ export default function Home() {
 
                         <div className="flex items-center">
                             <div className="flex flex-col items-center">
-                                <div className="w-52 h-52 mr-4 rounded-full bg-[#FFEDF3] border-4 border-white flex items-center justify-center">
+                                <div className="w-48 h-48 mr-4 rounded-full bg-[#FFEDF3] shadow-md flex items-center justify-center">
                                     <img
                                         src="/Face-Wash.png"
                                         alt="Face Wash"
-                                        className="w-40 h-auto object-contain"
+                                        className="w-38 h-auto object-contain"
                                     />
                                 </div>
                                 <p className="font-extrabold mt-4">Face Wash</p>
@@ -257,11 +257,11 @@ export default function Home() {
 
                         <div className="flex items-center">
                             <div className="flex flex-col items-center">
-                                <div className="w-52 h-52 mr-4 rounded-full bg-[#FFEDF3] border-4 border-white flex items-center justify-center">
+                                <div className="w-48 h-48 mr-4 rounded-full bg-[#FFEDF3] shadow-md flex items-center justify-center">
                                     <img
                                         src="/Moisturizer.png"
                                         alt="Moisturizer"
-                                        className="w-40 h-auto object-contain"
+                                        className="w-38 h-auto object-contain"
                                     />
                                 </div>
                                 <p className="font-extrabold mt-4">
@@ -274,11 +274,11 @@ export default function Home() {
                         </div>
 
                         <div className="flex flex-col items-center">
-                            <div className="w-52 h-52 mr-4 rounded-full bg-[#FFEDF3] border-4 border-white flex items-center justify-center">
+                            <div className="w-48 h-48 mr-4 rounded-full bg-[#FFEDF3] shadow-md flex items-center justify-center">
                                 <img
                                     src="/Sunscreen.png"
                                     alt="SPF"
-                                    className="w-37 h-auto object-contain"
+                                    className="w-33 h-auto object-contain"
                                 />
                             </div>
                             <p className="font-extrabold mt-4">SPF</p>
@@ -305,11 +305,11 @@ export default function Home() {
 
                         <div className="flex items-center">
                             <div className="flex flex-col items-center">
-                                <div className="w-52 h-52 mr-4 rounded-full bg-[#FFEDF3] border-4 border-white flex items-center justify-center">
+                                <div className="w-48 h-48 mr-4 rounded-full bg-[#FFEDF3] shadow-md flex items-center justify-center">
                                     <img
                                         src="/First-Cleanser.png"
                                         alt="First Cleanser"
-                                        className="w-40 h-auto object-contain"
+                                        className="w-38 h-auto object-contain"
                                     />
                                 </div>
                                 <p className="font-extrabold mt-4">
@@ -323,11 +323,11 @@ export default function Home() {
 
                         <div className="flex items-center">
                             <div className="flex flex-col items-center">
-                                <div className="w-52 h-52 mr-4 rounded-full bg-[#FFEDF3] border-4 border-white flex items-center justify-center">
+                                <div className="w-48 h-48 mr-4 rounded-full bg-[#FFEDF3] shadow-md flex items-center justify-center">
                                     <img
                                         src="/Face-Wash.png"
                                         alt="Face Wash"
-                                        className="w-40 h-auto object-contain"
+                                        className="w-38 h-auto object-contain"
                                     />
                                 </div>
                                 <p className="font-extrabold mt-4">Face Wash</p>
@@ -338,11 +338,11 @@ export default function Home() {
                         </div>
 
                         <div className="flex flex-col items-center">
-                            <div className="w-52 h-52 mr-4 rounded-full bg-[#FFEDF3] border-4 border-white flex items-center justify-center">
+                            <div className="w-48 h-48 mr-4 rounded-full bg-[#FFEDF3] shadow-md flex items-center justify-center">
                                 <img
                                     src="/Moisturizer.png"
                                     alt="Moisturizer"
-                                    className="w-37 h-auto object-contain"
+                                    className="w-38 h-auto object-contain"
                                 />
                             </div>
                             <p className="font-extrabold mt-4">Moisturizer</p>
