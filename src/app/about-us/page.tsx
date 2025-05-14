@@ -14,7 +14,7 @@ export default function AboutUs() {
             <div
                 className={`${montserrat.className}`}
                 style={{
-                    color: '#000000',
+                    color: '#405E93',
                 }}>
 
             
@@ -65,7 +65,7 @@ style={{
                     </div>
 
                     {/* Desc */}
-                    <p className="text-black px-10">
+                    <p className="px-10">
                         Menjadi tempat bagi pengguna skincare pemula untuk mencari 
                         edukasi mengenai skincare yang terpercaya, serta dapat membantu 
                         semua orang memahami dan merawat kulitnya mulai dari langkah paling dasar. 
