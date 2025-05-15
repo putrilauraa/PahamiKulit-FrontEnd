@@ -21,7 +21,7 @@ export default function SkinCare() {
                     {/* Column */}
                     <div className="flex items-center">
 
-                        <div className="border-pink-200 border-2 px-10 py-10 rounded-4xl hover:text-black hover:bg-pink-200">
+                        <div className="border-[#FFD5E9] border-2 px-10 py-10 rounded-2xl hover:text-black hover:bg-[#FFD5E9]">
                             {/* Title */}
                             <div className="font-semibold mb-3 text-2xl">
                                 Panduan Basic Skincare
@@ -37,7 +37,7 @@ export default function SkinCare() {
                             </p>
 
                             <div className="flex justify-end">
-                                <button className="border-pink-200 border-2 px-4 py-1.5 mt-4 rounded-4xl hover:text-white hover:bg-pink-300">
+                                <button className="border-[#FFD5E9] border-2 px-4 py-1.5 mt-4 rounded-4xl hover:text-white hover:bg-[#F38EB1]">
                                     Telusuri →
                                 </button>
                             </div>
@@ -46,7 +46,7 @@ export default function SkinCare() {
                     </div>
 
                     <div className="flex items-center">
-                        <div className="border-blue-200 border-2 px-10 py-10 rounded-4xl hover:text-black hover:bg-blue-200">
+                        <div className="border-[#BDD1F5] border-2 px-10 py-10 rounded-2xl hover:text-black hover:bg-[#BDD1F5]">
                             {/* Title */}
                             <div className="font-semibold mb-3 text-2xl">
                                 Mengenal Bahan Aktif
@@ -61,7 +61,7 @@ export default function SkinCare() {
                             </p>
 
                             <div className="flex justify-end">
-                                <button className="border-blue-200 border-2 px-4 py-1.5 mt-4 rounded-4xl hover:text-white hover:bg-blue-300">
+                                <button className="border-[#BDD1F5] border-2 px-4 py-1.5 mt-4 rounded-4xl hover:text-white hover:bg-[#7092CF]">
                                     Telusuri →
                                 </button>
                             </div>
@@ -70,7 +70,7 @@ export default function SkinCare() {
                     </div>
 
                     <div className="flex items-center">
-                        <div className="border-blue-200 border-2 px-10 py-10 rounded-4xl hover:text-black hover:bg-blue-200">
+                        <div className="border-[#BDD1F5] border-2 px-10 py-10 rounded-2xl hover:text-black hover:bg-[#BDD1F5]">
                             {/* Title */}
                             <div className="font-semibold mb-3 text-2xl">
                                 Rekomendasi Skincare
@@ -86,7 +86,7 @@ export default function SkinCare() {
                             </p>
 
                             <div className="flex justify-end">
-                                <button className="border-blue-200 border-2 px-4 py-1.5 mt-4 rounded-4xl hover:text-white hover:bg-blue-300">
+                                <button className="border-[#BDD1F5] border-2 px-4 py-1.5 mt-4 rounded-4xl hover:text-white hover:bg-[#7092CF]">
                                     Telusuri →
                                 </button>
                             </div>
@@ -95,23 +95,23 @@ export default function SkinCare() {
                     </div>
 
                     <div className="flex items-center">
-                        <div className="border-pink-200 border-2 px-10 py-10 rounded-4xl hover:text-black hover:bg-pink-200">
+                        <div className="border-[#FFD5E9] border-2 px-10 py-10 rounded-2xl hover:text-black hover:bg-[#FFD5E9]">
                             {/* Title */}
                             <div className="font-semibold mb-3 text-2xl">
-                                Rekomendasi Skincare
+                                Produk Skincare Lokal
                             </div>
 
                             {/* Description */}
                             <p>
-                                Dapatkan rekomendasi skincare terbaik untuk jenis
-                                kulitmu. Mulai dari yang berminyak, kering, sensitif,
-                                sampai berjerawat. Nggak perlu repot tebak-tebakan
-                                lagi, semua info disajikan dengan jelas, praktis,
-                                dan gampang dipahami.
+                                Dukung kulit sehat sekaligus brand lokal! 
+                                Di sini kamu bisa menemukan berbagai rekomendasi 
+                                produk skincare buatan Indonesia yang nggak kalah 
+                                keren, aman, berkualitas, dan pastinya lebih ramah 
+                                di kantong dibandingkan dengan brand skincare luar.
                             </p>
 
                             <div className="flex justify-end">
-                                <button className="border-pink-200 border-2 px-4 py-1.5 mt-4 rounded-4xl hover:text-white hover:bg-pink-300">
+                                <button className="border-[#FFD5E9] border-2 px-4 py-1.5 mt-4 rounded-4xl hover:text-white hover:bg-[#F38EB1]">
                                     Telusuri →
                                 </button>
                             </div>
