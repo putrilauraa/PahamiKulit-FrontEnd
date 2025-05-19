@@ -40,6 +40,7 @@ export default function SkinCare() {
                                 <button className="border-[#FFD5E9] border-2 px-4 py-1.5 mt-4 rounded-4xl hover:text-white hover:bg-[#F38EB1]">
                                     Telusuri →
                                 </button>
+                                
                             </div>
 
                         </div>
@@ -61,9 +62,11 @@ export default function SkinCare() {
                             </p>
 
                             <div className="flex justify-end">
+                                <a href='/mengenal-bahan-aktif'>
                                 <button className="border-[#BDD1F5] border-2 px-4 py-1.5 mt-4 rounded-4xl hover:text-white hover:bg-[#7092CF]">
                                     Telusuri →
                                 </button>
+                                </a>
                             </div>
 
                         </div>
