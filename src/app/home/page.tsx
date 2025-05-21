@@ -370,7 +370,7 @@ export default function Home() {
                     />
                     <div className="absolute bg-[#F38EB1] rounded-4xl top-98 left-1/2 transform -translate-x-1/2">
                         <p className="text-white text-extrabold text-2xl px-6 py-3">
-                            Quiz
+                            Tes Pemahaman
                         </p>
                     </div>
                     <div className="bg-[#FFF6ED] h-88">

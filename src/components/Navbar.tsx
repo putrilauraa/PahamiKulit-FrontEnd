@@ -28,7 +28,7 @@ export function Navbar() {
                                     href="/"
                                     className="text-black text-lg lg:text-2xl"
                                 >
-                                    <span className="font-bold">Basic</span>Dulu
+                                    {/* <span className='font-extrabold'>Skin</span>Sight */}Skindcare
                                 </Link>
                             </div>
                         </div>
