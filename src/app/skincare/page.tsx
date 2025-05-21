@@ -37,9 +37,11 @@ export default function SkinCare() {
                             </p>
 
                             <div className="flex justify-end">
+                                <a href="/create-account">
                                 <button className="border-[#FFD5E9] border-2 px-4 py-1.5 mt-4 rounded-4xl hover:text-white hover:bg-[#F38EB1]">
                                     Telusuri →
                                 </button>
+                                </a>
                                 
                             </div>
 

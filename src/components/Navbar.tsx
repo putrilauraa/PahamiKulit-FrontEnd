@@ -144,7 +144,7 @@ export function Navbar() {
                                 About Us
                             </Link>
                             <Link
-                                href="/"
+                                href=""
                                 className="text-black block hover:bg-gray-100 py-5 px-1"
                             >
                                 My Profile
