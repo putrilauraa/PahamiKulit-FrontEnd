@@ -26,9 +26,9 @@ export function Navbar() {
                             <div className="flex-shrink-0">
                                 <Link
                                     href="/"
-                                    className="text-black text-lg lg:text-2xl"
+                                    className="text-black text-lg lg:text-2xl font-semibold"
                                 >
-                                    {/* <span className='font-extrabold'>Skin</span>Sight */}Skindcare
+                                    PahamiKulit
                                 </Link>
                             </div>
                         </div>
