@@ -9,7 +9,6 @@ export default function Profile() {
     return (
         <>
         <Navbar/>
-            <h1>Halaman Profil Saya</h1>
 
             <div
                 className={`${montserrat.className}`}
@@ -26,15 +25,15 @@ export default function Profile() {
                 </div>
                 
                 {/* Card Details */}
-                <div className="mx-10 mt-6 pb-10 px-30">
-                <div className="mx-16 py-2 bg-white rounded-4xl grid grid-cols-2 gap-4">
+                <div className="mt-6 pb-10 px-30">
+                <div className="py-2 bg-white rounded-4xl grid grid-cols-2 gap-4">
 
                     {/* Left Side */}
-                    <div>
+                    <div className="pr-10">
                         {/* Illustration */}
-                        <div>
+                        <div className="flex justify-center">
                             <img
-                            className="w-60 h-auto"
+                            className="w-50 h-auto"
                             src="Profile-Fatin.png"
                             alt="Mascot">
                             </img>
@@ -60,9 +59,9 @@ export default function Profile() {
                     {/* Center Side */}
                     <div className="px-4 py-4">
                         {/* Edit button */}
-                        <div className="flex justify-end">
+                        <div className="flex justify-end ml-10">
                             <a>
-                                <button className="py-2 px-6 border-2 rounded-3xl hover:text-white hover:bg-[#7092CF]">
+                                <button className="py-1 px-6 border-2 rounded-3xl hover:text-white hover:bg-[#7092CF]">
                                     Edit
                                 </button>
                             </a>
@@ -107,14 +106,19 @@ export default function Profile() {
                             </div>
                     </div>
 
-
-                    
-
-                </div>
                 </div>
 
+                    {/* Button Keluar */}
+                    <div className="flex justify-end mt-4">
+                            <a>
+                                <div className="py-2 px-6 rounded-4xl bg-[#7092CF] font-bol text-white text-end">Keluar</div>
+                            </a>
+                        </div>
+                </div>
 
             </div>
+
+             
             
             {/* Footer */}
             <div className="Footer">
