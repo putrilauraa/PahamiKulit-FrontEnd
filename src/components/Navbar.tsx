@@ -38,25 +38,31 @@ export function Navbar() {
                                     href="/home"
                                     className="text-black hover:border-b-2 hover:border-black py-5 px-1"
                                 >
-                                    Home
+                                    Beranda
+                                </Link>
+                                <Link
+                                    href="/basic-skincare"
+                                    className="text-black hover:border-b-2 hover:border-black py-5 px-1"
+                                >
+                                    Basic Skincare
                                 </Link>
                                 <Link
                                     href="/skincare"
                                     className="text-black hover:border-b-2 hover:border-black py-5 px-1"
                                 >
-                                    Skincare
+                                    Bahan Aktif
                                 </Link>
                                 <Link
                                     href="/product"
                                     className="text-black hover:border-b-2 hover:border-black py-5 px-1"
                                 >
-                                    Product
+                                    Rekomendasi
                                 </Link>
                                 <Link
                                     href="/about-us"
                                     className="text-black hover:border-b-2 hover:border-black py-5 px-1"
                                 >
-                                    About Us
+                                    Tentang Kami
                                 </Link>
                                 <Link href="/">
                                     <svg
