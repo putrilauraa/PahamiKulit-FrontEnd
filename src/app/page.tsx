@@ -3,6 +3,7 @@
 import { Footer } from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 import { Montserrat } from 'next/font/google';
+import Link from 'next/link';
 
 const montserrat = Montserrat({ weight: '500', subsets: ['latin'] });
 
@@ -36,11 +37,11 @@ export default function Home() {
                     </div>
 
                     {/* Text content */}
-                    <div className="text-white max-w-xl md:mt-6 lg:mt-8">
+                    <div className="text-white max-w-xl lg:max-w-2xl md:mt-6 lg:mt-8">
                         <div className="font-extrabold pt-4 md:pt-2 lg:pt-0 text-2xl md:text-4xl lg:text-5xl">
                             Halo, Skincare Explorer!
                         </div>
-                        <div className="pt-4 md:py-5 text-xs md:text-sm lg:text-lg">
+                        <div className="pt-4 md:py-5 text-xs md:text-sm lg:text-lg lg:max-w-xl">
                             Selamat datang di{' '}
                             <span className="font-bold">PahamiKulit</span>,
                             tempatmu menjelajahi langkah-langkah paling dasar
@@ -91,13 +92,13 @@ export default function Home() {
                                 supaya kamu gak salah pilih produk
                             </p>
                             <button
-                                className="bg-[#F38EB1] text-white hover:bg-[#D64F7E] text-xs md:text-sm lg:text-lg font-semibold rounded-4xl px-5 py-3 mt-2"
+                                className="bg-[#F38EB1] text-white hover:bg-[#D64F7E] text-xs md:text-sm lg:text-lg font-semibold rounded-4xl px-6 py-3 mt-2"
                                 style={{
                                     boxShadow:
                                         '0px 4px 0px rgba(214, 79, 126, 1)',
                                 }}
                             >
-                                Tes Sekarang →
+                                <Link href="/">Tes Sekarang →</Link>
                             </button>
                         </div>
                         <div className="absolute md:right-7 lg:right-74">
@@ -138,7 +139,7 @@ export default function Home() {
                                             '0px 4px 0px rgba(64, 94, 147, 1)',
                                     }}
                                 >
-                                    Coba Sekarang →
+                                    <Link href="/">Coba Sekarang →</Link>
                                 </button>
                             </div>
                             <div className="absolute md:right-7 lg:right-74">
@@ -180,7 +181,7 @@ export default function Home() {
                                             '0px 4px 0px rgba(64, 94, 147, 1)',
                                     }}
                                 >
-                                    Coba Sekarang →
+                                    <Link href="/">Coba Sekarang →</Link>
                                 </button>
                             </div>
                             <div className="absolute md:right-7 lg:right-74">
@@ -389,11 +390,12 @@ export default function Home() {
                             </div>
                             <div>
                                 <h3 className="font-bold text-sm md:text-lg lg:text-xl">
-                                    Memahami Kandungan Aktif
+                                    Mengetahui Jenis-jenis Produk Basic Skincare
                                 </h3>
                                 <p className="mt-1 text-xs md:text-sm lg:text-md">
-                                    Ketahui apa yang kamu gunakan di kulitmu dan
-                                    bagaimana cara penggunaan yang tepat
+                                    Ketahui jenis-jenis produk basic skincare
+                                    untuk menyesuaikan dengan kebutuhan kulit
+                                    kamu
                                 </p>
                             </div>
                         </div>
@@ -411,11 +413,12 @@ export default function Home() {
                             </div>
                             <div>
                                 <h3 className="font-bold  md:text-lg lg:text-xl">
-                                    Memahami Kandungan Aktif
+                                    Mengetahui Jenis-jenis Produk Basic Skincare
                                 </h3>
                                 <p className="mt-1 md:text-sm lg:text-md">
-                                    Ketahui apa yang kamu gunakan di kulitmu dan
-                                    bagaimana cara penggunaan yang tepat
+                                    Ketahui jenis-jenis produk basic skincare
+                                    untuk menyesuaikan dengan kebutuhan kulit
+                                    kamu
                                 </p>
                             </div>
                         </div>
@@ -427,12 +430,11 @@ export default function Home() {
                             </div>
                             <div>
                                 <h3 className="font-bold text-sm md:text-lg lg:text-xl">
-                                    Cari Rekomendasi Skincare
+                                    Memahami Kandungan Aktif
                                 </h3>
                                 <p className="mt-1 text-xs md:text-sm lg:text-md">
-                                    Kami akan bantu kamu untuk menentukan
-                                    skincare yang sesuai dengan kondisi kulit
-                                    kamu
+                                    Ketahui apa yang kamu gunakan di kulitmu dan
+                                    bagaimana cara penggunaan yang tepat
                                 </p>
                             </div>
                         </div>
@@ -444,11 +446,11 @@ export default function Home() {
                             </div>
                             <div>
                                 <h3 className="font-bold text-sm md:text-lg lg:text-xl">
-                                    Mengetahui Jenis-jenis Produk Basic Skincare
+                                    Cari Rekomendasi Skincare
                                 </h3>
                                 <p className="mt-1 text-xs md:text-sm lg:text-md">
-                                    Ketahui jenis-jenis produk basic skincare
-                                    untuk menyesuaikan dengan kebutuhan kulit
+                                    Kami akan bantu kamu untuk menentukan
+                                    skincare yang sesuai dengan kondisi kulit
                                     kamu
                                 </p>
                             </div>
