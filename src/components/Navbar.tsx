@@ -41,19 +41,19 @@ export function Navbar() {
                         <div className="hidden md:block">
                             <div className="flex items-center space-x-4">
                                 <Link
-                                    href="/home"
+                                    href="/"
                                     className="text-black hover:border-b-2 hover:border-black py-5 px-1"
                                 >
                                     Beranda
                                 </Link>
                                 <Link
-                                    href="/basic-skincare"
+                                    href="/home"
                                     className="text-black hover:border-b-2 hover:border-black py-5 px-1"
                                 >
                                     Basic Skincare
                                 </Link>
                                 <Link
-                                    href="/skincare"
+                                    href="/mengenal-bahan-aktif"
                                     className="text-black hover:border-b-2 hover:border-black py-5 px-1"
                                 >
                                     Bahan Aktif
