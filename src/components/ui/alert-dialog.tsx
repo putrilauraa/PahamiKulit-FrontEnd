@@ -2,9 +2,11 @@
 
 import * as React from "react"
 import * as AlertDialogPrimitive from "@radix-ui/react-alert-dialog"
-
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
+import { Montserrat } from 'next/font/google';
+
+const montserrat = Montserrat({ weight: '500', subsets: ['latin'] });
 
 function AlertDialog({
   ...props
@@ -70,11 +72,13 @@ function AlertDialogHeader({
   return (
     <div
       data-slot="alert-dialog-header"
-      className={cn("flex flex-col gap-2 text-center sm:text-left", className)}
+      className={cn("flex flex-col gap-2 text-center", className)}
       {...props}
     />
   )
 }
+
+
 
 function AlertDialogFooter({
   className,
@@ -84,7 +88,7 @@ function AlertDialogFooter({
     <div
       data-slot="alert-dialog-footer"
       className={cn(
-        "flex flex-col-reverse gap-2 sm:flex-row sm:justify-end",
+        "flex items-center justify-center",
         className
       )}
       {...props}
@@ -99,7 +103,7 @@ function AlertDialogTitle({
   return (
     <AlertDialogPrimitive.Title
       data-slot="alert-dialog-title"
-      className={cn("text-lg font-semibold", className)}
+      className={cn("font-bold text-4xl", className)}
       {...props}
     />
   )
@@ -112,7 +116,7 @@ function AlertDialogDescription({
   return (
     <AlertDialogPrimitive.Description
       data-slot="alert-dialog-description"
-      className={cn("text-muted-foreground text-sm", className)}
+      className={cn("text-2xl", className)}
       {...props}
     />
   )
@@ -124,7 +128,7 @@ function AlertDialogAction({
 }: React.ComponentProps<typeof AlertDialogPrimitive.Action>) {
   return (
     <AlertDialogPrimitive.Action
-      className={cn(buttonVariants(), className)}
+      className={cn(buttonVariants({ variant: "outline" }), "bg-[#7092CF] text-white w-full mt-10", className)}
       {...props}
     />
   )
@@ -136,11 +140,22 @@ function AlertDialogCancel({
 }: React.ComponentProps<typeof AlertDialogPrimitive.Cancel>) {
   return (
     <AlertDialogPrimitive.Cancel
-      className={cn(buttonVariants({ variant: "outline" }), className)}
+      className={cn("flex items-end justify-end", className)}
       {...props}
-    />
+    >
+
+    <img
+    className="w-5 h-auto"
+    src="/Close.png"
+    alt="close">
+    </img>
+
+    </AlertDialogPrimitive.Cancel>
   )
 }
+
+
+
 
 export {
   AlertDialog,
