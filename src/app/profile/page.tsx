@@ -25,7 +25,7 @@ export default function Profile() {
                 </div>
 
                 {/* Card Details */}
-                <div className="mt-6 pb-10 px-30">
+                <div className="mt-6 pb-10 px-30 min-h-screen">
                     <div className="py-2 bg-white rounded-4xl grid grid-cols-2 gap-4">
                         {/* Left Side */}
                         <div className="pr-10">

@@ -22,7 +22,7 @@ export default function AboutUs() {
         {id:11, name:"Allantoin"},
         {id:12, name:"Centella Asiatica"},
         {id:13, name:"Tranexamic Acid"},
-        {id:14, name:"Azelaic Acid"},
+        {id:14, name:"Peptide"},
         {id:15, name:"Vitamin C"},
         {id:16, name:"Propolis"},
         {id:17, name:"Glycerin"},
@@ -41,7 +41,7 @@ export default function AboutUs() {
                 style={{
                     color: '#405E93',
                 }}>
-                
+
                 {/* Card 1 */}
                 <div className="mx-4 lg:mx-30 my-10">
 
@@ -63,15 +63,15 @@ export default function AboutUs() {
                     {/* Description */}
                         <div>
                             <p className="py-5">
-                                Bahan aktif skincare adalah kandungan 
-                                utama dalam produk skincare yang berfungsi 
-                                langsung untuk memberikan manfaat spesifik 
-                                pada kulit, seperti mengatasi masalah atau 
+                                Bahan aktif skincare adalah kandungan
+                                utama dalam produk skincare yang berfungsi
+                                langsung untuk memberikan manfaat spesifik
+                                pada kulit, seperti mengatasi masalah atau
                                 meningkatkan kondisi kulit.
                             </p>
-                                Biasanya, bahan aktif skincare digunakan 
-                                untuk menjadi fokus utama dari produk dan 
-                                bekerja secara efektif untuk mencapai hasil 
+                                Biasanya, bahan aktif skincare digunakan
+                                untuk menjadi fokus utama dari produk dan
+                                bekerja secara efektif untuk mencapai hasil
                                 yang diinginkan.
                             <p>
 
@@ -91,7 +91,7 @@ export default function AboutUs() {
                         <div className="font-medium text-1xl my-2 text-white">
                             Dengan Cara Mix & Match Bahan Aktif
                         </div>
-                    
+
                         {/* Button */}
                         <a href="/" className="">
                             <button className="border-2 mt-5 py-2 px-10 rounded-3xl bg-white">
@@ -107,9 +107,9 @@ export default function AboutUs() {
                         {
                             listBahanAktif.map((bahanAktif)=>{
                                 return(
-                                    <Link 
-                                        href={`/bahan-aktif/${bahanAktif.id}`} 
-                                        key={bahanAktif.id} 
+                                    <Link
+                                        href={`/bahan-aktif/${bahanAktif.id}`}
+                                        key={bahanAktif.id}
                                         className='items-center justify-center text-center hover:text-white hover:bg-[#7092CF] border-[#E6EEFC] border-2 p-5 rounded-2xl'
                                     >
                                         <div>
@@ -127,9 +127,9 @@ export default function AboutUs() {
                 <div className="Footer pt-10">
                                 <Footer />
                             </div>
-            
 
-        </>   
-        
+
+        </>
+
     );
 }

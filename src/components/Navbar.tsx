@@ -41,7 +41,7 @@ export function Navbar() {
                                     Beranda
                                 </Link>
                                 <Link
-                                    href="/home"
+                                    href="/basic-skincare"
                                     className="text-black hover:border-b-2 hover:border-black py-5 px-1"
                                 >
                                     Basic Skincare
@@ -53,7 +53,7 @@ export function Navbar() {
                                     Bahan Aktif
                                 </Link>
                                 <Link
-                                    href="/product"
+                                    href="/rekomendasi"
                                     className="text-black hover:border-b-2 hover:border-black py-5 px-1"
                                 >
                                     Rekomendasi
@@ -64,7 +64,7 @@ export function Navbar() {
                                 >
                                     Tentang Kami
                                 </Link>
-                                <Link href="/">
+                                <Link href="/profile">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         fill="none"
@@ -126,34 +126,34 @@ export function Navbar() {
                     <div className="md:hidden">
                         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                             <Link
-                                href="/home"
+                                href="/"
                                 className="text-black block hover:bg-gray-100 py-5 px-1"
                             >
-                                Home
+                                Beranda
                             </Link>
                             <Link
-                                href="/skincare"
+                                href="/basic-skincare"
                                 className="text-black block hover:bg-gray-100 py-5 px-1"
                             >
-                                Skincare
+                                Basic Skincare
                             </Link>
                             <Link
-                                href="/product"
+                                href="/mengenal-bahan-aktif"
                                 className="text-black block hover:bg-gray-100 py-5 px-1"
                             >
-                                Product
+                                Bahan Aktif
                             </Link>
                             <Link
                                 href="/about-us"
                                 className="text-black block hover:bg-gray-100 py-5 px-1"
                             >
-                                About Us
+                                Tentang Kami
                             </Link>
                             <Link
-                                href=""
+                                href="/profile"
                                 className="text-black block hover:bg-gray-100 py-5 px-1"
                             >
-                                My Profile
+                                Profil Saya
                             </Link>
                         </div>
                     </div>

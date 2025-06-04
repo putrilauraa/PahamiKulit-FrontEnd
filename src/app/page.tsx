@@ -98,7 +98,9 @@ export default function Home() {
                                         '0px 4px 0px rgba(214, 79, 126, 1)',
                                 }}
                             >
-                                <Link href="/">Tes Sekarang →</Link>
+                                <Link href="/tes-jenis-kulit">
+                                    Tes Sekarang →
+                                </Link>
                             </button>
                         </div>
                         <div className="absolute md:right-7 lg:right-74">
