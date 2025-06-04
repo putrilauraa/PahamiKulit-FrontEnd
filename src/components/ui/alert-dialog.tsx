@@ -131,7 +131,7 @@ function AlertDialogAction({
         <AlertDialogPrimitive.Action
             className={cn(
                 buttonVariants({ variant: 'outline' }),
-                'bg-[#7092CF] text-white w-full mt-10',
+                'bg-[#7092CF] text-white w-full mt-5 py-6 text-base',
                 className,
             )}
             {...props}

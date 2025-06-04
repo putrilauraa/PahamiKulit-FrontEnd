@@ -35,10 +35,13 @@ const Signin = () => {
             <AlertDialogContent>
                 <AlertDialogHeader>
                     <AlertDialogCancel>x</AlertDialogCancel>
-                    <AlertDialogTitle>Selamat Datang!</AlertDialogTitle>
-                    <AlertDialogDescription>
-                        Ketahui perawatan kulit dasar dengan BasicDulu. Mulai
-                        dari sini!
+                    <AlertDialogTitle className="mb-1">
+                        Selamat Datang!
+                    </AlertDialogTitle>
+                    <AlertDialogDescription className="flex items-center mx-auto text-base">
+                        Ketahui perawatan kulit dasar bersama PahamiKulit.
+                        <br />
+                        Mulai dari sini!
                     </AlertDialogDescription>
 
                     {/* Login Form */}
@@ -64,13 +67,17 @@ const Signin = () => {
                             </div>
                         </form>
 
-                        <a>
-                            <div className="flex items-end justify-end text-[#405E93] font-medium mt-2">
+                        <a href=''>
+                            <div className="flex items-end justify-end text-[#405E93] mt-2 text-sm font-semibold">
                                 Lupa Kata Sandi?
                             </div>
                         </a>
 
                         <AlertDialogAction>Masuk</AlertDialogAction>
+
+                        <div className="flex items-center justify-center text-[#405E93] mt-10 text-sm">
+                            Belum punya akun?<span className='text-white'>-</span><a href="" className=' font-semibold'>Daftar sekarang</a>
+                        </div>
                     </div>
                 </AlertDialogHeader>
                 <AlertDialogFooter></AlertDialogFooter>
