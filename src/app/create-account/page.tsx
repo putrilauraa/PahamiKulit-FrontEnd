@@ -4,7 +4,7 @@ import { Footer } from '@/components/Footer';
 
 const montserrat = Montserrat({ weight: '500', subsets: ['latin'] });
 
-export default function AboutUs() {
+export default function Regist() {
     return (
         <>
             <Navbar />
