@@ -1,11 +1,14 @@
+'use client';
 import Navbar from '@/components/Navbar';
 import { Montserrat } from 'next/font/google';
 import { Footer } from '@/components/Footer';
-import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 const montserrat = Montserrat({ weight: '500', subsets: ['latin'] });
 
 export default function Home() {
+    const router = useRouter();
+
     return (
         <>
             <Navbar />
@@ -295,7 +298,7 @@ export default function Home() {
                                     />
                                 </div>
                                 <p className="text-xs md:text-base font-medium md:font-extrabold mt-3 md:mt-4">
-                                    Face Wash
+                                    Cleanser
                                 </p>
                             </div>
                             <div className="text-base md:text-3xl lg:text-5xl mx-1 md:mx-2 lg:mx-10 mb-5 md:mb-8 lg:mb-0 text-[#7092CF]">
@@ -407,7 +410,7 @@ export default function Home() {
                                     />
                                 </div>
                                 <p className="text-xs md:text-base font-medium md:font-extrabold mt-3 md:mt-4">
-                                    Face Wash
+                                    Cleanser
                                 </p>
                             </div>
                             <div className="md:text-3xl lg:text-5xl mx-1 md:mx-2 lg:mx-10 mb-5 md:mb-8 lg:mb-0 text-[#7092CF]">
@@ -477,40 +480,18 @@ export default function Home() {
                                 basic skincare beserta jenis-jenisnya
                             </p>
                             <button
+                                onClick={() =>
+                                    router.push('/produk-basic-skincare')
+                                }
                                 className="mt-3 md:mt-7 lg:mt-10 text-white bg-[#F38EB1] hover:bg-[#D64F7E] w-3xs md:w-lg lg:w-xl p-2 md:p-4 font-semibold text-xs md:text-lg lg:text-xl rounded-full"
                                 style={{
                                     boxShadow:
                                         '0px 4px 0px rgba(214, 79, 126, 1)',
                                 }}
                             >
-                                <Link href="/produk-basic-skincare">
-                                    Telusuri
-                                </Link>
+                                Telusuri
                             </button>
                         </div>
-
-                        {/* <div className="relative grid grid-cols-1 md:grid-cols-2 grid-rows-4 md:grid-rows-2 gap-4 px-44">
-                            <div className="bg-white border-2 border-gray-100 hover:border-[#F38EB1] text-black p-5 items-center text-center rounded-xl">
-                                <p className="font-bold text-sm md:text-lg">
-                                    Membersihkan pori-pori
-                                </p>
-                            </div>
-                            <div className="bg-white border-2 border-gray-100 hover:border-[#F38EB1] text-black p-5 items-center text-center rounded-xl">
-                                <p className="font-bold text-sm md:text-lg">
-                                    Mengurangi minyak berlebih
-                                </p>
-                            </div>
-                            <div className="bg-white border-2 border-gray-100 hover:border-[#F38EB1] text-black p-5 items-center text-center rounded-xl">
-                                <p className="font-bold text-sm md:text-lg">
-                                    Melindungi kulit dari sinar UV
-                                </p>
-                            </div>
-                            <div className="bg-white border-2 border-gray-100 hover:border-[#F38EB1] text-black p-5 items-center text-center rounded-xl">
-                                <p className="font-bold text-sm md:text-lg">
-                                    Menjaga kelembaban kulit
-                                </p>
-                            </div>
-                        </div> */}
                     </div>
                 </div>
             </div>

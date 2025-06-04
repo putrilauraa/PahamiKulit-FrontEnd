@@ -273,7 +273,7 @@ export default function Quiz() {
                                     onClick={() =>
                                         router.push('/tes-jenis-kulit')
                                     }
-                                    className="bg-white hover:bg-[#405E93] hover:text-white hover:border-[#405E93] px-8 py-2 rounded-lg border-2"
+                                    className="bg-white hover:bg-[#405E93] hover:text-white border-black hover:border-[#405E93] px-8 py-2 rounded-lg border-2"
                                     style={{
                                         boxShadow:
                                             '0 4px 0px rgba(64, 94, 147, 1)',

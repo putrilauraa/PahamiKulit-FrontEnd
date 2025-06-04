@@ -1,13 +1,15 @@
 'use client';
-
 import { Footer } from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 import { Montserrat } from 'next/font/google';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 const montserrat = Montserrat({ weight: '500', subsets: ['latin'] });
 
 export default function Home() {
+    const router = useRouter();
+
     return (
         <>
             <Navbar />
@@ -42,15 +44,16 @@ export default function Home() {
                             Halo, Skincare Explorer!
                         </div>
                         <div className="pt-4 md:py-5 text-xs md:text-sm lg:text-lg lg:max-w-xl">
-                            Selamat datang di{' '}
+                            <p>Selamat datang di{' '}
                             <span className="font-bold">PahamiKulit</span>,
                             tempatmu menjelajahi langkah-langkah paling dasar
                             dalam dunia <span className="italic">skincare</span>
-                            . Di sini, kamu bisa mendapatkan pengetahuan
+                            .</p>
+                            <p className='pt-4 text-base'>Di sini, kamu bisa mendapatkan pengetahuan
                             mengenai{' '}
                             <span className="italic">basic skincare</span>{' '}
                             supaya kamu nggak salah pilih produk. Yuk, mulai
-                            perjalanan kulit sehat kamu di sini!
+                            perjalanan kulit sehat kamu di sini!</p>
                         </div>
                     </div>
                 </div>
@@ -92,15 +95,14 @@ export default function Home() {
                                 supaya kamu gak salah pilih produk
                             </p>
                             <button
+                                onClick={() => router.push('/tes-jenis-kulit')}
                                 className="bg-[#F38EB1] text-white hover:bg-[#D64F7E] text-xs md:text-sm lg:text-lg font-semibold rounded-4xl px-6 py-3 mt-2"
                                 style={{
                                     boxShadow:
                                         '0px 4px 0px rgba(214, 79, 126, 1)',
                                 }}
                             >
-                                <Link href="/tes-jenis-kulit">
-                                    Tes Sekarang →
-                                </Link>
+                                Tes Sekarang →
                             </button>
                         </div>
                         <div className="absolute md:right-7 lg:right-74">
@@ -135,13 +137,16 @@ export default function Home() {
                                     yang boleh digunakan secara bersamaan
                                 </p>
                                 <button
+                                    onClick={() =>
+                                        router.push('/mengenal-bahan-aktif')
+                                    }
                                     className="bg-[#7092CF] text-white hover:bg-[#405E93] font-semibold rounded-3xl md:flex md:mx-auto lg:mx-0 px-5 py-3 mt-2 md:mt-5 lg:mt-2 text-xs md:text-sm"
                                     style={{
                                         boxShadow:
                                             '0px 4px 0px rgba(64, 94, 147, 1)',
                                     }}
                                 >
-                                    <Link href="/">Coba Sekarang →</Link>
+                                    Coba Sekarang →
                                 </button>
                             </div>
                             <div className="absolute md:right-7 lg:right-74">
@@ -177,13 +182,14 @@ export default function Home() {
                                     tepat sesuai dengan kebutuhan kulit kamu
                                 </p>
                                 <button
+                                    onClick={() => router.push('/rekomendasi')}
                                     className="bg-[#7092CF] text-white hover:bg-[#405E93] font-semibold rounded-3xl md:flex md:mx-auto lg:mx-0 px-5 py-3 mt-2 md:mt-5 lg:mt-2 text-xs md:text-sm"
                                     style={{
                                         boxShadow:
                                             '0px 4px 0px rgba(64, 94, 147, 1)',
                                     }}
                                 >
-                                    <Link href="/">Coba Sekarang →</Link>
+                                    Coba Sekarang →
                                 </button>
                             </div>
                             <div className="absolute md:right-7 lg:right-74">

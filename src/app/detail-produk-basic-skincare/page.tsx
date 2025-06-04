@@ -4,7 +4,6 @@ import Navbar from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
 import { Montserrat } from 'next/font/google';
 import { useRouter } from 'next/navigation';
-import Link from 'next/link';
 
 const montserrat = Montserrat({ weight: '500', subsets: ['latin'] });
 
