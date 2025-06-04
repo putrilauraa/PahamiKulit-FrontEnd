@@ -294,7 +294,9 @@ export default function Home() {
                                         className="w-15 md:w-26 lg:w-38 h-auto object-contain drop-shadow-[2px_2px_0px_rgba(0,0,0,0.15)] md:drop-shadow-[4px_4px_0px_rgba(0,0,0,0.15)]"
                                     />
                                 </div>
-                                <p className="text-xs md:text-base font-medium md:font-extrabold mt-3 md:mt-4">Face Wash</p>
+                                <p className="text-xs md:text-base font-medium md:font-extrabold mt-3 md:mt-4">
+                                    Face Wash
+                                </p>
                             </div>
                             <div className="text-base md:text-3xl lg:text-5xl mx-1 md:mx-2 lg:mx-10 mb-5 md:mb-8 lg:mb-0 text-[#7092CF]">
                                 →
@@ -339,7 +341,9 @@ export default function Home() {
                                     className="w-13 md:w-21 lg:w-33 h-auto object-contain drop-shadow-[2px_2px_0px_rgba(0,0,0,0.15)] md:drop-shadow-[4px_4px_0px_rgba(0,0,0,0.15)]"
                                 />
                             </div>
-                            <p className="text-xs md:text-base font-medium md:font-extrabold mt-3 md:mt-4">SPF</p>
+                            <p className="text-xs md:text-base font-medium md:font-extrabold mt-3 md:mt-4">
+                                SPF
+                            </p>
                         </div>
                     </div>
 
@@ -402,7 +406,9 @@ export default function Home() {
                                         className="w-15 md:w-26 lg:w-38 h-auto object-contain drop-shadow-[2px_2px_0px_rgba(0,0,0,0.15)] md:drop-shadow-[4px_4px_0px_rgba(0,0,0,0.15)]"
                                     />
                                 </div>
-                                <p className="text-xs md:text-base font-medium md:font-extrabold mt-3 md:mt-4">Face Wash</p>
+                                <p className="text-xs md:text-base font-medium md:font-extrabold mt-3 md:mt-4">
+                                    Face Wash
+                                </p>
                             </div>
                             <div className="md:text-3xl lg:text-5xl mx-1 md:mx-2 lg:mx-10 mb-5 md:mb-8 lg:mb-0 text-[#7092CF]">
                                 →
@@ -423,7 +429,9 @@ export default function Home() {
                                     className="w-15 md:w-26 lg:w-38 h-auto object-contain drop-shadow-[2px_2px_0px_rgba(0,0,0,0.15)] md:drop-shadow-[4px_4px_0px_rgba(0,0,0,0.15)]"
                                 />
                             </div>
-                            <p className="text-xs md:text-base font-medium md:font-extrabold mt-3 md:mt-4">Moisturizer</p>
+                            <p className="text-xs md:text-base font-medium md:font-extrabold mt-3 md:mt-4">
+                                Moisturizer
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -443,7 +451,9 @@ export default function Home() {
                         className="absolute w-12 md:w-23 lg:w-45 h-auto object-cover z-0 right-0 top-0 md:top-3 lg:top-5"
                     />
                     <div className="absolute px-4 h-9 md:px-7 md:h-15 flex items-center justify-center bg-white rounded-tr-xl rounded-tl-xl rounded-br-xl ml-32 md:ml-65 lg:ml-105 -mt-35 md:-mt-70 drop-shadow-[3px_3px_0px_rgba(0,0,0,0.10)]">
-                        <p className="font-semibold text-[10px] md:text-base">Ayo ikut aku!</p>
+                        <p className="font-semibold text-[10px] md:text-base">
+                            Ayo ikut aku!
+                        </p>
                     </div>
                     <img
                         src="/Revised.png"
@@ -473,7 +483,9 @@ export default function Home() {
                                         '0px 4px 0px rgba(214, 79, 126, 1)',
                                 }}
                             >
-                                <Link href="/produk-basic-skincare">Telusuri</Link>
+                                <Link href="/produk-basic-skincare">
+                                    Telusuri
+                                </Link>
                             </button>
                         </div>
 

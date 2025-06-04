@@ -7,36 +7,36 @@ const montserrat = Montserrat({ weight: '500', subsets: ['latin'] });
 export default function AboutUs() {
     return (
         <>
-        <Navbar/>
+            <Navbar />
             <h1>Detail Bahan Aktif</h1>
 
             <div
                 className={`${montserrat.className}`}
                 style={{
                     color: '#405E93',
-                }}>
-                
+                }}
+            >
                 {/* Card Details */}
-                <div className=''>
-
+                <div className="">
                     {/* Left Side */}
-                        {/* Ilustrasi */}
-                        <div>
-                            <img>
-                            </img>
-                        </div>
+                    {/* Ilustrasi */}
+                    <div>
+                        <img></img>
+                    </div>
 
                     {/* Right Side */}
                     <div>
                         {/* Title */}
-                        <div>
-                            Niacinamide
-                        </div>
+                        <div>Niacinamide</div>
 
                         {/* Description */}
                         <div>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque gravida blandit ex vel eleifend. Donec eros ipsum, sagittis sed nibh sed, placerat laoreet justo. Sed gravida risus sit amet eros feugiat dignissim.
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit. Pellentesque gravida blandit ex
+                                vel eleifend. Donec eros ipsum, sagittis sed
+                                nibh sed, placerat laoreet justo. Sed gravida
+                                risus sit amet eros feugiat dignissim.
                             </p>
                         </div>
                     </div>
@@ -44,24 +44,17 @@ export default function AboutUs() {
 
                 {/* Manfaat Skincare */}
 
-                    <div>
-
-                    </div>
+                <div></div>
 
                 {/* Rekomendasi Produk */}
 
-                    <div>
-
-                    </div>
-
+                <div></div>
             </div>
-            
+
             {/* Footer */}
             <div className="Footer pt-10">
-                                <Footer />
-                            </div>
-
-        </>   
-        
+                <Footer />
+            </div>
+        </>
     );
 }

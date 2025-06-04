@@ -14,34 +14,34 @@ export default function basicSkincare() {
         <>
             <Navbar />
 
-                <div className="mt-5 ml-9">[Navigation]</div>
+            <div className="mt-5 ml-9">[Navigation]</div>
 
-                {/* Title Section */}
-                <div
-                    className="hidden md:hidden lg:block absolute bg-[#FFD5E9] h-50 w-50 mt-23 right-92"
-                    style={{
-                        clipPath: 'ellipse(100px 100px at center bottom)',
-                    }}
-                ></div>
-                <div className="absolute right-51">
-                    <img
-                        src="/Pink-11.png"
-                        alt="Mascot"
-                        className="w-97 h-auto -mt-8"
-                    />
-                </div>
-                <div className="text-white bg-gradient-to-r from-[#B5CBF0] to-[#7293D0] mx-45 mt-20 mb-30 rounded-xl p-17">
-                    <h1 className="text-4xl font-bold pb-2">Tes Jenis Kulit</h1>
-                    <p className="text-lg">
-                        Jawab beberapa pertanyaan untuk mengetahui jenis kulitmu!
-                    </p>
-                </div>
-
+            {/* Title Section */}
+            <div
+                className="hidden md:hidden lg:block absolute bg-[#FFD5E9] h-50 w-50 mt-23 right-92"
+                style={{
+                    clipPath: 'ellipse(100px 100px at center bottom)',
+                }}
+            ></div>
+            <div className="absolute right-51">
                 <img
-                    src="Elements-27.png"
-                    alt="Element"
-                    className="absolute w-47 -mt-15 -ml-2 opacity-70"
+                    src="/Pink-11.png"
+                    alt="Mascot"
+                    className="w-97 h-auto -mt-8"
                 />
+            </div>
+            <div className="text-white bg-gradient-to-r from-[#B5CBF0] to-[#7293D0] mx-45 mt-20 mb-30 rounded-xl p-17">
+                <h1 className="text-4xl font-bold pb-2">Tes Jenis Kulit</h1>
+                <p className="text-lg">
+                    Jawab beberapa pertanyaan untuk mengetahui jenis kulitmu!
+                </p>
+            </div>
+
+            <img
+                src="Elements-27.png"
+                alt="Element"
+                className="absolute w-47 -mt-15 -ml-2 opacity-70"
+            />
 
             {/* Start Quiz CTA */}
             <div className="flex flex-col items-center justify-center text-center">

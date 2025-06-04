@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
     AlertDialog,
     AlertDialogAction,
@@ -9,7 +9,7 @@ import {
     AlertDialogHeader,
     AlertDialogTitle,
     AlertDialogTrigger,
-} from "@/components/ui/alert-dialog"
+} from '@/components/ui/alert-dialog';
 
 const Signin = () => {
     return (
@@ -37,55 +37,46 @@ const Signin = () => {
                     <AlertDialogCancel>x</AlertDialogCancel>
                     <AlertDialogTitle>Selamat Datang!</AlertDialogTitle>
                     <AlertDialogDescription>
-                        Ketahui perawatan kulit dasar dengan BasicDulu.
-                        Mulai dari sini!
+                        Ketahui perawatan kulit dasar dengan BasicDulu. Mulai
+                        dari sini!
                     </AlertDialogDescription>
 
-                {/* Login Form */}
-                <div className="px-10">
-            <form className="flex flex-col gap-4 mt-4">
-          <div className="flex flex-col">
-            <input
-              id="email"
-              type="email"
-              className="border-2 rounded-md px-3 py-3 mt-1 text-sm focus:outline-none focus:border-[#7092CF]"
-              placeholder="Email"
-              required
-            />
-          </div>
-          <div className="flex flex-col">
-            <input
-              id="password"
-              type="password"
-              className=" border-2 rounded-md px-3 py-3 mt-1 text-sm focus:outline-none focus:border-[#7092CF]"
-              placeholder="Password"
-              required
-            />
-          </div>
-        </form>
+                    {/* Login Form */}
+                    <div className="px-10">
+                        <form className="flex flex-col gap-4 mt-4">
+                            <div className="flex flex-col">
+                                <input
+                                    id="email"
+                                    type="email"
+                                    className="border-2 rounded-md px-3 py-3 mt-1 text-sm focus:outline-none focus:border-[#7092CF]"
+                                    placeholder="Email"
+                                    required
+                                />
+                            </div>
+                            <div className="flex flex-col">
+                                <input
+                                    id="password"
+                                    type="password"
+                                    className=" border-2 rounded-md px-3 py-3 mt-1 text-sm focus:outline-none focus:border-[#7092CF]"
+                                    placeholder="Password"
+                                    required
+                                />
+                            </div>
+                        </form>
 
-        <a>
-         <div className="flex items-end justify-end text-[#405E93] font-medium mt-2">
-            Lupa Kata Sandi?
-        </div>
-        </a>
+                        <a>
+                            <div className="flex items-end justify-end text-[#405E93] font-medium mt-2">
+                                Lupa Kata Sandi?
+                            </div>
+                        </a>
 
-        <AlertDialogAction>Masuk</AlertDialogAction>
-
-        </div>
-
-        
-       
-
-
+                        <AlertDialogAction>Masuk</AlertDialogAction>
+                    </div>
                 </AlertDialogHeader>
-                <AlertDialogFooter>
-                
-                    
-                </AlertDialogFooter>
+                <AlertDialogFooter></AlertDialogFooter>
             </AlertDialogContent>
         </AlertDialog>
-    )
+    );
 };
 
 export default Signin;
