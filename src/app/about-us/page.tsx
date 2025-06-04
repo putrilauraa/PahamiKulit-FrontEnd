@@ -157,7 +157,7 @@ style={{
             </div>
 
             {/* Introduction Section */}
-            <div className="bg-blue-300 flex text-center justify-end"
+            <div className="bg-blue-300 flex text-center justify-end pb-4"
             style={{
                 background: '#E6EEFC'
             }}>
