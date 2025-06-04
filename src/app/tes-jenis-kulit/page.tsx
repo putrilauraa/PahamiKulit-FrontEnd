@@ -13,9 +13,9 @@ export default function basicSkincare() {
     return (
         <>
             <Navbar />
-            
+
             <div
-                className={`${montserrat.className} bg-[#E6EEFC] pb-20 overflow-hidden`}
+                className={`${montserrat.className} bg-[#ffffff]`}
             >
                 <div className="mt-5 ml-9">[Navigation]</div>
 
@@ -75,7 +75,7 @@ export default function basicSkincare() {
 
                 {/* See Skin Profile CTA */}
                 <div
-                    className="relative h-80 mt-30"
+                    className="relative h-84 mt-30"
                     style={{
                         background: '#E6EEFC',
                         clipPath: 'ellipse(1000px 312px at center bottom)',
@@ -99,7 +99,7 @@ export default function basicSkincare() {
                             </div>
 
                             <button
-                                className="border-2 border-[#405E93] bg-white hover:bg-[#405E93] hover:text-white font-medium rounded-full px-6 py-2 ml-8 text-sm"
+                                className="border-2 border-[#405E93] bg-white hover:bg-[#7092CF] hover:border-[#7092CF] hover:text-white font-medium rounded-full px-6 py-2 ml-8 text-sm"
                                 style={{
                                     boxShadow:
                                         '0px 4px 0px rgba(112, 146, 207, 1)',

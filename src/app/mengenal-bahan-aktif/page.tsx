@@ -42,15 +42,14 @@ export default function AboutUs() {
                 }}
             >
                 {/* Card 1 */}
-                <div className="mx-4 lg:mx-30 my-10"
-                
-                >
+                <div className="mx-4 lg:mx-30 my-10">
                     {/* Border */}
-                    <div className="border-4 rounded-2xl flex items-center justify-center py-5 px-5 border-[#7092CF]"
-                    style={{
-                                    boxShadow:
-                                        '6px 6px 0px rgba(185, 203, 232)',
-                                }}>
+                    <div
+                        className="border-4 rounded-2xl flex items-center justify-center py-5 px-5 border-[#7092CF]"
+                        style={{
+                            boxShadow: '6px 6px 0px rgba(185, 203, 232)',
+                        }}
+                    >
                         {/* Ilustrasi */}
                         <div>
                             <img
@@ -87,31 +86,30 @@ export default function AboutUs() {
                 {/* Card 2 */}
                 <div className="mx-4 lg:mx-30 my-10">
                     {/* Border */}
-                    <div className="rounded-2xl flex items-center justify-center py-5 px-5 bg-gradient-to-b from-[#90ACDF] to-[#7293D0]"
-                    >
+                    <div className="rounded-2xl flex items-center justify-center py-5 px-5 bg-gradient-to-b from-[#90ACDF] to-[#7293D0]">
                         <div className="text-center lg:my-10">
-                        <div className="font-bold text-3xl text-white">
-                            Cari Tahu Kombinasi Bahan Aktif yang Aman
-                        </div>
-                        <div className="font-medium text-1xl my-2 text-white">
-                            Dengan Cara Mix & Match Bahan Aktif
-                        </div>
+                            <div className="font-bold text-3xl text-white">
+                                Cari Tahu Kombinasi Bahan Aktif yang Aman
+                            </div>
+                            <div className="font-medium text-1xl my-2 text-white">
+                                Dengan Cara Mix & Match Bahan Aktif
+                            </div>
 
-                        {/* Button */}
-                        <a href="/" className="">
-                            <button className="border-2 mt-5 py-2 px-10 rounded-3xl bg-white hover:border-[#405E93]"
-                            style={{
-                                    boxShadow:
-                                        '0px 4px 0px rgba(64, 94, 147, 1)',
-                                }}>
-                                Coba
-                            </button>
-                        </a>
+                            {/* Button */}
+                            <a href="/" className="">
+                                <button
+                                    className="border-2 mt-5 py-2 px-10 rounded-3xl bg-white hover:border-[#405E93]"
+                                    style={{
+                                        boxShadow:
+                                            '0px 4px 0px rgba(64, 94, 147, 1)',
+                                    }}
+                                >
+                                    Coba
+                                </button>
+                            </a>
+                        </div>
                     </div>
-                    </div>
-                 </div>
-
-                
+                </div>
 
                 {/* Bahan Aktif dinamis */}
                 <div className="my-10 mx-4 lg:mx-25">
