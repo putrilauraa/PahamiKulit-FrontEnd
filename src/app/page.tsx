@@ -387,7 +387,7 @@ export default function Home() {
                                 <p className="mt-1 text-xs md:text-sm lg:text-md">
                                     Fokus pada langkah awal dalam penggunaan
                                     skincare dengan mengenal dan memahami basic
-                                    skincare
+                                    skincare. Yuk, ke menu Basic Skincare!
                                 </p>
                             </div>
                         </div>
@@ -403,7 +403,7 @@ export default function Home() {
                                 <p className="mt-1 text-xs md:text-sm lg:text-md">
                                     Ketahui jenis-jenis produk basic skincare
                                     untuk menyesuaikan dengan kebutuhan kulit
-                                    kamu
+                                    kamu. Telusuri melalui menu Basic Skincare, ya!
                                 </p>
                             </div>
                         </div>
@@ -426,7 +426,7 @@ export default function Home() {
                                 <p className="mt-1 md:text-sm lg:text-md">
                                     Ketahui jenis-jenis produk basic skincare
                                     untuk menyesuaikan dengan kebutuhan kulit
-                                    kamu
+                                    kamu. Telusuri melalui menu Basic Skincare, ya!
                                 </p>
                             </div>
                         </div>
@@ -442,7 +442,7 @@ export default function Home() {
                                 </h3>
                                 <p className="mt-1 text-xs md:text-sm lg:text-md">
                                     Ketahui apa yang kamu gunakan di kulitmu dan
-                                    bagaimana cara penggunaan yang tepat
+                                    bagaimana cara penggunaan yang tepat melalui menu Bahan Aktif
                                 </p>
                             </div>
                         </div>
@@ -459,7 +459,7 @@ export default function Home() {
                                 <p className="mt-1 text-xs md:text-sm lg:text-md">
                                     Kami akan bantu kamu untuk menentukan
                                     skincare yang sesuai dengan kondisi kulit
-                                    kamu
+                                    kamu, langsung aja ke menu Rekomendasi
                                 </p>
                             </div>
                         </div>

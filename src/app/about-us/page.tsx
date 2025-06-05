@@ -71,9 +71,9 @@ export default function AboutUs() {
                                     langkah yang paling dasar.
                                 </p>
                                 {/* Illustration */}
-                                <div className="absolute right-10 -mt-10">
+                                <div className="absolute right-38 mt-5">
                                     <img
-                                        className="w-85 h-auto"
+                                        className="w-60 h-auto"
                                         src="/Blue-3.png"
                                         alt="Mascot"
                                     ></img>
