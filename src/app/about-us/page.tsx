@@ -23,14 +23,14 @@ export default function AboutUs() {
                             dengan skincare dalam memahami dasar-dasar perawatan
                             kulit.
                         </p>
-                        <div className="py-10 mt-8 ml-9">
-                            <p className="text-3xl font-bold">
+                        <div className="py-10 mt-10 ml-9">
+                            <p className="text-2xl font-bold">
                                 <strong className="text-[#7092CF]">| </strong>
                                 Membantu remaja dalam perjalanan perawatan
                                 kulitnya
                             </p>
 
-                            <p className="ml-5 w-4xl mt-3 text-lg">
+                            <p className="ml-4 w-4xl mt-3">
                                 Kami hadir dengan memberikan fokus pada
                                 pengemasan informasi secara{' '}
                                 <strong className="text-[#D64F7E]">
@@ -58,7 +58,7 @@ export default function AboutUs() {
                                 background: '#E6EEFC',
                             }}
                         >
-                            <div className="absolute left-0 text-white font-bold text-4xl bg-[#7293D0] flex px-30 py-15 top-138 rounded-r-full sm:4px md:6px lg:8px">
+                            <div className="absolute left-0 text-white font-bold text-4xl bg-[#7293D0] flex px-30 py-15 top-130 rounded-r-full sm:4px md:6px lg:8px">
                                 Visi
                             </div>
                             <div className="flex items-center ml-100">

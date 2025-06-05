@@ -5,7 +5,6 @@ import { usePathname, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import Signin from './Signin';
 
-
 const bai_jamjuree = Bai_Jamjuree({ weight: '500', subsets: ['latin'] });
 
 export function Navbar() {
@@ -17,9 +16,7 @@ export function Navbar() {
         setisCLick(!isClick);
     };
 
-    const toggleLoginModal = () =>{
-
-    }
+    const toggleLoginModal = () => {};
 
     return (
         <>
@@ -42,31 +39,51 @@ export function Navbar() {
                             <div className="flex items-center space-x-4">
                                 <Link
                                     href="/"
-                                    className="text-black hover:border-b-2 hover:border-black py-5 px-1"
+                                    className={`text-black py-5 px-1 ${
+                                        pathName === '/'
+                                            ? 'border-b-2 border-black'
+                                            : 'hover:border-b-2 hover:border-black'
+                                    }`}
                                 >
                                     Beranda
                                 </Link>
                                 <Link
-                                    href="/home"
-                                    className="text-black hover:border-b-2 hover:border-black py-5 px-1"
+                                    href="/basic-skincare"
+                                    className={`text-black py-5 px-1 ${
+                                        pathName === '/basic-skincare'
+                                            ? 'border-b-2 border-black'
+                                            : 'hover:border-b-2 hover:border-black'
+                                    }`}
                                 >
                                     Basic Skincare
                                 </Link>
                                 <Link
                                     href="/mengenal-bahan-aktif"
-                                    className="text-black hover:border-b-2 hover:border-black py-5 px-1"
+                                    className={`text-black py-5 px-1 ${
+                                        pathName === '/mengenal-bahan-aktif'
+                                            ? 'border-b-2 border-black'
+                                            : 'hover:border-b-2 hover:border-black'
+                                    }`}
                                 >
                                     Bahan Aktif
                                 </Link>
                                 <Link
-                                    href="/product"
-                                    className="text-black hover:border-b-2 hover:border-black py-5 px-1"
+                                    href="/rekomendasi"
+                                    className={`text-black py-5 px-1 ${
+                                        pathName === '/rekomendasi'
+                                            ? 'border-b-2 border-black'
+                                            : 'hover:border-b-2 hover:border-black'
+                                    }`}
                                 >
                                     Rekomendasi
                                 </Link>
                                 <Link
                                     href="/about-us"
-                                    className="text-black hover:border-b-2 hover:border-black py-5 px-1"
+                                    className={`text-black py-5 px-1 ${
+                                        pathName === '/about-us'
+                                            ? 'border-b-2 border-black'
+                                            : 'hover:border-b-2 hover:border-black'
+                                    }`}
                                 >
                                     Tentang Kami
                                 </Link>
@@ -85,7 +102,7 @@ export function Navbar() {
                                             d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
                                         />
                                     </svg> */}
-                                    <Signin/>
+                                    <Signin />
                                 </Link>
                             </div>
                         </div>
@@ -130,7 +147,7 @@ export function Navbar() {
                     </div>
                 </div>
                 {isClick && (
-                     <div className="md:hidden">
+                    <div className="md:hidden">
                         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                             <Link
                                 href="/"
@@ -151,6 +168,12 @@ export function Navbar() {
                                 Bahan Aktif
                             </Link>
                             <Link
+                                href="/Rekomendasi"
+                                className="text-black block hover:bg-gray-100 py-5 px-1"
+                            >
+                                Rekomendasi
+                            </Link>
+                            <Link
                                 href="/about-us"
                                 className="text-black block hover:bg-gray-100 py-5 px-1"
                             >
@@ -166,7 +189,7 @@ export function Navbar() {
                                 onClick={toggleLoginModal}
                                 className="text-black block hover:bg-gray-100 py-5 px-1"
                             >
-                                My Profile
+                                Profil Saya
                             </div>
                         </div>
                     </div>
