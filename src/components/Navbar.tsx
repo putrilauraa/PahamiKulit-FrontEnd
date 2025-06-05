@@ -47,7 +47,7 @@ export function Navbar() {
                                     Beranda
                                 </Link>
                                 <Link
-                                    href="/basic-skincare"
+                                    href="/home"
                                     className="text-black hover:border-b-2 hover:border-black py-5 px-1"
                                 >
                                     Basic Skincare
@@ -59,7 +59,7 @@ export function Navbar() {
                                     Bahan Aktif
                                 </Link>
                                 <Link
-                                    href="/rekomendasi"
+                                    href="/product"
                                     className="text-black hover:border-b-2 hover:border-black py-5 px-1"
                                 >
                                     Rekomendasi
@@ -70,7 +70,6 @@ export function Navbar() {
                                 >
                                     Tentang Kami
                                 </Link>
-
                                 <Link href="/">
                                     {/* <svg
                                         xmlns="http://www.w3.org/2000/svg"
@@ -131,7 +130,7 @@ export function Navbar() {
                     </div>
                 </div>
                 {isClick && (
-                    <div className="md:hidden">
+                     <div className="md:hidden">
                         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                             <Link
                                 href="/"
