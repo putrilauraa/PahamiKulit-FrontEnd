@@ -14,9 +14,7 @@ export default function basicSkincare() {
         <>
             <Navbar />
 
-            <div
-                className={`${montserrat.className} overflow-hidden`}
-            >
+            <div className={`${montserrat.className} overflow-hidden`}>
                 <div className="mt-5 ml-9">[Navigation]</div>
 
                 {/* Title Section */}
@@ -60,7 +58,7 @@ export default function basicSkincare() {
                         <img
                             src="/Product-FirstCleanser.png"
                             alt="First Cleanser"
-                            className="absolute w-80 h-auto bottom-30 ml-3"
+                            className="absolute w-80 h-auto bottom-50 ml-3"
                         />
                         <button
                             className="flex items-center mt-43 mx-auto text-white text-lg font-semibold rounded-full bg-[#F38EB1] hover:bg-[#D64F7E] py-2 px-20"
@@ -80,7 +78,7 @@ export default function basicSkincare() {
                         <img
                             src="/Product-Cleanser.png"
                             alt="Cleanser"
-                            className="absolute w-80 h-auto bottom-30 ml-3"
+                            className="absolute w-80 h-auto bottom-50 ml-3"
                         />
 
                         <button
@@ -101,7 +99,7 @@ export default function basicSkincare() {
                         <img
                             src="/Product-Moisturizer.png"
                             alt="Moisturizer"
-                            className="absolute w-80 h-auto bottom-30 ml-3"
+                            className="absolute w-80 h-auto bottom-50 ml-3"
                         />
 
                         <button
@@ -125,7 +123,7 @@ export default function basicSkincare() {
                         <img
                             src="/Product-Sunscreen.png"
                             alt="SPF"
-                            className="absolute w-65 h-auto bottom-32 ml-10"
+                            className="absolute w-65 h-auto bottom-52 ml-10"
                         />
 
                         <button
@@ -140,7 +138,9 @@ export default function basicSkincare() {
                 </div>
             </div>
 
-            <Footer />
+            <div className="pt-5">
+                <Footer />
+            </div>
         </>
     );
 }

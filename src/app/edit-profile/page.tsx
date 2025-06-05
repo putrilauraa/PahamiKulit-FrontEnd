@@ -83,7 +83,7 @@ export default function Profile() {
 
                             <div className="flex justify-end text-lg font-semibold pt-5">
                                 <button
-                                    onClick={() => router.push('/profile')}
+                                    // onClick={() => router.push('/profile')}
                                     type="submit"
                                     className="bg-[#7092CF] text-white px-6 py-3 rounded-full hover:bg-[#405E93] transition"
                                     style={{

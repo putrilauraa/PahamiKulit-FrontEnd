@@ -33,7 +33,6 @@ export default function AboutUs() {
     return (
         <>
             <Navbar />
-            <h1>Mengenal Bahan Aktif Page</h1>
 
             <div
                 className={`${montserrat.className}`}
@@ -60,9 +59,9 @@ export default function AboutUs() {
                         </div>
                         <div className="ml-10">
                             {/* Title */}
-                            <div className="font-semibold text-4xl">
+                            <h1 className="font-semibold text-4xl">
                                 Yuk Mengenal Bahan Aktif Skincare!
-                            </div>
+                            </h1>
 
                             {/* Description */}
                             <div>

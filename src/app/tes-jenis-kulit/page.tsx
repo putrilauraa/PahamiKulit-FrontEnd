@@ -52,13 +52,13 @@ export default function basicSkincare() {
                     <p className="text-4xl font-bold mb-3">
                         Cari tahu jenis kulitmu yuk!
                     </p>
-                    <p className="w-md text-lg">
+                    <p className="w-lg text-base">
                         Untuk membantu mengetahui kandungan dan produk skincare
-                        yang tepat untuk kondisi kulitmu
+                        yang tepat untuk kondisi kulitmu.
                     </p>
                     <button
                         onClick={() => router.push('/quiz')}
-                        className="bg-[#7092CF] hover:bg-[#405E93] font-semibold text-lg text-white rounded-4xl w-md p-3 mt-6"
+                        className="bg-[#7092CF] hover:bg-[#405E93] font-semibold text-lg text-white rounded-4xl w-md p-3 mt-8"
                         style={{
                             boxShadow: '0px 4px 0px rgba(64, 94, 147, 1)',
                         }}

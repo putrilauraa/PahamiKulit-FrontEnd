@@ -52,7 +52,7 @@ export default function ProfilKulit() {
                     }}
                 ></div>
 
-                <div className="bg-[#E6EEFC] min-h-screen">
+                <div className="bg-[#E6EEFC] min-h-screen pb-15">
                     {/* Judul - Profil Kulit */}
                     <div className="relative z-20 -top-70">
                         <div
@@ -131,9 +131,9 @@ export default function ProfilKulit() {
                                         viewBox="0 0 24 24"
                                         fill="none"
                                         stroke="#FFF6ED"
-                                        stroke-width="3"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
+                                        strokeWidth="3"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
                                         className="lucide lucide-check-icon lucide-check"
                                     >
                                         <path d="M20 6 9 17l-5-5" />
@@ -156,9 +156,9 @@ export default function ProfilKulit() {
                                         viewBox="0 0 24 24"
                                         fill="none"
                                         stroke="#FFF6ED"
-                                        stroke-width="3"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
+                                        strokeWidth="3"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
                                         className="lucide lucide-x-icon lucide-x"
                                     >
                                         <path d="M18 6 6 18" />

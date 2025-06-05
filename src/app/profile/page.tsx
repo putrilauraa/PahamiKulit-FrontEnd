@@ -11,6 +11,11 @@ const montserrat = Montserrat({ weight: '500', subsets: ['latin'] });
 export default function Profile() {
     const router = useRouter();
     const [activeTab, setActiveTab] = useState('detail');
+    const [showLogoutDialog, setShowLogoutDialog] = useState(false);
+
+    const handleLogout = () => {
+        setShowLogoutDialog(true);
+    };
 
     return (
         <>
@@ -115,9 +120,11 @@ export default function Profile() {
                             </div>
                         </div>
                     </div>
+
                     {/* Logout Button */}
                     <div className="flex justify-end">
                         <button
+                            onClick={() => handleLogout()}
                             className="bg-[#7092CF] text-white px-6 py-2 font-semibold text-lg rounded-full mt-5 hover:bg-[#405E93] transition"
                             style={{
                                 boxShadow: '0px 4px 0px rgba(64, 94, 147, 1)',
@@ -126,6 +133,45 @@ export default function Profile() {
                             Keluar
                         </button>
                     </div>
+
+                    {showLogoutDialog && (
+                        <div className="fixed inset-0 z-50 backdrop-brightness-45 flex items-center justify-center">
+                            <div className="relative bg-white p-13 rounded-xl max-w-lg text-center border-1">
+                                <h2 className="text-2xl font-bold mb-4">
+                                    Yakin mau keluar?
+                                </h2>
+                                <p className="text-gray-700 mb-6">
+                                    Kamu akan keluar dari akun ini dan perlu
+                                    login kembali untuk mengakses semua fitur
+                                </p>
+
+                                <div className="flex justify-center gap-4">
+                                    <button
+                                        onClick={() =>
+                                            setShowLogoutDialog(false)
+                                        }
+                                        className="bg-white hover:bg-[#405E93] hover:text-white border-black hover:border-[#405E93] px-8 py-2 rounded-lg border-2"
+                                        style={{
+                                            boxShadow:
+                                                '0 4px 0px rgba(64, 94, 147, 1)',
+                                        }}
+                                    >
+                                        Batal
+                                    </button>
+                                    <button
+                                        onClick={() => router.push('/')}
+                                        className="bg-[#7092CF] hover:bg-[#405E93] text-white px-8 py-2 rounded-lg"
+                                        style={{
+                                            boxShadow:
+                                                '0 4px 0px rgba(64, 94, 147, 1)',
+                                        }}
+                                    >
+                                        Ya, keluar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    )}
                 </div>
             </div>
 
