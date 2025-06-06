@@ -17,14 +17,14 @@ export default function AboutUs() {
                         </div>
 
                         {/* Description */}
-                        <p className="w-4xl justify-center mx-auto text-center mt-8 text-xl">
+                        <p className="w-4xl justify-center mx-auto text-center mt-8 text-xl font-bold">
                             <strong>PahamiKulit</strong> adalah website edukasi
                             skincare untuk membantu remaja yang belum familiar
                             dengan skincare dalam memahami dasar-dasar perawatan
                             kulit.
                         </p>
                         <div className="py-10 mt-10 ml-9">
-                            <p className="text-2xl font-bold">
+                            <p className="text-2xl font-medium">
                                 <strong className="text-[#7092CF]">| </strong>
                                 Membantu remaja dalam perjalanan perawatan
                                 kulitnya

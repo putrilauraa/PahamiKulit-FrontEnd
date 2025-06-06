@@ -14,10 +14,20 @@ export default function basicSkincare() {
         <>
             <Navbar />
 
-            <div
-                className={`${montserrat.className} bg-[#ffffff]`}
-            >
-                <div className="mt-5 ml-9">[Navigation]</div>
+            <div className={`${montserrat.className} bg-[#ffffff]`}>
+                {/* Breadcrumbs */}
+                <nav className="mt-8 ml-8 text-sm space-x-2">
+                    <a href="/" className="hover:underline text-[#7092CF]">
+                        Beranda
+                    </a>
+                    <span>/</span>
+                    <a
+                        href="/tes-jenis-kulit"
+                        className="font-bold hover:underline text-[#7092CF]"
+                    >
+                        Tes Jenis Kulit
+                    </a>
+                </nav>
 
                 {/* Title Section */}
                 <div
@@ -33,7 +43,7 @@ export default function basicSkincare() {
                         className="w-97 h-auto -mt-8"
                     />
                 </div>
-                <div className="text-white bg-gradient-to-r from-[#B5CBF0] to-[#7293D0] mx-45 mt-20 mb-30 rounded-xl p-17">
+                <div className="text-white bg-gradient-to-r from-[#7293D0] to-[#B5CBF0] mx-45 mt-20 mb-30 rounded-xl p-17">
                     <h1 className="text-4xl font-bold pb-2">Tes Jenis Kulit</h1>
                     <p className="text-lg">
                         Jawab beberapa pertanyaan untuk mengetahui jenis
@@ -74,11 +84,13 @@ export default function basicSkincare() {
                 />
 
                 {/* See Skin Profile CTA */}
+
                 <div
                     className="relative h-84 mt-30"
                     style={{
                         background: '#E6EEFC',
                         clipPath: 'ellipse(1000px 312px at center bottom)',
+                        boxShadow: '0px 4px 0px rgba(0,0,0,0.15)',
                     }}
                 >
                     <div className="pt-8">
@@ -87,7 +99,12 @@ export default function basicSkincare() {
                             alt="Mascot"
                             className="w-50 h-auto ml-137 -mb-10"
                         />
-                        <div className="flex items-center bg-white px-15 py-5 rounded-full w-150 mx-auto">
+                        <div
+                            className="flex items-center bg-white px-15 py-5 rounded-full w-150 mx-auto"
+                            style={{
+                                boxShadow: '0px 4px 0px rgba(0,0,0,0.15)',
+                            }}
+                        >
                             <div>
                                 <p className="font-semibold text-xl">
                                     Profil Kulit

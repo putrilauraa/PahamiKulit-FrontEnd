@@ -15,7 +15,18 @@ export default function basicSkincare() {
             <Navbar />
 
             <div className={`${montserrat.className} overflow-hidden`}>
-                <div className="mt-5 ml-9">[Navigation]</div>
+                <nav className="mt-5 ml-8 text-sm space-x-2">
+                    <a href="/" className="hover:underline text-[#7092CF]">
+                        Basic Skincare
+                    </a>
+                    <span>/</span>
+                    <a
+                        href="/skincare"
+                        className="font-bold hover:underline text-[#7092CF]"
+                    >
+                        Produk Basic Skincare
+                    </a>
+                </nav>
 
                 {/* Title Section */}
                 <div
@@ -60,9 +71,12 @@ export default function basicSkincare() {
                         <img
                             src="/Product-FirstCleanser.png"
                             alt="First Cleanser"
-                            className="absolute w-80 h-auto bottom-45 ml-3"
+                            className="absolute w-80 h-auto bottom-45 ml-3 drop-shadow-[8px_8px_0px_rgba(0,0,0,0.15)]"
                         />
                         <button
+                            onClick={() =>
+                                router.push('/detail-produk-first-cleanser')
+                            }
                             className="flex items-center mt-43 mx-auto text-white text-lg font-semibold rounded-full bg-[#F38EB1] hover:bg-[#D64F7E] py-2 px-20"
                             style={{
                                 boxShadow: '0px 4px 0px rgba(214, 79, 126, 1)',
@@ -80,10 +94,13 @@ export default function basicSkincare() {
                         <img
                             src="/Product-Cleanser.png"
                             alt="Cleanser"
-                            className="absolute w-80 h-auto bottom-45 ml-3"
+                            className="absolute w-80 h-auto bottom-45 ml-3 drop-shadow-[8px_8px_0px_rgba(0,0,0,0.15)]"
                         />
 
                         <button
+                            onClick={() =>
+                                router.push('/detail-produk-cleanser')
+                            }
                             className="flex items-center mt-43 mx-auto text-white text-lg font-semibold rounded-full bg-[#F38EB1] hover:bg-[#D64F7E] py-2 px-26"
                             style={{
                                 boxShadow: '0px 4px 0px rgba(214, 79, 126, 1)',
@@ -101,12 +118,12 @@ export default function basicSkincare() {
                         <img
                             src="/Product-Moisturizer.png"
                             alt="Moisturizer"
-                            className="absolute w-80 h-auto bottom-45 ml-3"
+                            className="absolute w-80 h-auto bottom-45 ml-3 drop-shadow-[8px_8px_0px_rgba(0,0,0,0.15)]"
                         />
 
                         <button
                             onClick={() =>
-                                router.push('/detail-produk-basic-skincare')
+                                router.push('/detail-produk-moisturizer')
                             }
                             className="flex items-center mt-43 mx-auto text-white text-lg font-semibold rounded-full bg-[#F38EB1] hover:bg-[#D64F7E] py-2 px-24"
                             style={{
@@ -125,16 +142,19 @@ export default function basicSkincare() {
                         <img
                             src="/Product-Sunscreen.png"
                             alt="SPF"
-                            className="absolute w-65 h-auto bottom-47 ml-10"
+                            className="absolute w-65 h-auto bottom-47 ml-10 drop-shadow-[8px_8px_0px_rgba(0,0,0,0.15)]"
                         />
 
                         <button
+                            onClick={() =>
+                                router.push('/detail-produk-sunscreen')
+                            }
                             className="flex items-center mt-43 mx-auto text-white text-lg font-semibold rounded-full bg-[#F38EB1] hover:bg-[#D64F7E] py-2 px-30"
                             style={{
                                 boxShadow: '0px 4px 0px rgba(214, 79, 126, 1)',
                             }}
                         >
-                            SPF
+                            Sunscreen
                         </button>
                     </div>
                 </div>

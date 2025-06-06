@@ -17,52 +17,77 @@ export default function produkBasicSkincare() {
             <div
                 className={`${montserrat.className} bg-[#E6EEFC] pb-20 overflow-hidden`}
             >
-                <div className="pt-5 ml-9">[Navigation]</div>
+                {/* Breadcrumbs */}
+                <nav className="mt-8 ml-8 text-sm space-x-2">
+                    <a href="/" className="hover:underline text-[#7092CF]">
+                        Basic Skincare
+                    </a>
+                    <span>/</span>
+                    <a
+                        href="/produk-basic-skincare"
+                        className="hover:underline text-[#7092CF]"
+                    >
+                        Produk Basic Skincare
+                    </a>
+                    <span>/</span>
+                    <a
+                        href="/detail-produk-first-cleanser"
+                        className="font-bold hover:underline text-[#7092CF]"
+                    >
+                        First Cleanser
+                    </a>
+                </nav>
+
                 {/* Title Section */}
                 <div className="mt-16">
                     <div
-                        className="hidden md:hidden lg:block absolute bg-[#FFF6ED] h-70 w-70 top-37 right-72"
+                        className="hidden md:hidden lg:block absolute bg-[#FFF6ED] h-70 w-70 top-39 right-72"
                         style={{
                             clipPath: 'ellipse(140px 140px at center bottom)',
                         }}
                     ></div>
-                    <div className="absolute right-67 top-30">
+                    <div className="absolute right-77 top-47">
                         <img
-                            src="/Product-Moisturizer.png"
-                            alt="Mascot"
-                            className="w-81 h-auto"
+                            src="/Product-FirstCleanser.png"
+                            alt="First Cleanser"
+                            className="w-61 h-auto drop-shadow-[5px_5px_0px_rgba(0,0,0,0.15)]"
                         />
                     </div>
-                    <div className="text-white bg-gradient-to-r from-[#B5CBF0] to-[#7293D0] mx-45 mb-16 rounded-2xl py-10 px-14">
-                        <h1 className="text-4xl font-bold pb-2">Moisturizer</h1>
-                        <p className="text-2xl w-sm">
-                            Keeps your skin hydrated!
+                    <div className="text-white bg-gradient-to-r from-[#7293D0] to-[#B5CBF0] mx-45 mb-16 rounded-2xl py-10 px-14">
+                        {/* Title */}
+                        <h1 className="text-4xl font-bold pb-2">
+                            First Cleanser
+                        </h1>
+                        {/* Slogan */}
+                        <p className="text-2xl w-lg">
+                            Double Cleanse, Double the Benefits!
                         </p>
+                        {/* Product Description */}
                         <p className="text-lg w-3xl mt-2">
-                            Moisturizer atau pelembab adalah produk perawatan
-                            kulit yang menghidrasi kulit dengan menyerap air.
-                            Pelembap membantu menjaga fungsi lapisan kulit,
-                            memperbaiki tekstur, dan melindungi dari kerusakan
-                            lingkungan.
+                            First Cleanser adalah produk pembersih yang
+                            digunakan sebagai langkah awal untuk menghilangkan
+                            kotoran dari permukaan kulit. Penggunaan first
+                            cleanser sebelum sabun cuci muka disebut juga dengan
+                            metode Double Cleansing.
                         </p>
                     </div>
                 </div>
 
-                {/* Manfaat */}
+                {/* Benefit Section */}
                 <div className="mx-45">
                     <div className="bg-[#7092CF] h-8 md:h-10 py-7 w-34 md:text-xl flex items-center text-center justify-center font-semibold text-white rounded-tr-lg rounded-tl-lg md:rounded-tr-2xl md:rounded-tl-2xl">
                         Manfaat
                     </div>
                     <div className="bg-white rounded-tr-2xl rounded-bl-2xl rounded-br-2xl py-8 px-10">
                         <div className="flex flex-col md:flex-row items-center gap-6">
-                            {/* Swirl (background) */}
+                            {/* Swirl Element */}
                             <img
                                 src="/Elements-20.png"
                                 alt="Swirl"
                                 className="absolute w-76 h-auto left-42 pb-30"
                             />
 
-                            {/* Mascot (foreground) */}
+                            {/* Mascot */}
                             <img
                                 src="/Pink-3.png"
                                 alt="Mascot"
@@ -72,10 +97,10 @@ export default function produkBasicSkincare() {
                             {/* Benefit List */}
                             <div className="flex flex-col gap-4 w-4xl text-lg ml-88">
                                 {[
-                                    'Melembabkan kulit',
-                                    'Melindungi lapisan kulit',
-                                    'Memperbaiki tekstur kulit',
-                                    'Mempersiapkan kulit untuk tabir surya',
+                                    'Menghilangkan kotoran dan sisa produk waterproof, termasuk polusi',
+                                    'Membersihkan wajah sampai ke pori-pori',
+                                    'Memaksimalkan penyerapan skincare',
+                                    'Mencegah masalah kulit akibat pori yang tersumbat',
                                 ].map((item, index) => (
                                     <div
                                         key={index}
@@ -89,7 +114,7 @@ export default function produkBasicSkincare() {
                     </div>
                 </div>
 
-                {/* Cara Penggunaan */}
+                {/* How to Use Section */}
                 <div className="mx-45 mt-16">
                     <div className="bg-[#7092CF] h-8 md:h-10 py-7 w-60 md:text-xl flex items-center text-center justify-center font-semibold text-white rounded-tr-lg rounded-tl-lg md:rounded-tr-2xl md:rounded-tl-2xl">
                         Cara Penggunaan
@@ -102,10 +127,10 @@ export default function produkBasicSkincare() {
                             {/* Steps */}
                             <div className="flex flex-col gap-6 relative z-10">
                                 {[
-                                    'Bersihkan wajah secara menyeluruh dan keringkan dengan menepuk-nepuknya.',
-                                    'Ambil pelembab seukuran kacang polong.',
-                                    'Oleskan secara merata ke seluruh wajah dan leher dengan lembut.',
-                                    'Gunakan dua kali sehari — di pagi hari dan sebelum tidur.',
+                                    'Pastikan wajah kamu dalam kondisi kering dan ambil first cleanser secukupnya',
+                                    'Pijat first cleanser ke wajah, atau gunakan kapas kalau kamu menggunakan produk berbasis air',
+                                    'Kalau kamu menggunakan produk berbasis minyak, tambahkan sedikit air untuk mengemulsikannya',
+                                    'Bilas sampai bersih dengan air, pastikan semua residu sudah hilang',
                                 ].map((text, i) => (
                                     <div
                                         key={i}
@@ -126,37 +151,41 @@ export default function produkBasicSkincare() {
 
                         {/* Mascot Image */}
                         <img
-                            src="/Blue-2.png" // replace with your actual image path
+                            src="/Blue-2.png"
                             alt="Mascot"
-                            className="absolute bottom-4 right-66 top-288 w-68 h-auto -scale-x-100"
+                            className="absolute bottom-4 right-48 top-290 w-68 h-auto -scale-x-100"
                         />
                         <img
-                            src="/Elements-49.png" // replace with your actual image path
+                            src="/Elements-49.png"
                             alt="Mascot"
-                            className="absolute bottom-4 right-62 top-274 w-38 h-auto"
+                            className="absolute bottom-4 right-45 top-274 w-38 h-auto"
                         />
                     </div>
                 </div>
 
-                {/* Tipe-tipe Produk */}
-
+                {/* Product Type List */}
                 <div className="flex flex-col gap-3 mx-45 mt-16">
-                    <h2 className="text-3xl font-bold">Tipe Moisturizer</h2>
+                    <h2 className="text-3xl font-bold">Tipe First Cleanser</h2>
 
                     {[
                         {
-                            title: 'Gel Moisturizer',
-                            desc: 'Ringan, berbahan dasar air, baik untuk kulit berminyak.',
+                            title: 'Cleansing Oil',
+                            desc: 'Cleansing oil efektif membersihkan produk tahan air tanpa menyebabkan iritasi atau polusi sekunder pada kulit.',
                             link: '/produk/gel-moisturizer',
                         },
                         {
-                            title: 'Cream Moisturizer',
-                            desc: 'Ringan dan mudah dioleskan, cocok untuk digunakan di badan.',
+                            title: 'Micellar Water',
+                            desc: 'Micellar water mengandung micelles yang dapat mengikat kotoran dan minyak, sehingga efektif membersihkan kulit tanpa mengiritasi.',
                             link: '/produk/cream-moisturizer',
                         },
                         {
-                            title: 'Oil-based Moisturizer',
-                            desc: 'Kaya akan minyak, cocok untuk kulit yang sangat kering atau kulit yang sudah tua.',
+                            title: 'Cleansing Balm',
+                            desc: 'Cleansing balm sangat efektif membersihkan produk waterproof, sunscreen, dan sebum berlebih tanpa merusak lapisan pelindung kulit.',
+                            link: '/produk/oil-based-moisturizer',
+                        },
+                        {
+                            title: 'Cleansing Milk',
+                            desc: 'Cleansing milk juga efektif membersihkan kotoran serta membantu menjaga keseimbangan kelembapan dan pH kulit.',
                             link: '/produk/oil-based-moisturizer',
                         },
                     ].map((item, i) => (
@@ -167,13 +196,13 @@ export default function produkBasicSkincare() {
                                 boxShadow: '0px 4px 0px rgba(255, 231, 213, 1)',
                             }}
                         >
-                            <h3 className="text-2xl font-semibold mb-2">
+                            <h3 className="text-2xl font-semibold mb-3">
                                 {item.title}
                             </h3>
                             <p className="text-[#333] mb-5">{item.desc}</p>
                             <a
                                 href={item.link}
-                                className="inline-block bg-white hover:bg-[#405E93] hover:text-white hover:border-[#405E93] border-black font-semibold text-sm px-4 py-2 rounded-full border-2 transition-all"
+                                className="inline-block bg-white hover:bg-[#405E93] hover:text-white hover:border-[#405E93] border-black font-semibold text-xs px-4 py-2 rounded-full border-2 transition-all"
                                 style={{
                                     boxShadow: '0 4px 0px rgba(64, 94, 147, 1)',
                                 }}
