@@ -17,10 +17,9 @@ export default function Home() {
                 className={`${montserrat.className} overflow-hidden`}
                 style={{
                     background: '#D5E4FF',
-                    // color: '#405E93',
                 }}
             >
-                <div className="justify-between text-xs md:text-sm lg:text-base py-6 sm:px-6 px-4 lg:px-8 z-0">
+                <div className="text-[#D5E4FF] justify-between text-xs md:text-sm lg:text-base py-6 sm:px-6 px-4 lg:px-8 z-0">
                     [navigation]
                 </div>
                 <header
@@ -483,7 +482,7 @@ export default function Home() {
                                 onClick={() =>
                                     router.push('/produk-basic-skincare')
                                 }
-                                className="mt-3 md:mt-7 lg:mt-10 text-white bg-[#F38EB1] hover:bg-[#D64F7E] w-3xs md:w-lg lg:w-xl p-2 md:p-4 font-semibold text-xs md:text-lg lg:text-xl rounded-full"
+                                className="mt-3 md:mt-7 lg:mt-10 text-white bg-[#F38EB1] hover:bg-[#D64F7E] w-3xs md:w-lg lg:w-xl p-2 md:p-4 font-semibold text-xs md:text-lg lg:text-xl rounded-full transition"
                                 style={{
                                     boxShadow:
                                         '0px 4px 0px rgba(214, 79, 126, 1)',

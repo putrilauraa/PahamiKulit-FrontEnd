@@ -19,7 +19,7 @@ export default function produkBasicSkincare() {
             >
                 {/* Breadcrumbs */}
                 <nav className="mt-8 ml-8 text-sm space-x-2">
-                    <a href="/" className="hover:underline text-[#7092CF]">
+                    <a href="/basic-skincare" className="hover:underline text-[#7092CF]">
                         Basic Skincare
                     </a>
                     <span>/</span>
