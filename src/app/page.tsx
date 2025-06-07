@@ -17,7 +17,7 @@ export default function Home() {
             <header
                 className={`${montserrat.className} text-main-pink`}
                 style={{
-                    background: 'linear-gradient(to right, #B9CEF2, #7092CF)',
+                    background: 'linear-gradient(to bottom, #7092CF, #B9CEF2)',
                     clipPath: 'ellipse(1300px 375px at center top)',
                 }}
             >
@@ -96,7 +96,7 @@ export default function Home() {
                             </p>
                             <button
                                 onClick={() => router.push('/tes-jenis-kulit')}
-                                className="bg-[#F38EB1] text-white hover:bg-[#D64F7E] text-xs md:text-sm lg:text-lg font-semibold rounded-4xl px-6 py-3 mt-2"
+                                className="bg-[#F38EB1] text-white hover:bg-[#D64F7E] text-xs md:text-sm lg:text-lg font-semibold rounded-4xl px-6 py-3 mt-2 transition"
                                 style={{
                                     boxShadow:
                                         '0px 4px 0px rgba(214, 79, 126, 1)',
@@ -140,7 +140,7 @@ export default function Home() {
                                     onClick={() =>
                                         router.push('/mengenal-bahan-aktif')
                                     }
-                                    className="bg-[#7092CF] text-white hover:bg-[#405E93] font-semibold rounded-3xl md:flex md:mx-auto lg:mx-0 px-5 py-3 mt-2 md:mt-5 lg:mt-2 text-xs md:text-sm"
+                                    className="bg-[#7092CF] text-white hover:bg-[#405E93] font-semibold rounded-3xl md:flex md:mx-auto lg:mx-0 px-5 py-3 mt-2 md:mt-5 lg:mt-2 text-xs md:text-sm transition"
                                     style={{
                                         boxShadow:
                                             '0px 4px 0px rgba(64, 94, 147, 1)',
@@ -183,7 +183,7 @@ export default function Home() {
                                 </p>
                                 <button
                                     onClick={() => router.push('/rekomendasi')}
-                                    className="bg-[#7092CF] text-white hover:bg-[#405E93] font-semibold rounded-3xl md:flex md:mx-auto lg:mx-0 px-5 py-3 mt-2 md:mt-5 lg:mt-2 text-xs md:text-sm"
+                                    className="bg-[#7092CF] text-white hover:bg-[#405E93] font-semibold rounded-3xl md:flex md:mx-auto lg:mx-0 px-5 py-3 mt-2 md:mt-5 lg:mt-2 text-xs md:text-sm transition"
                                     style={{
                                         boxShadow:
                                             '0px 4px 0px rgba(64, 94, 147, 1)',

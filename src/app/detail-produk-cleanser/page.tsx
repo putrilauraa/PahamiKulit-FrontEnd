@@ -19,7 +19,7 @@ export default function produkBasicSkincare() {
             >
                 {/* Breadcrumbs */}
                 <nav className="mt-8 ml-8 text-sm space-x-2">
-                    <a href="/" className="hover:underline text-[#7092CF]">
+                    <a href="/basic-skincare" className="hover:underline text-[#7092CF]">
                         Basic Skincare
                     </a>
                     <span>/</span>
@@ -192,7 +192,7 @@ export default function produkBasicSkincare() {
                             <p className="text-[#333] mb-5">{item.desc}</p>
                             <a
                                 href={item.link}
-                                className="inline-block bg-white hover:bg-[#405E93] hover:text-white hover:border-[#405E93] border-black font-semibold text-xs px-4 py-2 rounded-full border-2 transition-all"
+                                className="inline-block bg-white hover:bg-[#405E93] hover:text-white hover:border-[#405E93] border-black font-semibold text-xs px-4 py-2 rounded-full border-2 transition"
                                 style={{
                                     boxShadow: '0 4px 0px rgba(64, 94, 147, 1)',
                                 }}

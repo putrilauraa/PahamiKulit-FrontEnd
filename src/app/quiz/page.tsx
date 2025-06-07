@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Footer } from '@/components/Footer';
 import { Montserrat, Bai_Jamjuree } from 'next/font/google';
 import { ArrowLeft } from 'lucide-react';
@@ -65,39 +65,12 @@ export default function Quiz() {
     const [totalScore, setTotalScore] = useState(0);
     const [result, setResult] = useState('');
     const [showDialog, setShowDialog] = useState(false);
+    const [isRedirecting, setIsRedirecting] = useState(false);
     const [showExitDialog, setShowExitDialog] = useState(false);
     const [answers, setAnswers] = useState<string[]>([]);
     const [selectedAnswers, setSelectedAnswers] = useState<(number | null)[]>(
         Array(questions.length).fill(null),
     );
-
-    const handleAnswer = (answer: 'A' | 'B' | 'C' | 'D') => {
-        let points = 0;
-
-        switch (answer) {
-            case 'A':
-                points = 4;
-                break;
-            case 'B':
-                points = 3;
-                break;
-            case 'C':
-                points = 2;
-                break;
-            case 'D':
-                points = 1;
-                break;
-        }
-
-        setTotalScore((prev) => prev + points);
-
-        if (currentQuestion < questions.length - 1) {
-            setCurrentQuestion((prev) => prev + 1);
-        } else {
-            calculateResult(totalScore + points);
-            setShowDialog(true);
-        }
-    };
 
     const calculateResult = (finalScore: number) => {
         if (finalScore >= 17) {
@@ -126,7 +99,34 @@ export default function Quiz() {
     };
 
     const handleNext = () => {
+        const currentSelectedIndex = selectedAnswers[currentQuestion];
+        if (currentSelectedIndex === null) return;
+
+        const answerLetter = ['A', 'B', 'C', 'D'][currentSelectedIndex];
+        let points = 0;
+        switch (answerLetter) {
+            case 'A':
+                points = 4;
+                break;
+            case 'B':
+                points = 3;
+                break;
+            case 'C':
+                points = 2;
+                break;
+            case 'D':
+                points = 1;
+                break;
+        }
+
+        // Update totalScore
+        setTotalScore((prev) => prev + points);
+
+        // Simpan jawaban (huruf A/B/C/D)
+        setAnswers((prevAnswers) => [...prevAnswers, answerLetter]);
+
         if (currentQuestion === questions.length - 1) {
+            calculateResult(totalScore + points);
             setShowDialog(true);
         } else {
             setCurrentQuestion((prev) => prev + 1);
@@ -136,11 +136,15 @@ export default function Quiz() {
     const handleDialogOk = () => {
         // Simpan jawaban ke localStorage / session supaya later bisa ditampilin setelah registered
         localStorage.setItem('skinQuizAnswers', JSON.stringify(answers));
-
-        // Tutup dialog & direct ke halaman register
-        setShowDialog(false);
-        router.push('/register');
+        localStorage.setItem('skinQuizResult', result);
+        setIsRedirecting(true);
     };
+
+    useEffect(() => {
+        if (isRedirecting) {
+            router.push('/profil-kulit');
+        }
+    }, [isRedirecting, router]);
 
     const progressPercentage = ((currentQuestion + 1) / questions.length) * 100;
 
@@ -162,11 +166,11 @@ export default function Quiz() {
             <div
                 className={`${montserrat.className} bg-[#E6EEFC] min-h-screen overflow-hidden`}
             >
-                <div className="mt-5 ml-9">[Navigation]</div>
+                <div className="mt-5 ml-9 text-[#E6EEFC]">[Navigation]</div>
 
                 {/* Title Section */}
                 <div
-                    className="hidden md:hidden lg:block absolute bg-[#FFD5E9] h-50 w-50 mt-23 right-92"
+                    className="hidden md:hidden lg:block absolute bg-[#FFD5E9] h-50 w-50 mt-15 right-92"
                     style={{
                         clipPath: 'ellipse(100px 100px at center bottom)',
                     }}
@@ -175,10 +179,10 @@ export default function Quiz() {
                     <img
                         src="/Pink-11.png"
                         alt="Mascot"
-                        className="w-97 h-auto -mt-8"
+                        className="w-97 h-auto -mt-16"
                     />
                 </div>
-                <div className="text-white bg-gradient-to-r from-[#B5CBF0] to-[#7293D0] mx-45 mt-20 mb-16 rounded-xl p-17">
+                <div className="text-white bg-gradient-to-r from-[#B5CBF0] to-[#7293D0] mx-45 mt-12 mb-16 rounded-xl p-17">
                     <h1 className="text-4xl font-bold pb-2">Tes Jenis Kulit</h1>
                     <p className="text-lg">
                         Jawab beberapa pertanyaan untuk mengetahui jenis
@@ -299,17 +303,17 @@ export default function Quiz() {
                 {showDialog && (
                     <div className="fixed inset-0 backdrop-brightness-35 backdrop-blur-sm flex items-center justify-center">
                         <div
-                            className="bg-white p-13 rounded-xl border-1 max-w-lg text-center"
-                            style={{
-                                boxShadow: '0 4px 0px rgba(64, 94, 147, 1)',
-                            }}
+                            className="bg-white p-13 rounded-xl border-2 max-w-lg text-center"
+                            // style={{
+                            //     boxShadow: '0 4px 0px rgba(64, 94, 147, 1)',
+                            // }}
                         >
                             <h2 className="text-2xl font-bold mb-3">
                                 Selesai!
                             </h2>
                             <p className="text-gray-700 mb-5">
-                                Kami akan menganalisis dan mencari
-                                produk yang cocok untuk kamu. Tunggu sebentar, ya
+                                Kami akan menganalisis dan mencari produk yang
+                                cocok untuk kamu. Tunggu sebentar, ya
                             </p>
                             <button
                                 onClick={handleDialogOk}

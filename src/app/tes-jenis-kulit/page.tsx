@@ -14,9 +14,9 @@ export default function basicSkincare() {
         <>
             <Navbar />
 
-            <div className={`${montserrat.className} bg-[#ffffff]`}>
+            <div className={`${montserrat.className} bg-[#E6EEFC]`}>
                 {/* Breadcrumbs */}
-                <nav className="mt-8 ml-8 text-sm space-x-2">
+                <nav className="pt-8 ml-8 text-sm space-x-2">
                     <a href="/" className="hover:underline text-[#7092CF]">
                         Beranda
                     </a>
@@ -31,7 +31,7 @@ export default function basicSkincare() {
 
                 {/* Title Section */}
                 <div
-                    className="hidden md:hidden lg:block absolute bg-[#FFD5E9] h-50 w-50 mt-23 right-92"
+                    className="hidden md:hidden lg:block absolute bg-[#FFD5E9] h-50 w-50 mt-15 right-92"
                     style={{
                         clipPath: 'ellipse(100px 100px at center bottom)',
                     }}
@@ -40,10 +40,10 @@ export default function basicSkincare() {
                     <img
                         src="/Pink-11.png"
                         alt="Mascot"
-                        className="w-97 h-auto -mt-8"
+                        className="w-97 h-auto -mt-16"
                     />
                 </div>
-                <div className="text-white bg-gradient-to-r from-[#7293D0] to-[#B5CBF0] mx-45 mt-20 mb-30 rounded-xl p-17">
+                <div className="text-white bg-gradient-to-b from-[#7293D0] to-[#B5CBF0] mx-45 mt-12 mb-30 rounded-xl p-17">
                     <h1 className="text-4xl font-bold pb-2">Tes Jenis Kulit</h1>
                     <p className="text-lg">
                         Jawab beberapa pertanyaan untuk mengetahui jenis
@@ -68,9 +68,9 @@ export default function basicSkincare() {
                     </p>
                     <button
                         onClick={() => router.push('/quiz')}
-                        className="bg-[#7092CF] hover:bg-[#405E93] font-semibold text-lg text-white rounded-4xl w-md p-3 mt-8"
+                        className="border-2 border-[#405E93] bg-white hover:bg-[#7092CF] hover:border-[#7092CF] hover:text-white font-semibold text-lg rounded-4xl w-md p-3 mt-8 transition"
                         style={{
-                            boxShadow: '0px 4px 0px rgba(64, 94, 147, 1)',
+                            boxShadow: '0px 4px 0px rgba(112, 146, 207, 1)',
                         }}
                     >
                         Mulai
@@ -85,10 +85,14 @@ export default function basicSkincare() {
 
                 {/* See Skin Profile CTA */}
 
+                {/* style={{
+                                boxShadow: '0 5px 0px rgba(213, 228, 255, 1)',
+                            }} */}
+
                 <div
                     className="relative h-84 mt-30"
                     style={{
-                        background: '#E6EEFC',
+                        background: '#ffffff',
                         clipPath: 'ellipse(1000px 312px at center bottom)',
                         boxShadow: '0px 4px 0px rgba(0,0,0,0.15)',
                     }}
@@ -100,26 +104,26 @@ export default function basicSkincare() {
                             className="w-50 h-auto ml-137 -mb-10"
                         />
                         <div
-                            className="flex items-center bg-white px-15 py-5 rounded-full w-150 mx-auto"
+                            className="flex items-center bg-[#FFF6ED] px-15 py-6 rounded-full w-150 mx-auto"
                             style={{
-                                boxShadow: '0px 4px 0px rgba(0,0,0,0.15)',
+                                boxShadow: '0 5px 0px rgba(255, 231, 213, 1)',
                             }}
                         >
                             <div>
-                                <p className="font-semibold text-xl">
+                                <p className="font-semibold text-xl mb-1">
                                     Profil Kulit
                                 </p>
-                                <p>
+                                <p className="leading-5 text-sm">
                                     Sudah pernah ambil tes jenis kulit? silakan
                                     masuk
                                 </p>
                             </div>
 
                             <button
-                                className="border-2 border-[#405E93] bg-white hover:bg-[#7092CF] hover:border-[#7092CF] hover:text-white font-medium rounded-full px-6 py-2 ml-8 text-sm"
+                                className="bg-[#7092CF] hover:bg-[#405E93] text-white font-medium rounded-full px-6 py-2 ml-8 text-sm"
                                 style={{
                                     boxShadow:
-                                        '0px 4px 0px rgba(112, 146, 207, 1)',
+                                        '0px 4px 0px rgba(64, 94, 147, 1)',
                                 }}
                             >
                                 Masuk
