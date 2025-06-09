@@ -7,7 +7,7 @@ import { useRouter } from 'next/navigation';
 
 const montserrat = Montserrat({ weight: '500', subsets: ['latin'] });
 
-export default function basicSkincare() {
+export default function TesJenisKulit() {
     const router = useRouter();
 
     return (
@@ -64,7 +64,7 @@ export default function basicSkincare() {
                     </p>
                     <p className="w-lg text-base">
                         Untuk membantu mengetahui kandungan dan produk skincare
-                        yang tepat untuk kondisi kulitmu.
+                        yang tepat untuk kondisi kulitmu
                     </p>
                     <button
                         onClick={() => router.push('/quiz')}
@@ -114,7 +114,7 @@ export default function basicSkincare() {
                                     Profil Kulit
                                 </p>
                                 <p className="leading-5 text-sm">
-                                    Sudah pernah ambil tes jenis kulit? silakan
+                                    Sudah pernah melakukan tes ini? silakan
                                     masuk
                                 </p>
                             </div>

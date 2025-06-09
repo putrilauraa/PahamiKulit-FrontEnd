@@ -45,7 +45,7 @@ export default function MengenalBahanAktif() {
                 <div className="mx-4 lg:mx-45 my-10">
                     {/* Border */}
                     <div
-                        className="bg-white border-3 border-[#7092CF] rounded-2xl flex items-center justify-center px-10 py-2"
+                        className="bg-white border-3 border-[#7092CF] rounded-2xl flex items-center justify-center px-10 py-4"
                         style={{
                             boxShadow: '4px 4px 0px rgba(185, 203, 232)',
                         }}
@@ -65,19 +65,16 @@ export default function MengenalBahanAktif() {
                             </h1>
 
                             {/* Description */}
-                            <p className="pt-6 pb-3">
+                            <p className="pt-3 pb-5 text-sm">
                                 Bahan aktif skincare adalah kandungan utama
                                 dalam produk skincare yang berfungsi langsung
-                                untuk memberikan manfaat spesifik pada kulit,
-                                seperti mengatasi masalah atau meningkatkan
-                                kondisi kulit.
-                            </p>
-                            <p>
+                                untuk memberikan manfaat spesifik pada kulit.
                                 Biasanya, bahan aktif skincare digunakan untuk
                                 menjadi fokus utama dari produk dan bekerja
                                 secara efektif untuk mencapai hasil yang
                                 diinginkan.
                             </p>
+                            <p className='font-bold text-[#D64F7E]'>Klik bahan aktif di bawah ini yang ingin kamu pelajari</p>
                         </div>
                     </div>
                 </div>

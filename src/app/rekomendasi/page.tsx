@@ -10,17 +10,17 @@ const montserrat = Montserrat({ weight: '500', subsets: ['latin'] });
 }
 const products = Array(9).fill({
     name: "For Skin's Sake Weightless Sunscreen",
-    tags: ['SPF', 
+    tags: ['SPF',
         // 'Pelembab', 'Pembersih'
     ],
     approved: true,
 });
 
-export default function RekomendasiSkincare() {
+export default function Rekomendasi() {
     return (
         <div className={`min-h-screen bg-[var(--color-background)] ${montserrat.className}`}>
             <Navbar />
-            
+
             {/* Upper */}
             <div className="flex justify-center">
                 <div>

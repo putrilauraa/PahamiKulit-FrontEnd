@@ -138,7 +138,7 @@ export default function Home() {
                                 </p>
                                 <button
                                     onClick={() =>
-                                        router.push('/mengenal-bahan-aktif')
+                                        router.push('/mix-and-match')
                                     }
                                     className="bg-[#7092CF] text-white hover:bg-[#405E93] font-semibold rounded-3xl md:flex md:mx-auto lg:mx-0 px-5 py-3 mt-2 md:mt-5 lg:mt-2 text-xs md:text-sm transition"
                                     style={{
@@ -182,7 +182,7 @@ export default function Home() {
                                     tepat sesuai dengan kebutuhan kulit kamu
                                 </p>
                                 <button
-                                    onClick={() => router.push('/rekomendasi')}
+                                    onClick={() => router.push('/rekomendasi-landing')}
                                     className="bg-[#7092CF] text-white hover:bg-[#405E93] font-semibold rounded-3xl md:flex md:mx-auto lg:mx-0 px-5 py-3 mt-2 md:mt-5 lg:mt-2 text-xs md:text-sm transition"
                                     style={{
                                         boxShadow:

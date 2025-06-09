@@ -269,7 +269,7 @@ export default function Quiz() {
                             </h2>
                             <p className="text-gray-700 mb-6">
                                 Selesaikan tes jenis kulit untuk mengetahui
-                                kandungan dan produk terbaik untuk kulitmu.
+                                produk dan kandungan yang tepat untuk kulitmu.
                             </p>
 
                             <div className="flex justify-center gap-4">
@@ -312,8 +312,7 @@ export default function Quiz() {
                                 Selesai!
                             </h2>
                             <p className="text-gray-700 mb-5">
-                                Kami akan menganalisis dan mencari produk yang
-                                cocok untuk kamu. Tunggu sebentar, ya
+                                Kami akan melakukan analisis untuk menemukan produk yang sesuai dengan kebutuhanmu. Tunggu sebentar, ya
                             </p>
                             <button
                                 onClick={handleDialogOk}

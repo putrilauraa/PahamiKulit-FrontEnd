@@ -26,7 +26,7 @@ const listBahanAktif: BahanAktif[] = [
     { id: 10, name: 'Squalane', type: 'lembut' },
     { id: 11, name: 'Allantoin', type: 'lembut' },
     { id: 12, name: 'Centella Asiatica', type: 'lembut' },
-    { id: 13, name: 'Tranexamic Acid', type: 'lembut' },
+    { id: 13, name: 'Tranexamic Acid', type: 'keras' },
     { id: 14, name: 'Peptide', type: 'lembut' },
     { id: 15, name: 'Vitamin C', type: 'keras' },
     { id: 16, name: 'Propolis', type: 'lembut' },

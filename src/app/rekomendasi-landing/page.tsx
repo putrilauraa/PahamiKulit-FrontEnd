@@ -8,7 +8,7 @@ import { useState } from 'react';
 
 const montserrat = Montserrat({ weight: '500', subsets: ['latin'] });
 
-export default function basicSkincare() {
+export default function RekomendasiSkincare() {
     const [skinType, setSkinType] = useState('');
     const [skinProblem, setSkinProblem] = useState('');
     const router = useRouter();

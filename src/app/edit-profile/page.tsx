@@ -7,7 +7,7 @@ import { useRouter } from 'next/navigation';
 
 const montserrat = Montserrat({ weight: '500', subsets: ['latin'] });
 
-export default function Profile() {
+export default function EditProfile() {
     const router = useRouter();
 
     return (
