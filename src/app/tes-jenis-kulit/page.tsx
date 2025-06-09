@@ -92,12 +92,12 @@ export default function basicSkincare() {
                 <div
                     className="relative h-84 mt-30"
                     style={{
-                        background: '#ffffff',
+                        background: '#D5E4FF',
                         clipPath: 'ellipse(1000px 312px at center bottom)',
                         boxShadow: '0px 4px 0px rgba(0,0,0,0.15)',
                     }}
                 >
-                    <div className="pt-8">
+                    <div className="pt-7">
                         <img
                             src="/Blue-3.png"
                             alt="Mascot"

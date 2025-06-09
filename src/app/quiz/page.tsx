@@ -182,7 +182,7 @@ export default function Quiz() {
                         className="w-97 h-auto -mt-16"
                     />
                 </div>
-                <div className="text-white bg-gradient-to-r from-[#B5CBF0] to-[#7293D0] mx-45 mt-12 mb-16 rounded-xl p-17">
+                <div className="text-white bg-gradient-to-b from-[#7293D0] to-[#B5CBF0] mx-45 mt-12 mb-16 rounded-xl p-17">
                     <h1 className="text-4xl font-bold pb-2">Tes Jenis Kulit</h1>
                     <p className="text-lg">
                         Jawab beberapa pertanyaan untuk mengetahui jenis

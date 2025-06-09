@@ -7,7 +7,7 @@ import { useRouter } from 'next/navigation';
 
 const montserrat = Montserrat({ weight: '500', subsets: ['latin'] });
 
-export default function produkBasicSkincare() {
+export default function BasicSkincareMoisturizer() {
     const router = useRouter();
 
     return (

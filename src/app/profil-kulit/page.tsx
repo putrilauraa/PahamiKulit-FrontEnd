@@ -341,7 +341,7 @@ export default function ProfilKulit() {
                             }}
                         >
                             <p className="text-lg w-sm">
-                                Berikut ini bahan-bahan yang cocok untuk jenis
+                                Berikut ini bahan-bahan skincare yang cocok untuk jenis
                                 kulitmu
                             </p>
                             <div className="flex flex-wrap gap-3">
