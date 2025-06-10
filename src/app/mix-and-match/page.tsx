@@ -74,11 +74,11 @@ export default function MixMatchPage() {
     const getResultStyle = () => {
         const result = getResult();
         if (result === 'Aman') {
-            return 'border-3 border-solid border-green-500 bg-green-50';
+            return 'border lg:border-3 border-solid border-green-500 bg-green-50';
         } else if (result === 'Tidak Disarankan') {
-            return 'border-3 border-solid border-red-500 bg-red-50';
+            return 'border lg:border-3 border-solid border-red-500 bg-red-50';
         } else {
-            return 'border-4 border-dashed border-gray-400 bg-white';
+            return 'border-2 lg:border-4 border-dashed border-gray-400 bg-white';
         }
     };
 
@@ -87,10 +87,10 @@ export default function MixMatchPage() {
             <Navbar />
 
             <div
-                className={`${montserrat.className} min-h-screen pb-20 bg-[#E6EEFC] pt-8`}
+                className={`${montserrat.className} min-h-screen pb-5 lg:pb-20 bg-[#E6EEFC] pt-5 lg:pt-8`}
             >
                 {/* Breadcrumbs */}
-                <nav className="ml-8 text-sm space-x-2">
+                <nav className="ml-4 lg:ml-8 text-xs lg:text-sm space-x-2">
                     <a
                         href="/mengenal-bahan-aktif"
                         className="hover:underline text-[#7092CF]"
@@ -106,41 +106,41 @@ export default function MixMatchPage() {
                     </a>
                 </nav>
 
-                <div className="mx-45">
+                <div className="mx-5 lg:mx-45">
                     <div
-                        className="bg-[#FFF6ED] my-13 px-14 py-12 rounded-2xl border-3 border-black"
+                        className="bg-[#FFF6ED] my-8 lg:my-13 px-7 py-7 lg:px-14 lg:py-12 rounded-2xl border-2 lg:border-3 border-black"
                         style={{
                             boxShadow: '8px 8px 0px rgba(185, 203, 232, 1)',
                         }}
                     >
-                        <h1 className="text-4xl font-extrabold mb-2 text-center">
+                        <h1 className="text-lg lg:text-4xl font-extrabold lg:mb-2 text-center">
                             Mix & Match Bahan Aktif Skincare
                         </h1>
 
-                        <p className="text-center text-xl font-medium">
+                        <p className="text-center text-xs lg:text-xl font-medium">
                             Klik bahan aktif yang ingin kamu kombinasikan
                         </p>
 
-                        <div className="flex flex-col md:flex-row justify-center gap-6 mt-10">
-                            <div className="flex-1 border-4 border-dashed border-[#D64F7E] rounded-lg p-6 min-h-[100px] flex items-center justify-center bg-white">
+                        <div className="flex justify-center gap-4 lg:gap-6 mt-6 lg:mt-10">
+                            <div className="lg:flex-1 border-2 lg:border-4 border-dashed border-[#D64F7E] rounded-lg p-2 lg:p-6 lg:min-h-[100px] flex items-center justify-center bg-white">
                                 {selectedBahan1 ? (
-                                    <span className="text-xl font-semibold">
+                                    <span className="text-sm lg:text-xl font-semibold">
                                         {selectedBahan1.name}
                                     </span>
                                 ) : (
-                                    <span className="text-gray-500">
+                                    <span className="text-gray-500 text-xs lg:text-base">
                                         Pilih bahan pertama
                                     </span>
                                 )}
                             </div>
 
-                            <div className="flex-1 border-4 border-dashed border-[#D64F7E] rounded-lg p-6 min-h-[100px] flex items-center justify-center bg-white">
+                            <div className="lg:flex-1 border-2 lg:border-4 border-dashed border-[#D64F7E] rounded-lg p-2 lg:p-6 lg:min-h-[100px] flex items-center justify-center bg-white">
                                 {selectedBahan2 ? (
-                                    <span className="text-xl font-semibold">
+                                    <span className="text-sm lg:text-xl font-semibold">
                                         {selectedBahan2.name}
                                     </span>
                                 ) : (
-                                    <span className="text-gray-500">
+                                    <span className="text-gray-500 text-xs lg:text-base">
                                         Pilih bahan kedua
                                     </span>
                                 )}
@@ -151,7 +151,7 @@ export default function MixMatchPage() {
                             </div>
 
                             <div
-                                className={`flex-1 rounded-lg p-6 min-h-[100px] flex items-center justify-center transition-all duration-300 ${getResultStyle()}`}
+                                className={`lg:flex-1 rounded-lg p-2 lg:p-6 lg:min-h-[100px] flex items-center justify-center transition-all duration-300 ${getResultStyle()}`}
                             >
                                 <AnimatePresence>
                                     {selectedBahan1 && selectedBahan2 && (
@@ -161,7 +161,7 @@ export default function MixMatchPage() {
                                             exit={{ opacity: 0, y: -20 }}
                                             className="text-center"
                                         >
-                                            <p className="text-2xl font-bold">
+                                            <p className=" text-base lg:text-2xl font-bold">
                                                 {/* Hasil kombinasi:{' '} */}
                                                 <span
                                                     className={
@@ -179,10 +179,10 @@ export default function MixMatchPage() {
                             </div>
                         </div>
 
-                        <div className="flex justify-center mt-7">
+                        <div className="flex justify-center mt-4 lg:mt-7">
                             <button
                                 onClick={handleReset}
-                                className="flex items-center bg-[#F38EB1] hover:bg-[#D64F7E] text-white mt-2 px-8 py-3 rounded-full font-semibold transition"
+                                className="flex items-center bg-[#F38EB1] hover:bg-[#D64F7E] text-white text-xs lg:text-base mt-2 px-5 lg:px-8 py-2 lg:py-3 rounded-full font-semibold transition"
                                 style={{
                                     boxShadow:
                                         '0px 4px 0px rgba(214, 79, 126, 1)',
@@ -219,7 +219,7 @@ export default function MixMatchPage() {
                                 <div
                                     key={bahan.id}
                                     onClick={() => handleCardClick(bahan)}
-                                    className={`relative cursor-pointer border-2 rounded-lg p-4 text-center font-medium transition transform hover:scale-105 hover:shadow-lg ${
+                                    className={`relative cursor-pointer text-sm lg:text-base border-2 rounded-lg p-4 text-center font-medium transition transform hover:scale-105 hover:shadow-lg ${
                                         isSelected
                                             ? 'bg-green-100 border-green-400'
                                             : 'bg-white border-[#B9CBE8]'

@@ -39,13 +39,13 @@ export default function MengenalBahanAktif() {
             <Navbar />
 
             <div
-                className={`${montserrat.className} bg-[#E6EEFC] pt-10 pb-15 min-h-screen`}
+                className={`${montserrat.className} bg-[#E6EEFC] pt-1 lg:pt-10 pb-8 lg:pb-15 min-h-screen`}
             >
                 {/* Card 1 */}
-                <div className="mx-4 lg:mx-45 my-10">
+                <div className="mx-5 lg:mx-45 my-10">
                     {/* Border */}
                     <div
-                        className="bg-white border-3 border-[#7092CF] rounded-2xl flex items-center justify-center px-10 py-4"
+                        className="bg-white border-3 border-[#7092CF] rounded-2xl flex items-center justify-center px-6 py-6 lg:px-10 lg:py-4"
                         style={{
                             boxShadow: '4px 4px 0px rgba(185, 203, 232)',
                         }}
@@ -53,19 +53,24 @@ export default function MengenalBahanAktif() {
                         {/* Ilustrasi */}
                         <div>
                             <img
-                                className="w-75 h-auto"
+                                className="hidden lg:block w-75 h-auto"
                                 src="mba-page.png"
                                 alt="Mascot"
                             ></img>
                         </div>
-                        <div className="ml-5">
+                        <div className="lg:ml-5">
+                            <img
+                                className="block lg:hidden w-26 h-auto justify-center items-center mx-auto"
+                                src="mba-page.png"
+                                alt="Mascot"
+                            ></img>
                             {/* Title */}
-                            <h1 className="font-bold text-4xl">
+                            <h1 className="font-bold text-xl lg:text-4xl">
                                 Yuk Mengenal Bahan Aktif Skincare!
                             </h1>
 
                             {/* Description */}
-                            <p className="pt-3 pb-5 text-sm">
+                            <p className="pt-2 lg:pt-3 pb-3 lg:pb-5 text-xs lg:text-sm">
                                 Bahan aktif skincare adalah kandungan utama
                                 dalam produk skincare yang berfungsi langsung
                                 untuk memberikan manfaat spesifik pada kulit.
@@ -74,20 +79,23 @@ export default function MengenalBahanAktif() {
                                 secara efektif untuk mencapai hasil yang
                                 diinginkan.
                             </p>
-                            <p className='font-bold text-[#D64F7E]'>Klik bahan aktif di bawah ini yang ingin kamu pelajari</p>
+                            <p className="font-semibold lg:font-bold text-xs lg:text-base text-[#D64F7E]">
+                                Klik bahan aktif di bawah ini yang ingin kamu
+                                pelajari
+                            </p>
                         </div>
                     </div>
                 </div>
 
                 {/* Bahan Aktif dinamis */}
-                <div className="mx-4 lg:mx-45 mt-15 pb-10">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+                <div className="mx-5 lg:mx-45 lg:mt-15 pb-6 lg:pb-10">
+                    <div className="grid grid-cols-2 lg:grid-cols-5 gap-4">
                         {listBahanAktif.map((bahanAktif) => {
                             return (
                                 <Link
                                     href={`/bahan-aktif/${bahanAktif.id}`}
                                     key={bahanAktif.id}
-                                    className="items-center bg-white justify-center text-center hover:text-white hover:bg-[#7092CF] border-[#B9CBE8] hover:border-[#7092CF] border-2 p-5 rounded-2xl"
+                                    className="flex items-center bg-white justify-center text-center hover:text-white hover:bg-[#7092CF] border-[#B9CBE8] hover:border-[#7092CF] border-2 p-5 rounded-2xl"
                                 >
                                     <div>{bahanAktif.name}</div>
                                 </Link>
@@ -97,36 +105,41 @@ export default function MengenalBahanAktif() {
                 </div>
 
                 {/* Card 2 */}
-                <div className="mx-4 lg:mx-45 my-5">
+                <div className="mx-5 lg:mx-45 my-5">
                     {/* Border */}
                     <div
-                        className="bg-[#FFF6ED] rounded-2xl flex items-center px-10 py-4"
+                        className="bg-[#FFF6ED] rounded-2xl flex items-center px-6 py-6 lg:px-10 lg:py-4"
                         style={{
                             boxShadow: '6px 6px 0px rgba(255, 231, 213, 1)',
                         }}
                     >
                         {/* Ilustrasi */}
                         <img
-                            className="w-60 h-auto"
+                            className="hidden lg:block w-60 h-auto"
                             src="/Blue-10.png"
                             alt="Mascot"
                         ></img>
 
-                        <div className="ml-10">
+                        <div className="lg:ml-10">
+                            <img
+                                className="block lg:hidden w-30 h-auto justify-center mx-auto mb-1"
+                                src="/Blue-10.png"
+                                alt="Mascot"
+                            ></img>
                             {/* Title */}
-                            <h1 className="font-bold text-4xl">
+                            <h1 className="font-bold text-xl lg:text-4xl">
                                 Mix & Match Bahan Aktif
                             </h1>
 
                             {/* Description */}
-                            <p className="font-medium my-2 md:my-4 text-xs md:text-sm lg:text-lg ">
+                            <p className="font-medium my-1 lg:my-2 md:my-4 text-xs md:text-sm lg:text-lg ">
                                 Eits! jangan asal campur skincare, pahami dulu
                                 yuk tentang kandungan aktif apa saja yang boleh
                                 digunakan secara bersamaan
                             </p>
                             <button
                                 onClick={() => router.push('/mix-and-match')}
-                                className="bg-[#7092CF] text-white hover:bg-[#405E93] text-xs md:text-sm lg:text-base font-semibold rounded-4xl px-6 py-3 mt-2 transition"
+                                className="bg-[#7092CF] text-white hover:bg-[#405E93] text-xs md:text-sm lg:text-base font-semibold rounded-4xl px-4 lg:px-6 py-2 lg:py-3 mt-2 transition"
                                 style={{
                                     boxShadow:
                                         '0px 4px 0px rgba(64, 94, 147, 1)',
