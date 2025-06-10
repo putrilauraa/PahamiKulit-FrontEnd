@@ -73,6 +73,11 @@ export default function SkincareDetailPage() {
         fetchData();
     }, [params?.id]);
 
+    // Navigate to the product page
+    const goToProductPage = (productTypeId: number) => {
+        router.push(`/detail-produk?id=${productTypeId}`);
+    };
+
     // Helper function to split text by commas
     const formatTextToList = (text: string) => {
         return text
@@ -292,8 +297,8 @@ export default function SkincareDetailPage() {
                                 </p>
                                 <button
                                     onClick={() =>
-                                        router.push(
-                                            `/detail-produk?id=${productType.product_type.id}`,
+                                        goToProductPage(
+                                            productType.product_type.id,
                                         )
                                     }
                                     className="inline-block bg-white hover:bg-[#405E93] hover:text-white hover:border-[#405E93] border-black font-semibold text-xs px-4 py-2 rounded-full border-2 transition"
