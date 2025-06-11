@@ -86,15 +86,18 @@ export default function BasicSkincare() {
                                 {' '}
                                 Kenapa Harus Pakai Skincare?
                             </div>
-                            <div className="py-1 md:py-3 lg:py-5 text-[10px] md:text-sm lg:text-base">
-                                Tujuan penggunaan skincare secara rutin bukan
-                                hanya soal penampilan saja lho, tetapi juga
-                                menjaga kesehatan kulit. Skincare dapat membantu
-                                mengatasi berbagai masalah kulit seperti
-                                jerawat, kusam, bahkan penuaan dini, sekaligus
-                                melindungi kulit dari paparan polusi serta sinar
-                                matahari. Kulit yang dirawat dengan baik akan
-                                tampak lebih bersih dan segar.
+                            <div className="py-1 md:py-3 lg:py-4 text-[10px] md:text-sm lg:text-base">
+                                Skincare itu bukan cuma buat gaya-gayaan, lho!
+                                Merawat kulit secara rutin sebenarnya penting
+                                banget buat jaga kesehatan kulit kamu dan
+                                meminimalisir potensi kerusakan kulit. Misalnya
+                                nih, skincare bisa bantu ngusir jerawat, bikin
+                                wajah nggak kusam, dan mencegah penuaan
+                                dini—biar kulitmu tetap kece sampai nanti. Gak
+                                cuma itu, skincare juga jadi tameng dari polusi
+                                dan sinar matahari. Kulit yang dirawat bakal
+                                kelihatan lebih bersih, segar, dan pastinya
+                                makin percaya diri!
                             </div>
                         </div>
                     </div>
@@ -229,8 +232,8 @@ export default function BasicSkincare() {
                             </div>
                             <div className="text-[10px] md:text-xs lg:text-base md:py-4 lg:py-6 md:w-md lg:w-4xl">
                                 Basic skincare adalah rutinitas perawatan kulit
-                                dasar yang terdiri dari langkah-langkah simpel &
-                                penting. Seperti{' '}
+                                dasar yang terdiri dari langkah-langkah
+                                sederhana & penting. Yaitu{' '}
                                 <span className="text-[#D34E7C]">
                                     membersihkan
                                 </span>
@@ -344,7 +347,7 @@ export default function BasicSkincare() {
                                 />
                             </div>
                             <p className="text-xs md:text-base font-medium md:font-extrabold mt-3 md:mt-4">
-                                SPF
+                                Sunscreen
                             </p>
                         </div>
                     </div>

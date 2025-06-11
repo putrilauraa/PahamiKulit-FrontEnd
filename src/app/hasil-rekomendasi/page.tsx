@@ -30,32 +30,30 @@ export default function HasilRekomendasi() {
     }, []);
 
     return (
-        <div
-            className={`min-h-screen bg-[var(--color-background)] ${montserrat.className}`}
-        >
+        <>
             <Navbar />
 
-            {/* Upper */}
-            <div className="flex justify-center">
-                <div>
-                    {/* Hasil Rekomendasi */}
-                    <div className="flex justify-center">
-                        <div className="flex gap-2 mb-4 mt-6 sm:mt-8">
-                            <div className="px-6 sm:px-6 py-2 rounded-full font-bold text-[#405E93] bg-[#D5E4FF]">
-                                Hasil
-                            </div>
-                            <div className="px-6 sm:px-6 py-2 rounded-full font-bold text-[#405E93] bg-[#FFD5E9]">
-                                Rekomendasi
-                            </div>
-                        </div>
+            <div
+                className={`${montserrat.className} bg-[#E6EEFC] overflow-hidden min-h-screen`}
+            >
+                <div className='mt-15'>
+                    <div className="bg-[#D5E4FF] text-[#405E93] flex justify-center mx-auto w-20 font-semibold px-4 py-2 rounded-full mt-8 lg:mt-10 text-xs lg:text-lg">
+                        Hasil
                     </div>
 
-                    {/* Rekomendasi Skincare Intro */}
-                    <div className="relative w-full max-w-lg sm:max-w-2xl lg:max-w-4xl rounded-2xl bg-[#B9CBE8] text-[#405E93] px-4 sm:px-8 md:px-16 py-6 sm:py-8text-[#405E93] flex flex-col items-center">
-                        <h1 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2 text-center">
+                    <div className="absolute text-[#405E93] mt-6 lg:mt-8 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[#FFD5E9] font-semibold px-6 py-2 rounded-full text-xs lg:text-lg">
+                        Rekomendasi Skincare
+                    </div>
+                    <img
+                        src="/Elements-48.png"
+                        alt="Element"
+                        className="hidden lg:block absolute right-62 w-42 h-auto top-33 rotate-25"
+                    />
+                    <div className="text-white bg-[#B9CBE8] rounded-2xl mt-6 lg:mt-9 mx-5 lg:mx-45 px-7 lg:px-10 py-7 lg:py-14 text-center">
+                        <h1 className="text-xl lg:text-4xl font-bold">
                             Rekomendasi Skincare
                         </h1>
-                        <p className="text-center text-sm sm:text-base md:text-lg opacity-90">
+                        <p className="mt-1 lg:mt-3 text-xs lg:text-lg lg:w-3xl flex mx-auto lg:leading-6">
                             Berikut ini rekomendasi produk yang diberikan
                             berdasarkan informasi jenis kulit dan permasalahan
                             kulit yang kamu masukkan. Hasil rekomendasi bersifat
@@ -63,33 +61,21 @@ export default function HasilRekomendasi() {
                             dermatologi.
                         </p>
                     </div>
+                    <img
+                        src="/Elements-40.png"
+                        alt="Element"
+                        className="hidden lg:block absolute left-62 w-42 h-auto top-90"
+                    />
                 </div>
-            </div>
 
-            <div
-                className="h-80 relative"
-                style={{
-                    background: '#E6EEFC',
-                    clipPath: 'ellipse(1000px 200px at center bottom)',
-                }}
-            ></div>
-
-            {/* Products*/}
-            <div>
-                <div
-                    className="w-full bg-[#E6EEFC]"
-                    style={
-                        {
-                            // clipPath: 'ellipse(1200px 1500px at center bottom)',
-                        }
-                    }
-                >
-                    {/* Product List */}
-                    <div className="max-w-xs sm:max-w-2xl md:max-w-4xl lg:max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 px-2 sm:px-4 md:px-8 pb-100 sm:pb-10">
+                {/* Product List */}
+                <div className="my-25">
+                    <div className="max-w-xs sm:max-w-2xl md:max-w-4xl lg:max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 px-2 sm:px-4 md:px-8">
                         {products.map((product, idx) => (
                             <CardProduct
                                 key={idx}
                                 cardKey={idx}
+                                brand={product.brand.name}
                                 productName={product.name}
                                 image={product.image}
                                 tags={[product.product_category.description]}
@@ -98,8 +84,9 @@ export default function HasilRekomendasi() {
                         ))}
                     </div>
                 </div>
+
+                <Footer />
             </div>
-            <Footer />
-        </div>
+        </>
     );
 }

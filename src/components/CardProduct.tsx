@@ -3,7 +3,8 @@ import { Card, CardDescription, CardFooter } from '@/components/ui/card';
 import Image from 'next/image';
 
 interface iCardProduct {
-    cardKey: number; // ✅ renamed
+    cardKey: number;
+    brand: string;
     productName: string;
     image: string;
     tags: string[];
@@ -11,6 +12,7 @@ interface iCardProduct {
 }
 
 const CardProduct: React.FC<iCardProduct> = ({
+    brand,
     cardKey,
     productName,
     tags,
@@ -20,7 +22,7 @@ const CardProduct: React.FC<iCardProduct> = ({
     return (
         <Card>
             <CardDescription>
-                <div className="p-4">
+                <div className="px-6 pt-6">
                     <div className="relative w-full h-64 mb-10">
                         <Image
                             src={image}
@@ -45,7 +47,10 @@ const CardProduct: React.FC<iCardProduct> = ({
                             </span>
                         ))}
                     </div>
-                    <div className="mt-2 font-bold text-xl text-black">
+                    <div className="mt-3 font-semibold text-lg text-black">
+                        {brand}
+                    </div>
+                    <div className="text-lg text-black">
                         {productName}
                     </div>
                 </div>
@@ -53,11 +58,11 @@ const CardProduct: React.FC<iCardProduct> = ({
 
             <CardFooter>
                 {approvedByDoct && (
-                    <span className="flex items-center px-3 py-1 rounded-md border-2 border-[#84CDA8] text-[#3CB371] text-xs font-medium">
+                    <span className="flex items-center px-2 py-1 mt-3 rounded-md border-2 border-[#84CDA8] text-[#3CB371] text-xs font-medium">
                         <img
                             src="/Check.png"
                             alt="Checked"
-                            className="w-5 h-auto mr-2"
+                            className="w-5 h-auto mr-1"
                         />
                         BPOM Registered
                     </span>
