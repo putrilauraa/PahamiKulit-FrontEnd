@@ -1,4 +1,5 @@
 'use client';
+import React, { useEffect, useState } from 'react';
 import Navbar from '@/components/Navbar';
 import { Montserrat } from 'next/font/google';
 import { Footer } from '@/components/Footer';
@@ -7,32 +8,74 @@ import { useRouter } from 'next/navigation';
 
 const montserrat = Montserrat({ weight: '500', subsets: ['latin'] });
 
+type brand = {
+    id: number;
+    name: string;
+};
+
+type ProductCategory = {
+    id: number;
+    description: string;
+};
+
+type products = {
+    id: number;
+    brand: brand;
+    name: string;
+    image: string;
+    product_category: ProductCategory;
+};
+
+type IngredientType = {
+    id: number;
+    name: string;
+
+};
+
+type Ingredient = {
+    id: number;
+    name: string;
+    ingredient_type: IngredientType;
+    products: products[];
+};
+
 export default function MengenalBahanAktif() {
     const router = useRouter();
+    const [ingredients, setIngredients] = useState<Ingredient[]>([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const res = await fetch('/api/mengenal-bahan-aktif');
+            const json = await res.json();
+            setIngredients(json.data);
+        };
+        fetchData();
+        console.log(ingredients);
+    }, []);
 
     // sample data
-    const listBahanAktif = [
-        { id: 1, name: 'Niacinamide' },
-        { id: 2, name: 'Hyaluronic Acid' },
-        { id: 3, name: 'Ceramide' },
-        { id: 4, name: 'Bakuchiol' },
-        { id: 5, name: 'AHA' },
-        { id: 6, name: 'BHA' },
-        { id: 7, name: 'PHA' },
-        { id: 8, name: 'Alpha Arbutin' },
-        { id: 9, name: 'Panthenol' },
-        { id: 10, name: 'Squalane' },
-        { id: 11, name: 'Allantoin' },
-        { id: 12, name: 'Centella Asiatica' },
-        { id: 13, name: 'Tranexamic Acid' },
-        { id: 14, name: 'Peptide' },
-        { id: 15, name: 'Vitamin C' },
-        { id: 16, name: 'Propolis' },
-        { id: 17, name: 'Glycerin' },
-        { id: 18, name: 'Aloe Vera' },
-        { id: 19, name: 'Mugwort' },
-        { id: 20, name: 'Oat' },
-    ];
+    // const listBahanAktif = [
+    //     { id: 1, name: 'Niacinamide' },
+    //     { id: 2, name: 'Hyaluronic Acid' },
+    //     { id: 3, name: 'Ceramide' },
+    //     { id: 4, name: 'Bakuchiol' },
+    //     { id: 5, name: 'AHA' },
+    //     { id: 6, name: 'BHA' },
+    //     { id: 7, name: 'PHA' },
+    //     { id: 8, name: 'Alpha Arbutin' },
+    //     { id: 9, name: 'Panthenol' },
+    //     { id: 10, name: 'Squalane' },
+    //     { id: 11, name: 'Allantoin' },
+    //     { id: 12, name: 'Centella Asiatica' },
+    //     { id: 13, name: 'Tranexamic Acid' },
+    //     { id: 14, name: 'Peptide' },
+    //     { id: 15, name: 'Vitamin C' },
+    //     { id: 16, name: 'Propolis' },
+    //     { id: 17, name: 'Glycerin' },
+    //     { id: 18, name: 'Aloe Vera' },
+    //     { id: 19, name: 'Mugwort' },
+    //     { id: 20, name: 'Oat' },
+    // ];
 
     return (
         <>
@@ -70,7 +113,7 @@ export default function MengenalBahanAktif() {
                             </h1>
 
                             {/* Description */}
-                            <p className="pt-2 lg:pt-3 pb-3 lg:pb-5 text-xs lg:text-sm">
+                            <p className="py-2 lg:py-3 text-xs lg:text-sm">
                                 Bahan aktif skincare adalah kandungan utama
                                 dalam produk skincare yang berfungsi langsung
                                 untuk memberikan manfaat spesifik pada kulit.
@@ -79,7 +122,7 @@ export default function MengenalBahanAktif() {
                                 secara efektif untuk mencapai hasil yang
                                 diinginkan.
                             </p>
-                            <p className="font-semibold lg:font-bold text-xs lg:text-base text-[#D64F7E]">
+                            <p className="font-semibold lg:font-bold text-xs lg:text-base text-[#7092CF]">
                                 Klik bahan aktif di bawah ini yang ingin kamu
                                 pelajari
                             </p>
@@ -90,14 +133,14 @@ export default function MengenalBahanAktif() {
                 {/* Bahan Aktif dinamis */}
                 <div className="mx-5 lg:mx-45 lg:mt-15 pb-6 lg:pb-10">
                     <div className="grid grid-cols-2 lg:grid-cols-5 gap-4">
-                        {listBahanAktif.map((bahanAktif) => {
+                        {ingredients.map((ingredient) => {
                             return (
                                 <Link
-                                    href={`/bahan-aktif/${bahanAktif.id}`}
-                                    key={bahanAktif.id}
+                                    href={`/mengenal-bahan-aktif/${ingredient.id}`}
+                                    key={ingredient.id}
                                     className="flex items-center bg-white justify-center text-center hover:text-white hover:bg-[#7092CF] border-[#B9CBE8] hover:border-[#7092CF] border-2 p-5 rounded-2xl"
                                 >
-                                    <div>{bahanAktif.name}</div>
+                                    <div>{ingredient.name}</div>
                                 </Link>
                             );
                         })}

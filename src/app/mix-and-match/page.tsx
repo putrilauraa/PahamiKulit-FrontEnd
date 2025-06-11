@@ -4,6 +4,7 @@ import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
 import { Montserrat } from 'next/font/google';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useRouter } from 'next/navigation';
 
 const montserrat = Montserrat({ weight: '500', subsets: ['latin'] });
 
@@ -37,6 +38,8 @@ const listBahanAktif: BahanAktif[] = [
 ];
 
 export default function MixMatchPage() {
+    const router = useRouter();
+
     const [selectedBahan1, setSelectedBahan1] = useState<BahanAktif | null>(
         null,
     );
@@ -249,6 +252,18 @@ export default function MixMatchPage() {
                             );
                         })}
                     </div>
+                </div>
+                {/* Back Button */}
+                <div className="mx-45 mt-14 text-center">
+                    <button
+                        onClick={() => router.push('/mengenal-bahan-aktif')}
+                        className="bg-[#7092CF] hover:bg-[#5a7bc4] text-white font-semibold py-3 px-8 rounded-full transition"
+                        style={{
+                            boxShadow: '0px 4px 0px rgba(90, 123, 196, 1)',
+                        }}
+                    >
+                        Kembali ke Daftar Bahan Aktif
+                    </button>
                 </div>
             </div>
 

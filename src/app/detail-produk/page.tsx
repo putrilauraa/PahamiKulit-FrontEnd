@@ -124,7 +124,7 @@ export default function DetailProduk() {
                 <img
                     src="/Holding-Cleanser.png"
                     alt="Mascot"
-                    className="absolute w-80 h-auto right-42 pt-17 drop-shadow-[4px_0px_0px_rgba(0,0,0,0.15)]"
+                    className="absolute w-80 h-auto right-42 pt-11 drop-shadow-[4px_0px_0px_rgba(0,0,0,0.15)]"
                 />
 
                 {/* Product Card */}
