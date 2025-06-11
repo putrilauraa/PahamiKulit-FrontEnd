@@ -2,7 +2,6 @@
 import { Footer } from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 import { Montserrat } from 'next/font/google';
-import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 
 const montserrat = Montserrat({ weight: '500', subsets: ['latin'] });
@@ -43,13 +42,13 @@ export default function Home() {
                         <div className="font-extrabold pt-4 md:pt-2 lg:pt-0 text-2xl md:text-4xl lg:text-5xl">
                             Halo, Skincare Explorer!
                         </div>
-                        <div className="pt-4 md:py-5 text-xs md:text-sm lg:text-lg lg:max-w-xl">
+                        <div className="pt-4 md:py-5 text-xs md:text-sm lg:text-lg max-w-md lg:max-w-xl">
                             <p>Selamat datang di{' '}
                             <span className="font-bold">PahamiKulit</span>,
                             tempatmu menjelajahi langkah-langkah paling dasar
                             dalam dunia <span className="italic">skincare</span>
                             .</p>
-                            <p className='pt-4 text-base'>Di sini, kamu bisa mendapatkan pengetahuan
+                            <p className='pt-3 lg:pt-4 text-xs md:text-sm lg:text-base'>Di sini, kamu bisa mendapatkan pengetahuan
                             mengenai{' '}
                             <span className="italic">basic skincare</span>{' '}
                             supaya kamu nggak salah pilih produk. Yuk, mulai

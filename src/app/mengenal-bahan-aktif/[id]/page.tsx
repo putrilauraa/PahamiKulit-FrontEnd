@@ -5,27 +5,19 @@ import Navbar from '@/components/Navbar';
 import { Montserrat } from 'next/font/google';
 import { Footer } from '@/components/Footer';
 import CardProduct from '@/components/CardProduct';
-import Link from 'next/link';
-import Image from 'next/image';
 
 const montserrat = Montserrat({ weight: '500', subsets: ['latin'] });
 
-type brand = {
+type Products = {
     id: number;
-    name: string;
-};
-
-type ProductCategory = {
-    id: number;
-    description: string;
-};
-
-type products = {
-    id: number;
-    brand: brand;
     name: string;
     image: string;
-    product_category: ProductCategory;
+    suitable_for: string;
+    key_ingredient: string;
+    benefit: string;
+    skor: number;
+    brand: { name: string };
+    product_category: { description: string };
 };
 
 type IngredientType = {
@@ -40,15 +32,8 @@ type IngredientDetail = {
     image: string;
     ingredient_type: IngredientType;
     benefits: string;
-    products: products[];
+    products: Products[];
 };
-
-const products = Array(9).fill({
-    name: "For Skin's Sake Weightless Sunscreen",
-    image: '/Face-Wash.png',
-    tags: ['SPF', 'Pelembab', 'Pembersih'],
-    approved: true,
-});
 
 export default function DetailBahanAktif() {
     const params = useParams();
@@ -92,11 +77,6 @@ export default function DetailBahanAktif() {
 
         fetchData();
     }, [params?.id]);
-
-    // Navigate to the product page
-    const goToProductPage = (productTypeId: number) => {
-        router.push(`/detail-produk?id=${productTypeId}`);
-    };
 
     // Helper function to split text by commas
     const formatTextToList = (text: string | string[]): string[] => {
@@ -209,10 +189,8 @@ export default function DetailBahanAktif() {
                 </div>
 
                 {/* Manfaat Skincare */}
-
-                {/* Title */}
                 <div className="text-3xl font-bold text-center mt-15">
-                    Manfaat Bahan Aktif
+                    Manfaat {ingredientDetail.name}
                 </div>
 
                 {/* Cards */}
@@ -235,7 +213,21 @@ export default function DetailBahanAktif() {
                 {/* Cards Produk */}
                 <div>
                     <div className="text-3xl font-bold text-center mt-20 mb-10">
-                        Produk Yang Mengandung Niacinamide
+                        Produk Yang Mengandung {ingredientDetail.name}
+                    </div>
+                    {/* Product List */}
+                    <div className="max-w-xs sm:max-w-2xl md:max-w-4xl lg:max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 px-2 sm:px-4 md:px-8 pb-100 sm:pb-10">
+                        {ingredientDetail.products.map((product, idx) => (
+                            <CardProduct
+                                key={idx}
+                                cardKey={idx}
+                                brand={product.brand.name}
+                                productName={product.name}
+                                image={product.image}
+                                tags={[product.product_category.description]}
+                                approvedByDoct={true}
+                            />
+                        ))}
                     </div>
                 </div>
 
