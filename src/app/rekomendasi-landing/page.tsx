@@ -8,10 +8,54 @@ import { useState } from 'react';
 
 const montserrat = Montserrat({ weight: '500', subsets: ['latin'] });
 
+const skinTypeMap: Record<string, number> = {
+    berminyak: 1,
+    kombinasi: 2,
+    kering: 3,
+    normal: 4,
+};
+
+const skinProblemMap: Record<string, number> = {
+    jerawat: 1,
+    iritasi: 2,
+    kusam: 3,
+};
+
 export default function RekomendasiSkincare() {
     const [skinType, setSkinType] = useState('');
     const [skinProblem, setSkinProblem] = useState('');
     const router = useRouter();
+
+    const handleSubmit = async () => {
+        const skin_test_result_id = skinTypeMap[skinType];
+        const skin_problem_id = skinProblemMap[skinProblem];
+
+        if (!skin_test_result_id || !skin_problem_id) {
+            alert('Mohon pilih jenis dan masalah kulit terlebih dahulu.');
+            return;
+        }
+
+        try {
+            const res = await fetch('/api/recommendation', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ skin_test_result_id, skin_problem_id }),
+            });
+
+            const data = await res.json();
+
+            if (!res.ok || !Array.isArray(data)) {
+                throw new Error('Gagal mendapatkan rekomendasi.');
+            }
+
+            // Pass data via query or state (optional); we'll use localStorage here for simplicity
+            localStorage.setItem('recommendation', JSON.stringify(data));
+            router.push('/hasil-rekomendasi');
+        } catch (err) {
+            alert('Terjadi kesalahan saat mengambil rekomendasi.');
+            console.error(err);
+        }
+    };
 
     return (
         <>
@@ -128,8 +172,7 @@ export default function RekomendasiSkincare() {
                         {/* Lanjut button */}
                         <div className="flex justify-center font-semibold pt-3 lg:pt-6">
                             <button
-                                // type="submit"
-                                onClick={() => alert('Lanjut')}
+                                onClick={handleSubmit}
                                 className="bg-[#7092CF] text-white text-xs lg:text-base px-5 lg:px-12 py-2 lg:py-3 rounded-full hover:bg-[#405E93] transition"
                                 style={{
                                     boxShadow:
