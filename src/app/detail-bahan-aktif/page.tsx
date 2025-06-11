@@ -3,7 +3,7 @@ import { Montserrat } from 'next/font/google';
 import { Footer } from '@/components/Footer';
 import Link from 'next/link';
 import Image from 'next/image';
-import {Product} from '@/components/CardProduct';
+import CardProduct from '@/components/CardProduct';
 
 const montserrat = Montserrat({ weight: '500', subsets: ['latin'] });
 
@@ -17,6 +17,14 @@ export default function DetailBahanAktif() {
         {id: 4, name: 'Mencegah Tanda Penuaan', image: '/No4.png'},
         {id: 5, name: 'Mengurangi Peradangan Jerawat', image: '/No5.png'},
     ];
+
+    const products = Array(3).fill({
+    name: "For Skin's Sake Weightless Sunscreen",
+    image: "/Face-Wash.png",
+    tags: ['SPF','Pelembab', 'Pembersih'
+    ],
+    approved: true,
+});
 
     return (
         <>
@@ -110,8 +118,21 @@ export default function DetailBahanAktif() {
                 {/* Rekomendasi Produk */}
 
                 <div>
-                    <div className="text-4xl font-bold text-center mt-12">
+                    <div className="text-4xl font-bold text-center mt-12 mb-10">
                         Produk Yang Mengandung Niacinamide
+                    </div>
+
+                    {/* Product List */}
+                    <div className="max-w-xs sm:max-w-2xl md:max-w-4xl lg:max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 px-2 sm:px-4 md:px-8 pb-100 sm:pb-10">
+                        {products.map((product, idx) => (
+                            <CardProduct
+                                key={idx}
+                                productName={product.name}
+                                image={product.image}
+                                tags={product.tags}
+                                approvedByDoct={product.approved}
+                            />
+                        ))}
                     </div>
 
 
@@ -121,7 +142,6 @@ export default function DetailBahanAktif() {
             </div>
 
             <div>
-                <product />
             </div>
 
             {/* Footer */}

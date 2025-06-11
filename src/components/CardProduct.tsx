@@ -1,12 +1,8 @@
 import React from 'react';
 import {
     Card,
-    CardAction,
-    CardContent,
     CardDescription,
     CardFooter,
-    CardHeader,
-    CardTitle,
 } from "@/components/ui/card"
 import Image from 'next/image';
 
@@ -48,7 +44,7 @@ const CardProduct: React.FC<iCardProduct> = ({ key, productName, tags, image, ap
 
             <CardFooter>
                 {approvedByDoct && (
-                    <span className="flex items-center mt-2 px-3 py-1 rounded-md border-2 border-[#84CDA8] text-[#3CB371] text-xs font-medium">
+                    <span className="flex items-center px-3 py-1 rounded-md border-2 border-[#84CDA8] text-[#3CB371] text-xs font-medium">
                         <img
                             src="/Check.png"
                             alt="Checked"

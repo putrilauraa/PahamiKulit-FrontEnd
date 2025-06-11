@@ -13,8 +13,7 @@ const montserrat = Montserrat({ weight: '500', subsets: ['latin'] });
 const products = Array(9).fill({
     name: "For Skin's Sake Weightless Sunscreen",
     image: "/Face-Wash.png",
-    tags: ['SPF',
-        'Pelembab', 'Pembersih'
+    tags: ['SPF','Pelembab', 'Pembersih'
     ],
     approved: true,
 });
