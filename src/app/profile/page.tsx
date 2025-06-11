@@ -16,6 +16,11 @@ export default function Profile() {
     const [token, setToken] = useState<string | null>(null);
     const [user, setUser] = useState<User>();
 
+    const handleProfilKulit = () => {
+        setActiveTab('profil');
+        router.push('/profil-kulit');
+    };
+
     const handleLogout = () => {
         localStorage.removeItem('token');
         router.replace('/');
@@ -112,7 +117,7 @@ export default function Profile() {
                                             ? 'bg-[#6B8ED6] text-white'
                                             : 'bg-transparent text-[#2C3E50]'
                                     }`}
-                                    onClick={() => setActiveTab('profil')}
+                                    onClick={() => handleProfilKulit()}
                                 >
                                     Profil Kulit
                                 </button>
@@ -122,7 +127,7 @@ export default function Profile() {
                         {/* Right: Info + Edit */}
                         <div className="lg:w-2/3 lg:pl-6 relative pb-5 lg:pb-0">
                             {/* Edit Button */}
-                            <div className="absolute top-64 lg:top-0 right-68 lg:right-0">
+                            {/* <div className="absolute top-64 lg:top-0 right-68 lg:right-0">
                                 <button
                                     onClick={() => router.push('/edit-profile')}
                                     className="border-2 border-black font-semibold text-sm bg-white lg:text-base px-6 lg:px-5 py-2 rounded-full shadow-sm hover:bg-[#7092CF] hover:border-[#7092CF] hover:text-white transition"
@@ -133,7 +138,7 @@ export default function Profile() {
                                 >
                                     Edit
                                 </button>
-                            </div>
+                            </div> */}
 
                             {/* User Info */}
                             <div className="space-y-4 lg:space-y-6 mx-5 lg:mx-6 lg:mt-2">

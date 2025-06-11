@@ -43,16 +43,20 @@ export default function Home() {
                             Halo, Skincare Explorer!
                         </div>
                         <div className="pt-4 md:py-5 text-xs md:text-sm lg:text-lg max-w-md lg:max-w-xl">
-                            <p>Selamat datang di{' '}
-                            <span className="font-bold">PahamiKulit</span>,
-                            tempatmu menjelajahi langkah-langkah paling dasar
-                            dalam dunia <span className="italic">skincare</span>
-                            .</p>
-                            <p className='pt-3 lg:pt-4 text-xs md:text-sm lg:text-base'>Di sini, kamu bisa mendapatkan pengetahuan
-                            mengenai{' '}
-                            <span className="italic">basic skincare</span>{' '}
-                            supaya kamu nggak salah pilih produk. Yuk, mulai
-                            perjalanan kulit sehat kamu di sini!</p>
+                            <p>
+                                Selamat datang di{' '}
+                                <span className="font-bold">PahamiKulit</span>,
+                                tempatmu menjelajahi langkah-langkah paling
+                                dasar dalam dunia{' '}
+                                <span className="italic">skincare</span>.
+                            </p>
+                            <p className="pt-3 lg:pt-4 text-xs md:text-sm lg:text-base">
+                                Di sini, kamu bisa mendapatkan pengetahuan
+                                mengenai{' '}
+                                <span className="italic">basic skincare</span>{' '}
+                                supaya kamu nggak salah pilih produk. Yuk, mulai
+                                perjalanan kulit sehat kamu di sini!
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -94,7 +98,7 @@ export default function Home() {
                                 supaya kamu gak salah pilih produk
                             </p>
                             <button
-                                onClick={() => router.push('/tes-jenis-kulit')}
+                                onClick={() => router.push('/profil-kulit')}
                                 className="bg-[#F38EB1] text-white hover:bg-[#D64F7E] text-xs md:text-sm lg:text-lg font-semibold rounded-4xl px-6 py-3 mt-2 transition"
                                 style={{
                                     boxShadow:
@@ -181,7 +185,9 @@ export default function Home() {
                                     tepat sesuai dengan kebutuhan kulit kamu
                                 </p>
                                 <button
-                                    onClick={() => router.push('/rekomendasi-landing')}
+                                    onClick={() =>
+                                        router.push('/rekomendasi-landing')
+                                    }
                                     className="bg-[#7092CF] text-white hover:bg-[#405E93] font-semibold rounded-3xl md:flex md:mx-auto lg:mx-0 px-5 py-3 mt-2 md:mt-5 lg:mt-2 text-xs md:text-sm transition"
                                     style={{
                                         boxShadow:
@@ -402,7 +408,8 @@ export default function Home() {
                                 <p className="mt-1 text-xs md:text-sm lg:text-md">
                                     Ketahui jenis-jenis produk basic skincare
                                     untuk menyesuaikan dengan kebutuhan kulit
-                                    kamu. Telusuri melalui menu Basic Skincare, ya!
+                                    kamu. Telusuri melalui menu Basic Skincare,
+                                    ya!
                                 </p>
                             </div>
                         </div>
@@ -425,7 +432,8 @@ export default function Home() {
                                 <p className="mt-1 md:text-sm lg:text-md">
                                     Ketahui jenis-jenis produk basic skincare
                                     untuk menyesuaikan dengan kebutuhan kulit
-                                    kamu. Telusuri melalui menu Basic Skincare, ya!
+                                    kamu. Telusuri melalui menu Basic Skincare,
+                                    ya!
                                 </p>
                             </div>
                         </div>
@@ -441,7 +449,8 @@ export default function Home() {
                                 </h3>
                                 <p className="mt-1 text-xs md:text-sm lg:text-md">
                                     Ketahui apa yang kamu gunakan di kulitmu dan
-                                    bagaimana cara penggunaan yang tepat melalui menu Bahan Aktif
+                                    bagaimana cara penggunaan yang tepat melalui
+                                    menu Bahan Aktif
                                 </p>
                             </div>
                         </div>

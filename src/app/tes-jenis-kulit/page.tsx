@@ -102,7 +102,7 @@ export default function TesJenisKulit() {
                     }}
                 >
                     {/* Login if not yet */}
-                    <div className="pt-38 lg:pt-7">
+                    {/* <div className="pt-38 lg:pt-7">
                         <img
                             src="/Blue-3.png"
                             alt="Mascot"
@@ -134,7 +134,7 @@ export default function TesJenisKulit() {
                                 Masuk
                             </button>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
 

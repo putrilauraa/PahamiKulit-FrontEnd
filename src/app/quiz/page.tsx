@@ -5,10 +5,18 @@ import { Montserrat, Bai_Jamjuree } from 'next/font/google';
 import { ArrowLeft } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { LOCAL_API_URL } from '@/configs/app';
+import { jwtDecode } from 'jwt-decode';
 
 const bai_jamjuree = Bai_Jamjuree({ weight: '500', subsets: ['latin'] });
 const montserrat = Montserrat({ weight: '500', subsets: ['latin'] });
 const API_URL = LOCAL_API_URL;
+
+interface DecodedToken {
+    user_id: number;
+    user_name: string;
+    exp: number;
+    [key: string]: any;
+}
 
 export default function Quiz() {
     const router = useRouter();
@@ -25,7 +33,46 @@ export default function Quiz() {
         [],
     );
 
-    const calculateResult = (finalScore: number) => {
+    const submitSkinTestResult = async (score: number) => {
+        try {
+            const token = localStorage.getItem('token');
+
+            if (!token) {
+                throw new Error('No authentication token found');
+            }
+
+            const decoded: DecodedToken = jwtDecode(token);
+            console.log(token);
+
+            const response = await fetch(
+                `${API_URL}/users/${decoded.user_id}/skin-test`,
+                {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        Authorization: `Bearer ${token}`,
+                    },
+                    body: JSON.stringify({
+                        score: score,
+                    }),
+                },
+            );
+
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
+            const data = await response.json();
+            console.log('Skin test result submitted successfully:', data);
+
+            return data;
+        } catch (error) {
+            console.error('Error submitting skin test result:', error);
+            throw error;
+        }
+    };
+
+    const calculateResult = async (finalScore: number) => {
         if (finalScore >= 17) {
             setResult('Kulit Berminyak');
         } else if (finalScore >= 13) {
@@ -34,6 +81,12 @@ export default function Quiz() {
             setResult('Kulit Kering');
         } else {
             setResult('Kulit Normal');
+        }
+
+        try {
+            await submitSkinTestResult(finalScore);
+        } catch (err) {
+            console.error('Submission failed, but moving on...');
         }
     };
 
@@ -59,14 +112,14 @@ export default function Quiz() {
             questions[currentQuestion].options[currentSelectedIndex];
         const points = selectedOption.point;
 
-        // Update totalScore
-        setTotalScore((prev) => prev + points);
+        const newScore = totalScore + points; // <-- new total score
 
-        // Simpan jawaban (huruf A/B/C/D)
+        // Save the score
+        setTotalScore(newScore);
         setAnswers((prevAnswers) => [...prevAnswers, selectedOption.option]);
 
         if (currentQuestion === questions.length - 1) {
-            calculateResult(totalScore + points);
+            calculateResult(newScore); // ✅ use the up-to-date value
             setShowDialog(true);
         } else {
             setCurrentQuestion((prev) => prev + 1);
@@ -75,9 +128,10 @@ export default function Quiz() {
 
     const handleDialogOk = () => {
         // Simpan jawaban ke localStorage / session supaya later bisa ditampilin setelah registered
-        localStorage.setItem('skinQuizAnswers', JSON.stringify(answers));
-        localStorage.setItem('skinQuizResult', result);
-        setIsRedirecting(true);
+        // localStorage.setItem('skinQuizAnswers', JSON.stringify(answers));
+        // localStorage.setItem('skinQuizResult', result);
+        // setIsRedirecting(true);
+        router.push('/profil-kulit');
     };
 
     useEffect(() => {

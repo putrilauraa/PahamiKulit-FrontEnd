@@ -159,7 +159,7 @@ const Signin = () => {
 
                         <div className="text-center text-[#405E93] mt-10 text-sm">
                             Belum punya akun?{' '}
-                            <a href="" className="font-semibold">
+                            <a href="/create-account" className="font-semibold">
                                 Daftar sekarang
                             </a>
                         </div>
