@@ -1,36 +1,118 @@
-import React from 'react';
+'use client';
+
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
+import { User } from '@/interfaces/User';
 import {
     AlertDialog,
-    AlertDialogAction,
-    AlertDialogCancel,
+    AlertDialogTrigger,
     AlertDialogContent,
-    AlertDialogDescription,
-    AlertDialogFooter,
     AlertDialogHeader,
     AlertDialogTitle,
-    AlertDialogTrigger,
+    AlertDialogDescription,
+    AlertDialogCancel,
+    AlertDialogAction,
+    AlertDialogFooter,
 } from '@/components/ui/alert-dialog';
 
 const Signin = () => {
+    const router = useRouter();
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [token, setToken] = useState<string | null>(null);
+    const [user, setUser] = useState<User>();
+    const [loading, setLoading] = useState(true); // new loading state
+
+    const handleLogin = async () => {
+        try {
+            const res = await fetch('/api/login', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email, password }),
+            });
+
+            const data = await res.json();
+            if (data?.token) {
+                localStorage.setItem('token', data.token);
+                setToken(data.token);
+                router.push('/');
+            } else {
+                alert(data.message || 'Login failed');
+            }
+        } catch (err) {
+            console.error(err);
+            alert('Error logging in');
+        }
+    };
+
+    const fetchData = async () => {
+        if (token) {
+            try {
+                const response = await fetch('/api/user-information', {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        Authorization: `Bearer ${token}`,
+                    },
+                });
+
+                if (!response.ok) {
+                    throw new Error('Server Error');
+                }
+
+                const userInfo: User = await response.json();
+                setUser(userInfo);
+                console.log(userInfo);
+            } catch (error) {
+                console.log('Error');
+                localStorage.removeItem('token');
+                router.replace('/');
+            }
+        }
+    };
+
+    useEffect(() => {
+        const storedToken = localStorage.getItem('token');
+        if (storedToken) {
+            setToken(storedToken);
+        }
+        setLoading(false); // stop loading after checking token
+    }, []);
+
+    useEffect(() => {
+        if (token) {
+            fetchData();
+        }
+    }, [token]);
+
+    // Optional: Loading spinner
+    if (loading) {
+        return (
+            <div className="flex items-center justify-center">
+                <div className="animate-spin rounded-full h-6 w-6 border-t-2 border-b-2 border-gray-800" />
+            </div>
+        );
+    }
+
+    // If token and user exists: show profile image
+    if (token && user) {
+        return (
+            <img
+                src={user.image}
+                alt="User Profile"
+                className="size-10 ml-2 rounded-full cursor-pointer"
+                onClick={() => router.push('/profile')}
+            />
+        );
+    }
+
+    // Else: show login button and modal
     return (
         <AlertDialog>
             <AlertDialogTrigger asChild>
-                <div>
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        strokeWidth="1"
-                        stroke="currentColor"
-                        className="size-10 ml-2"
-                    >
-                        <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
-                        />
-                    </svg>
-                </div>
+                <button className="text-sm font-medium bg-[#7092CF] hover:bg-[#5a78b5] text-white px-4 py-2 rounded-md ml-2 transition-all">
+                    Masuk
+                </button>
             </AlertDialogTrigger>
             <AlertDialogContent>
                 <AlertDialogHeader>
@@ -38,49 +120,52 @@ const Signin = () => {
                     <AlertDialogTitle className="mb-1">
                         Selamat Datang!
                     </AlertDialogTitle>
-                    <AlertDialogDescription className="flex items-center mx-auto text-base">
+                    <AlertDialogDescription className="text-base text-center">
                         Ketahui perawatan kulit dasar bersama PahamiKulit.
                         <br />
                         Mulai dari sini!
                     </AlertDialogDescription>
 
-                    {/* Login Form */}
                     <div className="px-10">
-                        <form className="flex flex-col gap-4 mt-4">
-                            <div className="flex flex-col">
-                                <input
-                                    id="email"
-                                    type="email"
-                                    className="border-2 rounded-md px-3 py-3 mt-1 text-sm focus:outline-none focus:border-[#7092CF]"
-                                    placeholder="Email"
-                                    required
-                                />
-                            </div>
-                            <div className="flex flex-col">
-                                <input
-                                    id="password"
-                                    type="password"
-                                    className=" border-2 rounded-md px-3 py-3 mt-1 text-sm focus:outline-none focus:border-[#7092CF]"
-                                    placeholder="Password"
-                                    required
-                                />
-                            </div>
+                        <form
+                            className="flex flex-col gap-4 mt-4"
+                            onSubmit={(e) => e.preventDefault()}
+                        >
+                            <input
+                                type="email"
+                                placeholder="Email"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                                required
+                                className="border-2 rounded-md px-3 py-3 mt-1 text-sm focus:outline-none focus:border-[#7092CF]"
+                            />
+                            <input
+                                type="password"
+                                placeholder="Password"
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
+                                required
+                                className="border-2 rounded-md px-3 py-3 mt-1 text-sm focus:outline-none focus:border-[#7092CF]"
+                            />
                         </form>
 
-                        <a href=''>
-                            <div className="flex items-end justify-end text-[#405E93] mt-2 text-sm font-semibold">
-                                Lupa Kata Sandi?
-                            </div>
-                        </a>
+                        <div className="text-right text-[#405E93] mt-2 text-sm font-semibold">
+                            <a href="">Lupa Kata Sandi?</a>
+                        </div>
 
-                        <AlertDialogAction>Masuk</AlertDialogAction>
+                        <AlertDialogAction onClick={handleLogin}>
+                            Masuk
+                        </AlertDialogAction>
 
-                        <div className="flex items-center justify-center text-[#405E93] mt-10 text-sm">
-                            Belum punya akun?<span className='text-white'>-</span><a href="" className=' font-semibold'>Daftar sekarang</a>
+                        <div className="text-center text-[#405E93] mt-10 text-sm">
+                            Belum punya akun?{' '}
+                            <a href="" className="font-semibold">
+                                Daftar sekarang
+                            </a>
                         </div>
                     </div>
                 </AlertDialogHeader>
-                <AlertDialogFooter></AlertDialogFooter>
+                <AlertDialogFooter />
             </AlertDialogContent>
         </AlertDialog>
     );

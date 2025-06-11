@@ -3,8 +3,9 @@ import Navbar from '@/components/Navbar';
 import { Montserrat } from 'next/font/google';
 import { Footer } from '@/components/Footer';
 // import { Display } from '@geist-ui/react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
+import { User } from '@/interfaces/User';
 
 const montserrat = Montserrat({ weight: '500', subsets: ['latin'] });
 
@@ -12,11 +13,56 @@ export default function Profile() {
     const router = useRouter();
     const [activeTab, setActiveTab] = useState('detail');
     const [showLogoutDialog, setShowLogoutDialog] = useState(false);
+    const [token, setToken] = useState<string | null>(null);
+    const [user, setUser] = useState<User>();
 
     const handleLogout = () => {
-        setShowLogoutDialog(true);
+        localStorage.removeItem('token');
+        router.replace('/');
     };
 
+    const fetchData = async () => {
+        if (token) {
+            try {
+                // Send JWT to API route to fetch user data
+                const response = await fetch('/api/user-information', {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        Authorization: `Bearer ${token}`,
+                    },
+                });
+
+                if (!response.ok) {
+                    throw new Error('Server Error');
+                }
+
+                const userInfo: User = await response.json();
+                setUser(userInfo);
+
+                console.log(userInfo);
+            } catch (error) {
+                console.log('Error');
+                localStorage.removeItem('token');
+                router.replace('/');
+            }
+        }
+    };
+
+    useEffect(() => {
+        const storedToken = localStorage.getItem('token');
+        if (storedToken) {
+            setToken(storedToken); // trigger the next useEffect
+        } else {
+            router.push('/');
+        }
+    }, []);
+
+    useEffect(() => {
+        if (token) {
+            fetchData(); // only runs once token is set
+        }
+    }, [token]);
     return (
         <>
             <Navbar />
@@ -37,9 +83,9 @@ export default function Profile() {
                         {/* Left: Avatar + Tabs */}
                         <div className="lg:w-1/3 flex flex-col items-center lg:border-r border-gray-200 lg:pr-15 lg:ml-5 p-5 lg:p-0">
                             {/* Avatar */}
-                            <div className="w-30 h-30 lg:w-55 lg:h-55 bg-[#7092CF] rounded-full flex items-center justify-center mb-6">
+                            <div className="w-30 h-30 lg:w-55 lg:h-55 rounded-full flex items-center justify-center mb-6">
                                 <img
-                                    src="/Expression-Mascot-07.png"
+                                    src={user?.image}
                                     alt="Avatar"
                                     className="w-30 lg:w-50 h-auto"
                                 />
@@ -96,7 +142,7 @@ export default function Profile() {
                                         Nama
                                     </p>
                                     <p className="text-lg font-semibold text-[#111827]">
-                                        Johnny
+                                        {user?.username}
                                     </p>
                                 </div>
 
@@ -105,7 +151,7 @@ export default function Profile() {
                                         Email
                                     </p>
                                     <p className="text-lg font-semibold text-[#111827]">
-                                        johnnyjohnny@yespapa.com
+                                        {user?.email}
                                     </p>
                                 </div>
 
@@ -114,7 +160,7 @@ export default function Profile() {
                                         Gender
                                     </p>
                                     <p className="text-lg font-semibold text-[#111827]">
-                                        Pria
+                                        {user?.gender}
                                     </p>
                                 </div>
                             </div>
@@ -124,7 +170,7 @@ export default function Profile() {
                     {/* Logout Button */}
                     <div className="flex justify-end mt-3 lg:mt-0">
                         <button
-                            onClick={() => handleLogout()}
+                            onClick={() => setShowLogoutDialog(true)}
                             className="bg-[#7092CF] text-white px-6 py-2 font-semibold text-sm lg:text-lg rounded-full mt-5 hover:bg-[#405E93] transition"
                             style={{
                                 boxShadow: '0px 4px 0px rgba(64, 94, 147, 1)',
@@ -159,7 +205,7 @@ export default function Profile() {
                                         Batal
                                     </button>
                                     <button
-                                        onClick={() => router.push('/')}
+                                        onClick={() => handleLogout()}
                                         className="bg-[#7092CF] hover:bg-[#405E93] text-white px-8 py-2 rounded-lg"
                                         style={{
                                             boxShadow:

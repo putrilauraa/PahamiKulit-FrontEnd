@@ -14,7 +14,9 @@ export default function TesJenisKulit() {
         <>
             <Navbar />
 
-            <div className={`${montserrat.className} min-h-screen bg-[#E6EEFC]`}>
+            <div
+                className={`${montserrat.className} min-h-screen bg-[#E6EEFC]`}
+            >
                 {/* Breadcrumbs */}
                 <nav className="pt-4 lg:pt-8 ml-4 lg:ml-8 text-sm space-x-2">
                     <a href="/" className="hover:underline text-[#7092CF]">
@@ -44,7 +46,9 @@ export default function TesJenisKulit() {
                     />
                 </div>
                 <div className="text-white bg-gradient-to-b from-[#7293D0] to-[#B5CBF0] mx-5 lg:mx-45 mt-8 lg:mt-12 mb-12 lg:mb-30 rounded-xl p-8 lg:p-17">
-                    <h1 className="text-xl lg:text-4xl font-bold pb-1 lg:pb-2">Tes Jenis Kulit</h1>
+                    <h1 className="text-xl lg:text-4xl font-bold pb-1 lg:pb-2">
+                        Tes Jenis Kulit
+                    </h1>
                     <p className="text-xs lg:text-lg">
                         Jawab beberapa pertanyaan untuk mengetahui jenis
                         kulitmu!
@@ -97,6 +101,7 @@ export default function TesJenisKulit() {
                         boxShadow: '0px 4px 0px rgba(0,0,0,0.15)',
                     }}
                 >
+                    {/* Login if not yet */}
                     <div className="pt-38 lg:pt-7">
                         <img
                             src="/Blue-3.png"

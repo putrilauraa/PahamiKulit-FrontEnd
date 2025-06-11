@@ -4,6 +4,7 @@ import Navbar from '@/components/Navbar';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { LOCAL_API_URL } from '@/configs/app';
+import { User } from '@/interfaces/User';
 
 const API_URL = LOCAL_API_URL;
 
