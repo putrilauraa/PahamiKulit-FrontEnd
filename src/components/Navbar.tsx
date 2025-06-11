@@ -68,7 +68,7 @@ export function Navbar() {
                                     Bahan Aktif
                                 </Link>
                                 <Link
-                                    href="/rekomendasi"
+                                    href="/rekomendasi-landing"
                                     className={`text-black py-5 px-1 ${
                                         pathName === '/rekomendasi'
                                             ? 'border-b-2 border-black'
@@ -168,7 +168,7 @@ export function Navbar() {
                                 Bahan Aktif
                             </Link>
                             <Link
-                                href="/Rekomendasi"
+                                href="/rekomendasi-landing"
                                 className="text-black block hover:bg-gray-100 py-5 px-1"
                             >
                                 Rekomendasi

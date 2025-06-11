@@ -1,11 +1,15 @@
+'use client';
 import Navbar from '@/components/Navbar';
 import { Montserrat } from 'next/font/google';
 import { Footer } from '@/components/Footer';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 const montserrat = Montserrat({ weight: '500', subsets: ['latin'] });
 
-export default function AboutUs() {
+export default function MengenalBahanAktif() {
+    const router = useRouter();
+
     // sample data
     const listBahanAktif = [
         { id: 1, name: 'Niacinamide' },
@@ -35,90 +39,63 @@ export default function AboutUs() {
             <Navbar />
 
             <div
-                className={`${montserrat.className}`}
-                style={{
-                    color: '#405E93',
-                }}
+                className={`${montserrat.className} bg-[#E6EEFC] pt-1 lg:pt-10 pb-8 lg:pb-15 min-h-screen`}
             >
                 {/* Card 1 */}
-                <div className="mx-4 lg:mx-30 my-10">
+                <div className="mx-5 lg:mx-45 my-10">
                     {/* Border */}
                     <div
-                        className="border-4 rounded-2xl flex items-center justify-center py-5 px-5 border-[#7092CF]"
+                        className="bg-white border-3 border-[#7092CF] rounded-2xl flex items-center justify-center px-6 py-6 lg:px-10 lg:py-4"
                         style={{
-                            boxShadow: '6px 6px 0px rgba(185, 203, 232)',
+                            boxShadow: '4px 4px 0px rgba(185, 203, 232)',
                         }}
                     >
                         {/* Ilustrasi */}
                         <div>
                             <img
-                                className="w-120 h-auto"
+                                className="hidden lg:block w-75 h-auto"
                                 src="mba-page.png"
                                 alt="Mascot"
                             ></img>
                         </div>
-                        <div className="ml-10">
+                        <div className="lg:ml-5">
+                            <img
+                                className="block lg:hidden w-26 h-auto justify-center items-center mx-auto"
+                                src="mba-page.png"
+                                alt="Mascot"
+                            ></img>
                             {/* Title */}
-                            <h1 className="font-semibold text-4xl">
+                            <h1 className="font-bold text-xl lg:text-4xl">
                                 Yuk Mengenal Bahan Aktif Skincare!
                             </h1>
 
                             {/* Description */}
-                            <div>
-                                <p className="py-5">
-                                    Bahan aktif skincare adalah kandungan utama
-                                    dalam produk skincare yang berfungsi
-                                    langsung untuk memberikan manfaat spesifik
-                                    pada kulit, seperti mengatasi masalah atau
-                                    meningkatkan kondisi kulit.
-                                </p>
+                            <p className="pt-2 lg:pt-3 pb-3 lg:pb-5 text-xs lg:text-sm">
+                                Bahan aktif skincare adalah kandungan utama
+                                dalam produk skincare yang berfungsi langsung
+                                untuk memberikan manfaat spesifik pada kulit.
                                 Biasanya, bahan aktif skincare digunakan untuk
                                 menjadi fokus utama dari produk dan bekerja
                                 secara efektif untuk mencapai hasil yang
                                 diinginkan.
-                                <p></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                {/* Card 2 */}
-                <div className="mx-4 lg:mx-30 my-10">
-                    {/* Border */}
-                    <div className="rounded-2xl flex items-center justify-center py-5 px-5 bg-gradient-to-b from-[#90ACDF] to-[#7293D0]">
-                        <div className="text-center lg:my-10">
-                            <div className="font-bold text-3xl text-white">
-                                Cari Tahu Kombinasi Bahan Aktif yang Aman
-                            </div>
-                            <div className="font-medium text-1xl my-2 text-white">
-                                Dengan Cara Mix & Match Bahan Aktif
-                            </div>
-
-                            {/* Button */}
-                            <a href="/" className="">
-                                <button
-                                    className="border-2 mt-5 py-2 px-10 rounded-3xl bg-white hover:border-[#405E93]"
-                                    style={{
-                                        boxShadow:
-                                            '0px 4px 0px rgba(64, 94, 147, 1)',
-                                    }}
-                                >
-                                    Coba
-                                </button>
-                            </a>
+                            </p>
+                            <p className="font-semibold lg:font-bold text-xs lg:text-base text-[#D64F7E]">
+                                Klik bahan aktif di bawah ini yang ingin kamu
+                                pelajari
+                            </p>
                         </div>
                     </div>
                 </div>
 
                 {/* Bahan Aktif dinamis */}
-                <div className="my-10 mx-4 lg:mx-25">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+                <div className="mx-5 lg:mx-45 lg:mt-15 pb-6 lg:pb-10">
+                    <div className="grid grid-cols-2 lg:grid-cols-5 gap-4">
                         {listBahanAktif.map((bahanAktif) => {
                             return (
                                 <Link
                                     href={`/bahan-aktif/${bahanAktif.id}`}
                                     key={bahanAktif.id}
-                                    className="items-center justify-center text-center hover:text-white hover:bg-[#7092CF] border-[#E6EEFC] border-2 p-5 rounded-2xl"
+                                    className="flex items-center bg-white justify-center text-center hover:text-white hover:bg-[#7092CF] border-[#B9CBE8] hover:border-[#7092CF] border-2 p-5 rounded-2xl"
                                 >
                                     <div>{bahanAktif.name}</div>
                                 </Link>
@@ -126,13 +103,57 @@ export default function AboutUs() {
                         })}
                     </div>
                 </div>
-                
+
+                {/* Card 2 */}
+                <div className="mx-5 lg:mx-45 my-5">
+                    {/* Border */}
+                    <div
+                        className="bg-[#FFF6ED] rounded-2xl flex items-center px-6 py-6 lg:px-10 lg:py-4"
+                        style={{
+                            boxShadow: '6px 6px 0px rgba(255, 231, 213, 1)',
+                        }}
+                    >
+                        {/* Ilustrasi */}
+                        <img
+                            className="hidden lg:block w-60 h-auto"
+                            src="/Blue-10.png"
+                            alt="Mascot"
+                        ></img>
+
+                        <div className="lg:ml-10">
+                            <img
+                                className="block lg:hidden w-30 h-auto justify-center mx-auto mb-1"
+                                src="/Blue-10.png"
+                                alt="Mascot"
+                            ></img>
+                            {/* Title */}
+                            <h1 className="font-bold text-xl lg:text-4xl">
+                                Mix & Match Bahan Aktif
+                            </h1>
+
+                            {/* Description */}
+                            <p className="font-medium my-1 lg:my-2 md:my-4 text-xs md:text-sm lg:text-lg ">
+                                Eits! jangan asal campur skincare, pahami dulu
+                                yuk tentang kandungan aktif apa saja yang boleh
+                                digunakan secara bersamaan
+                            </p>
+                            <button
+                                onClick={() => router.push('/mix-and-match')}
+                                className="bg-[#7092CF] text-white hover:bg-[#405E93] text-xs md:text-sm lg:text-base font-semibold rounded-4xl px-4 lg:px-6 py-2 lg:py-3 mt-2 transition"
+                                style={{
+                                    boxShadow:
+                                        '0px 4px 0px rgba(64, 94, 147, 1)',
+                                }}
+                            >
+                                Coba Sekarang →
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             {/* Footer */}
-            <div className="Footer pt-10">
-                <Footer />
-            </div>
+            <Footer />
         </>
     );
 }

@@ -7,7 +7,7 @@ import { useRouter } from 'next/navigation';
 
 const montserrat = Montserrat({ weight: '500', subsets: ['latin'] });
 
-export default function Profile() {
+export default function EditProfile() {
     const router = useRouter();
 
     return (
@@ -22,23 +22,23 @@ export default function Profile() {
                 }}
             >
                 {/* Breadcrumb */}
-                <p className="text-[#6B7280] text-sm py-5 ml-8">Profile</p>
+                <p className="text-[#E6EEFC] text-sm lg:py-5 ml-8">Profile</p>
 
-                <div className="mx-45">
+                <div className="mx-5 lg:mx-45">
                     {/* Heading */}
-                    <h1 className="flex text-[#405E93] text-4xl font-bold my-10">
+                    <h1 className="flex text-[#405E93] text-2xl lg:text-4xl font-bold my-5 lg:my-10">
                         Profil Saya
                     </h1>
 
                     {/* Card Container */}
-                    <div className="bg-white rounded-2xl shadow-md p-10 flex gap-8 mx-auto">
+                    <div className="bg-white rounded-2xl shadow-md p-5 lg:p-10 lg:flex lg:gap-8 mx-auto">
                         {/* Avatar Section */}
-                        <div className="justify-center items-center">
-                            <div className="w-55 h-55 bg-[#7092CF] rounded-full flex items-center justify-center mx-15 mt-5">
+                        <div className="flex justify-center items-center">
+                            <div className="w-30 h-30 lg:w-55 lg:h-55 bg-[#7092CF] rounded-full flex items-center justify-center lg:mx-15 lg:mt-5 p-5">
                                 <img
                                     src="/Expression-Mascot-07.png"
                                     alt="Avatar"
-                                    className="w-50 h-auto"
+                                    className="w-30 lg:w-50 h-auto"
                                 />
                             </div>
                         </div>
@@ -47,14 +47,14 @@ export default function Profile() {
                         <div className="hidden md:block w-px bg-gray-200"></div>
 
                         {/* Form Section */}
-                        <form className="flex-1 space-y-6 mx-6">
+                        <form className="flex-1 space-y-4 lg:space-y-6 mx-2 lg:mx-6">
                             <div>
-                                <label className="block text-xl font-semibold my-4 text-gray-600 mb-3">
+                                <label className="block text-sm lg:text-xl font-semibold my-2 lg:my-4 text-gray-600 mb-1 lg:mb-3">
                                     Username
                                 </label>
                                 <input
                                     type="text"
-                                    className="w-2xl text-lg border border-gray-300 rounded-lg px-6 py-4 focus:outline-none focus:ring-2 focus:ring-[#7092CF]"
+                                    className="w-xs lg:w-2xl text-sm lg:text-lg border border-gray-300 rounded-lg px-2 py-2 lg:px-6 lg:py-4 focus:outline-none focus:ring-2 focus:ring-[#7092CF]"
                                     defaultValue="Johnny"
                                 />
                             </div>

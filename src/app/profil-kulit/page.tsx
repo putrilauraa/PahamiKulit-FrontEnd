@@ -156,7 +156,7 @@ export default function ProfilKulit() {
 
             <div className={`${montserrat.className} overflow-hidden`}>
                 {/* Breadcrumbs */}
-                <nav className="mt-8 ml-8 text-sm space-x-2">
+                <nav className="mt-4 lg:mt-8 ml-4 lg:ml-8 text-xs lg:text-sm space-x-2">
                     <a href="/" className="hover:underline text-[#7092CF]">
                         Beranda
                     </a>
@@ -176,22 +176,22 @@ export default function ProfilKulit() {
                     </a>
                 </nav>
 
-                <div className="bg-[#D5E4FF] text-[#405E93] flex justify-center mx-auto w-20 font-semibold px-4 py-2 rounded-full mt-10 text-lg">
+                <div className="bg-[#D5E4FF] text-[#405E93] flex justify-center mx-auto w-20 font-semibold px-4 py-2 rounded-full mt-8 lg:mt-10 text-xs lg:text-lg">
                     Hasil
                 </div>
 
                 {/* Header Section */}
-                <div className="absolute text-[#405E93] mt-8 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[#FFD5E9] font-semibold px-6 py-2 rounded-full text-lg">
+                <div className="absolute text-[#405E93] mt-6 lg:mt-8 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[#FFD5E9] font-semibold px-6 py-2 rounded-full text-xs lg:text-lg">
                     Tes Jenis Kulit
                 </div>
                 <img
                     src="/Elements-48.png"
                     alt="Element"
-                    className="absolute right-62 w-42 h-auto top-38 rotate-25"
+                    className="hidden lg:block absolute right-62 w-42 h-auto top-38 rotate-25"
                 />
-                <div className="text-white bg-[#B9CBE8] rounded-2xl mt-9 mx-45 px-10 py-14 text-center">
-                    <h1 className="text-4xl font-bold">Profil Kulit</h1>
-                    <p className="mt-3 text-lg w-2xl flex mx-auto leading-6">
+                <div className="text-white bg-[#B9CBE8] rounded-2xl mt-6 lg:mt-9 mx-5 lg:mx-45 px-7 lg:px-10 py-7 lg:py-14 text-center">
+                    <h1 className="text-xl lg:text-4xl font-bold">Profil Kulit</h1>
+                    <p className="mt-1 lg:mt-3 text-xs lg:text-lg lg:w-2xl flex mx-auto lg:leading-6">
                         Ini dia hasil tes jenis kulit hanya untuk kamu, beserta
                         tips untuk menjaga jenis kulit yang sesuai dengan
                         kondisi kulitmu
@@ -200,7 +200,7 @@ export default function ProfilKulit() {
                 <img
                     src="/Elements-40.png"
                     alt="Element"
-                    className="absolute left-62 w-42 h-auto top-90"
+                    className="hidden lg:block absolute left-62 w-42 h-auto top-90"
                 />
 
                 {/* Ellips Background */}
@@ -213,36 +213,36 @@ export default function ProfilKulit() {
                 ></div>
 
                 {/* Skin Profile Header */}
-                <div className="bg-[#E6EEFC] min-h-screen pb-12">
-                    <div className="relative z-20 -top-70">
+                <div className="bg-[#E6EEFC] min-h-screen lg:pb-12">
+                    <div className="relative z-20 -top-92 lg:-top-70">
                         <div
-                            className="mx-45 bg-white border border-black flex items-center rounded-xl md:rounded-2xl p-6 mb-4 md:mb-6"
+                            className="mx-5 lg:mx-45 bg-white border border-black lg:flex items-center rounded-xl md:rounded-2xl p-6 mb-4 md:mb-6"
                             style={{
                                 boxShadow: '0px 4px 0px rgba(112, 146, 207, 1)',
                             }}
                         >
                             <div className="">
                                 {/* Avatar Background Color */}
-                                <div className={`${profile.avatarBg} aspect-square w-55 rounded-xl`}>
+                                <div className={`${profile.avatarBg} aspect-square w-35 lg:w-55 rounded-xl`}>
                                     {/* Skin Type Avatar */}
                                     <img
                                         src={profile.avatarImg}
                                         alt={`Avatar ${profile.title}`}
-                                        className="absolute w-55 h-auto aspect-square rounded-xl"
+                                        className="absolute w-35 lg:w-55 h-auto aspect-square rounded-xl"
                                     />
                                 </div>
                             </div>
 
-                            <div className="md:w-lg lg:w-4xl mx-10">
-                                <p className="font-semibold text-lg">
+                            <div className="lg:w-4xl mt-4 lg:mt-0 lg:mx-10">
+                                <p className="font-semibold text-[10px] lg:text-lg">
                                     Username
                                 </p>
                                 {/* Skin Type Title */}
-                                <h2 className="text-3xl font-bold mt-3">
+                                <h2 className="lg:text-3xl font-bold mt-1 lg:mt-3">
                                     {profile.title}
                                 </h2>
                                 {/* Skin Type Description */}
-                                <p className="text-[#333] text-base mt-3">
+                                <p className="text-[#333] text-xs lg:text-base mt-1 lg:mt-3">
                                     {profile.description}
                                 </p>
                             </div>
@@ -250,13 +250,13 @@ export default function ProfilKulit() {
                     </div>
 
                     {/* Skin Type Characteristics */}
-                    <div className="absolute mx-45 -mt-60">
-                        <h3 className="font-bold text-3xl mb-6">Ciri-ciri</h3>
-                        <div className="grid md:grid-cols-4 gap-4">
+                    <div className="absolute mx-5 lg:mx-45 -mt-85 lg:-mt-60">
+                        <h3 className="font-bold text-xl lg:text-3xl mb-2 lg:mb-6">Ciri-ciri</h3>
+                        <div className="grid md:grid-cols-4 gap-3 lg:gap-4">
                             {profile.characteristics.map((item, idx) => (
                                 <div
                                     key={idx}
-                                    className="flex items-center justify-center bg-white border-2 border-[#7092CF] rounded-lg px-6 py-8 text-center"
+                                    className="flex items-center justify-center bg-white border-2 border-[#7092CF] rounded-lg px-6 py-3 lg:py-8 text-center text-sm lg:text-base"
                                     style={{
                                         boxShadow:
                                             '0px 4px 0px rgba(185, 203, 232, 1)',
@@ -269,17 +269,17 @@ export default function ProfilKulit() {
                     </div>
 
                     {/* Do's & Dont's */}
-                    <div className="mx-45 mt-10">
-                        <h3 className="font-bold text-3xl mb-6">
+                    <div className="mx-5 lg:mx-45 -mt-9 lg:mt-10">
+                        <h3 className="font-bold text-xl lg:text-3xl mb-2 lg:mb-6">
                             Do's & Dont's
                         </h3>
                         <div
-                            className="bg-[#FFF6ED] border-2 border-[#7092CF] rounded-xl px-10 py-10"
+                            className="bg-[#FFF6ED] border-2 border-[#7092CF] rounded-xl p-4 lg:p-10"
                             style={{
                                 boxShadow: '0px 4px 0px rgba(185, 203, 232, 1)',
                             }}
                         >
-                            <div className="flex items-start gap-4 w-7xl text-lg">
+                            <div className="flex items-start gap-4 lg:w-7xl text-xs lg:text-lg">
                                 <div className="bg-green-300 opacity-70 rounded-full p-3">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
@@ -302,7 +302,7 @@ export default function ProfilKulit() {
                                     {profile.dos.text}
                                 </p>
                             </div>
-                            <div className="flex items-start gap-4 w-7xl mt-6 text-lg">
+                            <div className="flex items-start gap-4 lg:w-7xl mt-3 lg:mt-6 text-xs lg:text-lg">
                                 <div className="bg-red-300 opacity-70 rounded-full p-3">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
@@ -330,26 +330,26 @@ export default function ProfilKulit() {
                     </div>
 
                     {/* Ingredients Recommendation */}
-                    <div className="mx-45 mt-15">
-                        <h3 className="font-bold text-3xl mb-6">
+                    <div className="mx-5 lg:mx-45 mt-10 lg:mt-15">
+                        <h3 className="font-bold text-xl lg:text-3xl mb-2 lg:mb-6">
                             Rekomendasi Kandungan
                         </h3>
                         <div
-                            className="flex bg-white border-2 border-[#7092CF] rounded-xl px-10 py-10 justify-between"
+                            className="lg:flex bg-white border-2 border-[#7092CF] rounded-xl p-4 lg:p-10 justify-between"
                             style={{
                                 boxShadow: '0px 4px 0px rgba(185, 203, 232, 1)',
                             }}
                         >
-                            <p className="text-lg w-sm">
-                                Berikut ini bahan-bahan yang cocok untuk jenis
+                            <p className="text-xs lg:text-lg lg:w-sm mb-3 lg:mb-0">
+                                Berikut ini bahan-bahan skincare yang cocok untuk jenis
                                 kulitmu
                             </p>
-                            <div className="flex flex-wrap gap-3">
+                            <div className="flex flex-wrap gap-1 lg:gap-3">
                                 {profile.ingredients.map(
                                     (item, idx) => (
                                         <button
                                             key={idx}
-                                            className="bg-[#7092CF] w-50 h-20 px-5 py-2 rounded-lg font-medium text-white hover:bg-[#405E93] transition-all"
+                                            className="bg-[#7092CF] lg:w-50 lg:h-20 px-5 py-2 rounded-lg font-medium text-xs lg:text-base text-white hover:bg-[#405E93] transition-all"
                                             style={{
                                                 boxShadow:
                                                     '0px 4px 0px rgba(64, 94, 147, 1)',
@@ -364,7 +364,7 @@ export default function ProfilKulit() {
                     </div>
 
                     {/* Disclaimer */}
-                    <div className="mx-45 mt-15">
+                    <div className="mx-5 lg:mx-45 mt-12 lg:mt-15 text-[10px] lg:text-base">
                         <strong>Disclaimer:</strong> Hasil tes ini ditujukan
                         sebagai panduan awal untuk mengenali jenis kulitmu
                         secara umum. Tes ini bukan diagnosis medis dan tidak

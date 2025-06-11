@@ -7,7 +7,7 @@ import { useRouter } from 'next/navigation';
 
 const montserrat = Montserrat({ weight: '500', subsets: ['latin'] });
 
-export default function produkBasicSkincare() {
+export default function BasicSkincareMoisturizer() {
     const router = useRouter();
 
     return (
@@ -15,10 +15,10 @@ export default function produkBasicSkincare() {
             <Navbar />
 
             <div
-                className={`${montserrat.className} bg-[#E6EEFC] pb-20 overflow-hidden`}
+                className={`${montserrat.className} bg-[#E6EEFC] pb-12 lg:pb-20 overflow-hidden`}
             >
                 {/* Breadcrumbs */}
-                <nav className="mt-8 ml-8 text-sm space-x-2">
+                <nav className="mt-8 ml-4 lg:ml-8 text-xs lg:text-sm space-x-2">
                     <a href="/basic-skincare" className="hover:underline text-[#7092CF]">
                         Basic Skincare
                     </a>
@@ -39,7 +39,7 @@ export default function produkBasicSkincare() {
                 </nav>
 
                 {/* Title Section */}
-                <div className="mt-16">
+                <div className="mt-10 lg:mt-16">
                     <div
                         className="hidden md:hidden lg:block absolute bg-[#FFF6ED] h-70 w-70 top-39 right-72"
                         style={{
@@ -50,18 +50,23 @@ export default function produkBasicSkincare() {
                         <img
                             src="/Product-Moisturizer.png"
                             alt="Moisturizer"
-                            className="w-61 h-auto drop-shadow-[5px_5px_0px_rgba(0,0,0,0.15)]"
+                            className="hidden lg:block w-61 h-auto drop-shadow-[5px_5px_0px_rgba(0,0,0,0.15)]"
                         />
                     </div>
-                    <div className="text-white bg-gradient-to-r from-[#7293D0] to-[#B5CBF0] mx-45 mb-16 rounded-2xl py-10 px-14">
+                    <div className="text-white bg-gradient-to-r from-[#7293D0] to-[#B5CBF0] mx-5 lg:mx-45 mb-8 lg:mb-16 rounded-2xl py-7 px-7 lg:py-10 lg:px-14">
+                        <img
+                            src="/Product-Moisturizer.png"
+                            alt="Moisturizer"
+                            className="block lg:hidden w-30 h-auto drop-shadow-[5px_5px_0px_rgba(0,0,0,0.15)] pb-3"
+                        />
                         {/* Title */}
-                        <h1 className="text-4xl font-bold pb-2">Moisturizer</h1>
+                        <h1 className="text-2xl lg:text-4xl font-bold lg:pb-2">Moisturizer</h1>
                         {/* Slogan */}
-                        <p className="text-2xl w-sm">
+                        <p className="lg:text-2xl lg:w-sm">
                             Keeps Your Skin Hydrated!
                         </p>
                         {/* Product Description */}
-                        <p className="text-lg w-3xl mt-2">
+                        <p className="text-xs lg:text-lg lg:w-3xl mt-2">
                             Moisturizer atau pelembab adalah produk perawatan
                             kulit yang menghidrasi kulit dengan menyerap air.
                             Pelembap membantu menjaga fungsi lapisan kulit,
@@ -72,28 +77,28 @@ export default function produkBasicSkincare() {
                 </div>
 
                 {/* Benefit Section */}
-                <div className="mx-45">
-                    <div className="bg-[#7092CF] h-8 md:h-10 py-7 w-34 md:text-xl flex items-center text-center justify-center font-semibold text-white rounded-tr-lg rounded-tl-lg md:rounded-tr-2xl md:rounded-tl-2xl">
+                <div className="mx-5 lg:mx-45">
+                    <div className="bg-[#7092CF] md:h-10 py-2 lg:py-7 w-22 lg:w-34 text-sm md:text-xl flex items-center text-center justify-center font-semibold text-white rounded-tr-lg rounded-tl-lg md:rounded-tr-2xl md:rounded-tl-2xl">
                         Manfaat
                     </div>
-                    <div className="bg-white rounded-tr-2xl rounded-bl-2xl rounded-br-2xl py-8 px-10">
+                    <div className="bg-white rounded-tr-2xl rounded-bl-2xl rounded-br-2xl py-4 px-5 lg:py-8 lg:px-10">
                         <div className="flex flex-col md:flex-row items-center gap-6">
                             {/* Swirl Element */}
                             <img
                                 src="/Elements-20.png"
                                 alt="Swirl"
-                                className="absolute w-76 h-auto left-42 pb-30"
+                                className="absolute hidden lg:block w-76 h-auto left-42 pb-30"
                             />
 
                             {/* Mascot */}
                             <img
                                 src="/Pink-3.png"
                                 alt="Mascot"
-                                className="absolute w-79 h-auto -scale-x-100 pt-32 left-57"
+                                className="absolute hidden lg:block w-79 h-auto -scale-x-100 pt-32 left-57"
                             />
 
                             {/* Benefit List */}
-                            <div className="flex flex-col gap-4 w-4xl text-lg ml-88">
+                            <div className="flex flex-col gap-3 lg:gap-4 lg:w-4xl text-xs lg:text-lg lg:ml-88">
                                 {[
                                     'Melembabkan kulit',
                                     'Melindungi lapisan kulit',
@@ -102,7 +107,7 @@ export default function produkBasicSkincare() {
                                 ].map((item, index) => (
                                     <div
                                         key={index}
-                                        className="bg-[#D5E4FF] text-black px-8 py-4 rounded-full"
+                                        className="bg-[#D5E4FF] text-black px-6 lg:px-8 py-4 rounded-full"
                                     >
                                         {item}
                                     </div>
@@ -113,17 +118,17 @@ export default function produkBasicSkincare() {
                 </div>
 
                 {/* How to Use Section */}
-                <div className="mx-45 mt-16">
-                    <div className="bg-[#7092CF] h-8 md:h-10 py-7 w-60 md:text-xl flex items-center text-center justify-center font-semibold text-white rounded-tr-lg rounded-tl-lg md:rounded-tr-2xl md:rounded-tl-2xl">
+                <div className="mx-5 lg:mx-45 mt-8 lg:mt-16">
+                    <div className="bg-[#7092CF] md:h-10 py-2 lg:py-7 w-40 lg:w-60 text-sm md:text-xl flex items-center text-center justify-center font-semibold text-white rounded-tr-lg rounded-tl-lg md:rounded-tr-2xl md:rounded-tl-2xl">
                         Cara Penggunaan
                     </div>
-                    <div className="bg-white rounded-tr-2xl rounded-bl-2xl rounded-br-2xl py-12 px-10">
+                    <div className="bg-white rounded-tr-2xl rounded-bl-2xl rounded-br-2xl py-5 px-5 lg:py-12 lg:px-10">
                         <div className="relative">
                             {/* Dashed vertical line */}
-                            <div className="absolute top-[30px] left-[24px] h-[calc(100%-40px)] border-l-2 border-dashed border-[#7092CF] z-0"></div>
+                            <div className="absolute top-[30px] left-[14px] lg:left-[24px] h-[calc(100%-40px)] border-l-2 border-dashed border-[#7092CF] z-0"></div>
 
                             {/* Steps */}
-                            <div className="flex flex-col gap-6 relative z-10">
+                            <div className="flex flex-col gap-3 lg:gap-6 relative z-10">
                                 {[
                                     'Bersihkan wajah secara menyeluruh dan keringkan dengan menepuk-nepuknya',
                                     'Ambil produk pelembab secukupnya untuk seluruh wajah',
@@ -134,12 +139,12 @@ export default function produkBasicSkincare() {
                                         key={i}
                                         className="flex gap-4 items-start"
                                     >
-                                        <div className="min-w-[50px] min-h-[50px] border-2 border-[#7092CF] rounded-full flex items-center justify-center text-[#7293D0] text-lg font-bold bg-white z-10">
+                                        <div className="min-w-[30px] min-h-[30px] lg:min-w-[50px] lg:min-h-[50px] border lg:border-2 border-[#7092CF] rounded-full flex items-center justify-center text-[#7293D0] text-xs lg:text-lg font-bold bg-white z-10">
                                             {(i + 1)
                                                 .toString()
                                                 .padStart(2, '0')}
                                         </div>
-                                        <p className="text-[#333] pt-2 pl-2 text-lg">
+                                        <p className="text-[#333] lg:pt-2 lg:pl-2 text-xs lg:text-lg">
                                             {text}
                                         </p>
                                     </div>
@@ -151,19 +156,19 @@ export default function produkBasicSkincare() {
                         <img
                             src="/Blue-2.png"
                             alt="Mascot"
-                            className="absolute bottom-4 right-66 top-290 w-68 h-auto -scale-x-100"
+                            className="hidden lg:block absolute bottom-4 right-66 top-290 w-68 h-auto -scale-x-100"
                         />
                         <img
                             src="/Elements-49.png"
                             alt="Mascot"
-                            className="absolute bottom-4 right-62 top-276 w-38 h-auto"
+                            className="hidden lg:block absolute bottom-4 right-62 top-276 w-38 h-auto"
                         />
                     </div>
                 </div>
 
                 {/* Product Type List */}
-                <div className="flex flex-col gap-3 mx-45 mt-16">
-                    <h2 className="text-3xl font-bold">Tipe Moisturizer</h2>
+                <div className="flex flex-col gap-3 mx-5 lg:mx-45 mt-8 lg:mt-16">
+                    <h2 className="text-xl lg:text-3xl font-bold">Tipe Moisturizer</h2>
 
                     {[
                         {
@@ -179,18 +184,18 @@ export default function produkBasicSkincare() {
                     ].map((item, i) => (
                         <div
                             key={i}
-                            className="bg-[#FFF6ED] rounded-[20px] shadow-[0px_4px_0px_#f1dcc1] px-10 py-8 mt-2"
+                            className="bg-[#FFF6ED] rounded-[20px] shadow-[0px_4px_0px_#f1dcc1] px-6 py-4 lg:px-10 lg:py-8 lg:mt-2"
                             style={{
                                 boxShadow: '0px 4px 0px rgba(255, 231, 213, 1)',
                             }}
                         >
-                            <h3 className="text-2xl font-semibold mb-3">
+                            <h3 className="text-lg lg:text-2xl font-semibold mb-1 lg:mb-3">
                                 {item.title}
                             </h3>
-                            <p className="text-[#333] mb-5">{item.desc}</p>
+                            <p className="text-xs lg:text-base text-[#333] mb-3 lg:mb-5">{item.desc}</p>
                             <a
                                 href={item.link}
-                                className="inline-block bg-white hover:bg-[#405E93] hover:text-white hover:border-[#405E93] border-black font-semibold text-xs px-4 py-2 rounded-full border-2 transition-all"
+                                className="inline-block bg-white hover:bg-[#405E93] hover:text-white hover:border-[#405E93] border-black font-semibold text-xs px-3 py-1 lg:px-4 lg:py-2 rounded-full border-2 transition"
                                 style={{
                                     boxShadow: '0 4px 0px rgba(64, 94, 147, 1)',
                                 }}

@@ -25,30 +25,30 @@ export default function Profile() {
                 className={`${montserrat.className} bg-[#E6EEFC] min-h-screen`}
             >
                 {/* Breadcrumb */}
-                <p className="text-[#6B7280] text-sm py-5 ml-8">Profile</p>
+                <p className="text-[#E6EEFC] text-sm lg:py-5 ml-8">Profile</p>
 
-                <div className="mx-45">
+                <div className="mx-5 lg:mx-45">
                     {/* Heading */}
-                    <h1 className="flex text-[#405E93] text-4xl font-bold my-10">
+                    <h1 className="flex text-[#405E93] text-2xl lg:text-4xl font-bold my-5 lg:my-10">
                         Profil Saya
                     </h1>
 
-                    <div className="bg-white rounded-2xl shadow-md p-10 flex">
+                    <div className="bg-white rounded-2xl shadow-md p-5 lg:p-10 lg:flex">
                         {/* Left: Avatar + Tabs */}
-                        <div className="w-1/3 flex flex-col items-center border-r border-gray-200 pr-15 ml-5">
+                        <div className="lg:w-1/3 flex flex-col items-center lg:border-r border-gray-200 lg:pr-15 lg:ml-5 p-5 lg:p-0">
                             {/* Avatar */}
-                            <div className="w-55 h-55 bg-[#7092CF] rounded-full flex items-center justify-center mb-6">
+                            <div className="w-30 h-30 lg:w-55 lg:h-55 bg-[#7092CF] rounded-full flex items-center justify-center mb-6">
                                 <img
                                     src="/Expression-Mascot-07.png"
                                     alt="Avatar"
-                                    className="w-50 h-auto"
+                                    className="w-30 lg:w-50 h-auto"
                                 />
                             </div>
 
                             {/* Tabs */}
-                            <div className="space-y-3 w-full mt-4">
+                            <div className="space-y-2 lg:space-y-3 w-full lg:mt-4">
                                 <button
-                                    className={`w-full py-4 rounded-lg font-semibold text-xl transition ${
+                                    className={`w-full py-2 lg:py-4 rounded-lg font-semibold lg:text-xl transition ${
                                         activeTab === 'detail'
                                             ? 'bg-[#6B8ED6] text-white'
                                             : 'bg-transparent text-[#2C3E50]'
@@ -61,7 +61,7 @@ export default function Profile() {
                                     Profil Kulit
                                 </button> */}
                                 <button
-                                    className={`w-full py-4 rounded-lg font-semibold text-xl transition ${
+                                    className={`w-full py-2 lg:py-4 rounded-lg font-semibold lg:text-xl transition ${
                                         activeTab === 'profil'
                                             ? 'bg-[#6B8ED6] text-white'
                                             : 'bg-transparent text-[#2C3E50]'
@@ -74,12 +74,12 @@ export default function Profile() {
                         </div>
 
                         {/* Right: Info + Edit */}
-                        <div className="w-2/3 pl-6 relative">
+                        <div className="lg:w-2/3 lg:pl-6 relative pb-5 lg:pb-0">
                             {/* Edit Button */}
-                            <div className="absolute top-0 right-0">
+                            <div className="absolute top-64 lg:top-0 right-68 lg:right-0">
                                 <button
                                     onClick={() => router.push('/edit-profile')}
-                                    className="border-2 border-black font-semibold px-5 py-2 rounded-full shadow-sm hover:bg-[#7092CF] hover:border-[#7092CF] hover:text-white transition"
+                                    className="border-2 border-black font-semibold text-sm bg-white lg:text-base px-6 lg:px-5 py-2 rounded-full shadow-sm hover:bg-[#7092CF] hover:border-[#7092CF] hover:text-white transition"
                                     style={{
                                         boxShadow:
                                             '0px 4px 0px rgba(112, 146, 207, 1)',
@@ -90,9 +90,9 @@ export default function Profile() {
                             </div>
 
                             {/* User Info */}
-                            <div className="space-y-6 mx-6 mt-2">
+                            <div className="space-y-4 lg:space-y-6 mx-5 lg:mx-6 lg:mt-2">
                                 <div>
-                                    <p className="text-xl text-gray-500 mb-1">
+                                    <p className="text-sm lg:text-xl text-gray-500 mb-1">
                                         Nama
                                     </p>
                                     <p className="text-lg font-semibold text-[#111827]">
@@ -101,7 +101,7 @@ export default function Profile() {
                                 </div>
 
                                 <div>
-                                    <p className="text-xl text-gray-500 mb-1">
+                                    <p className="text-sm lg:text-xl text-gray-500 mb-1">
                                         Email
                                     </p>
                                     <p className="text-lg font-semibold text-[#111827]">
@@ -110,7 +110,7 @@ export default function Profile() {
                                 </div>
 
                                 <div>
-                                    <p className="text-xl text-gray-500 mb-1">
+                                    <p className="text-sm lg:text-xl text-gray-500 mb-1">
                                         Gender
                                     </p>
                                     <p className="text-lg font-semibold text-[#111827]">
@@ -122,10 +122,10 @@ export default function Profile() {
                     </div>
 
                     {/* Logout Button */}
-                    <div className="flex justify-end">
+                    <div className="flex justify-end mt-3 lg:mt-0">
                         <button
                             onClick={() => handleLogout()}
-                            className="bg-[#7092CF] text-white px-6 py-2 font-semibold text-lg rounded-full mt-5 hover:bg-[#405E93] transition"
+                            className="bg-[#7092CF] text-white px-6 py-2 font-semibold text-sm lg:text-lg rounded-full mt-5 hover:bg-[#405E93] transition"
                             style={{
                                 boxShadow: '0px 4px 0px rgba(64, 94, 147, 1)',
                             }}

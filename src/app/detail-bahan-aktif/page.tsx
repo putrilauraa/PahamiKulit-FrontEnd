@@ -7,7 +7,7 @@ import {Product} from '@/components/CardProduct';
 
 const montserrat = Montserrat({ weight: '500', subsets: ['latin'] });
 
-export default function AboutUs() {
+export default function DetailBahanAktif() {
 
     // Effect List
     const listEfek = [
@@ -33,7 +33,7 @@ export default function AboutUs() {
                 <div className="bg-gradient-to-l from-[#7293D0] to-[#B5CBF0]">
                 <div className="bg-gradient-to-r from-[#7293D0] to-[#B5CBF0] text-white px-300 py-5 md:px-5 md:py-10
                                     mr-20 rounded-r-full">
-                    
+
                     <div className="flex mx-4 lg:mx-10 my-10">
                     {/* Left Side */}
                         {/* Ilustrasi */}
@@ -98,14 +98,14 @@ export default function AboutUs() {
                                             className="mr-6">
                                         </Image>
                                         <div>{efekBahan.name}</div>
-                                    
+
                                     </Link>
                                 );
                             })}
 
                         </div>
                     </div>
-                    
+
 
                 {/* Rekomendasi Produk */}
 
@@ -114,7 +114,7 @@ export default function AboutUs() {
                         Produk Yang Mengandung Niacinamide
                     </div>
 
-                    
+
 
                 </div>
 

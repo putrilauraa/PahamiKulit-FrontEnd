@@ -12,14 +12,19 @@ const montserrat = Montserrat({ weight: '500', subsets: ['latin'] });
 }
 const products = Array(9).fill({
     name: "For Skin's Sake Weightless Sunscreen",
+<<<<<<< HEAD
     image: "/Face-Wash.png",
     tags: ['SPF',
         'Pelembab', 'Pembersih'
+=======
+    tags: ['SPF',
+        // 'Pelembab', 'Pembersih'
+>>>>>>> 4c508bb91f01cf05895a7944e050cb2d7ab3d2f3
     ],
     approved: true,
 });
 
-export default function RekomendasiSkincare() {
+export default function Rekomendasi() {
     return (
         <div className={`min-h-screen bg-[var(--color-background)] ${montserrat.className}`}>
             <Navbar />
