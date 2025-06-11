@@ -141,9 +141,9 @@ export default function DetailBahanAktif() {
             <Navbar />
             <div className={`${montserrat.className}`}>
                 {/* Breadcrumbs */}
-                <nav className="my-8 ml-8 text-sm space-x-2">
+                <nav className="my-4 lg:my-8 ml-4 lg:ml-8 text-xs lg:text-sm space-x-2">
                     <a
-                        href="/basic-skincare"
+                        href="/mengenal-bahan-aktif"
                         className="hover:underline text-[#7092CF]"
                     >
                         Mengenal Bahan Aktif
@@ -157,29 +157,29 @@ export default function DetailBahanAktif() {
                 {/* Card Details */}
                 <div className="bg-gradient-to-l from-[#7293D0] to-[#B5CBF0]">
                     <div
-                        className="bg-gradient-to-r from-[#7293D0] to-[#B5CBF0] text-white px-300 py-5 md:px-5 md:py-10
-                                    mr-20 rounded-r-full"
+                        className="bg-gradient-to-r from-[#7293D0] to-[#B5CBF0] text-white py-5 md:px-5 md:py-10
+                                    md:mr-20 md:rounded-r-full"
                     >
-                        <div className="flex mx-4 lg:mx-10 my-10">
+                        <div className="flex mx-4 sm:py-4 lg:mx-10">
                             {/* Left Side */}
-                            <div className="bg-white p-6 rounded-2xl">
+                            <div className="bg-white lg:p-6 rounded-2xl">
                                 <img
                                     src={ingredientDetail.image}
                                     alt={ingredientDetail.name}
-                                    className="w-90 h-auto"
+                                    className="hidden lg:block w-90 h-auto"
                                 ></img>
                             </div>
 
                             {/* Right Side */}
-                            <div className="mx-10 lg:mx-6 my-2 flex items-center">
-                                <div className="ml-4">
+                            <div className="mx-4 lg:mx-6 my-2 flex items-center">
+                                <div className="lg:ml-4">
                                     {/* Title */}
-                                    <div className="text-4xl font-bold mb-4">
+                                    <div className="text-lg lg:text-4xl font-bold mb-2 lg:mb-4">
                                         {ingredientDetail.name}
                                     </div>
 
                                     {/* Description */}
-                                    <div className="text-lg">
+                                    <div className="text-xs lg:text-lg">
                                         {ingredientDetail.description}
                                     </div>
                                 </div>
@@ -189,22 +189,22 @@ export default function DetailBahanAktif() {
                 </div>
 
                 {/* Manfaat Skincare */}
-                <div className="text-3xl font-bold text-center mt-15">
+                <div className="text-lg lg:text-3xl font-bold text-center mt-8 lg:mt-15">
                     Manfaat {ingredientDetail.name}
                 </div>
 
                 {/* Cards */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mx-60 my-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 lg:gap-4 mx-5 lg:mx-60 my-4 lg:my-10">
                     {formatTextToList(ingredientDetail.benefits).map(
                         (benefit, index) => (
                             <div
                                 key={index}
-                                className="flex items-center bg-[#E6EEFC] p-4 rounded-xl"
+                                className="flex items-center bg-[#E6EEFC] p-2 lg:p-4 rounded-xl"
                             >
-                                <div className="bg-[#7092CF] text-white font-bold w-12 h-12 flex items-center justify-center rounded-md mr-4">
+                                <div className="bg-[#7092CF] text-white font-bold w-10 h-10 lg:w-12 lg:h-12 flex items-center justify-center rounded-md mr-4">
                                     {String(index + 1).padStart(2, '0')}
                                 </div>
-                                <p className="text-xl font-medium">{benefit}</p>
+                                <p className="text-sm lg:text-xl font-medium">{benefit}</p>
                             </div>
                         ),
                     )}
@@ -212,11 +212,11 @@ export default function DetailBahanAktif() {
 
                 {/* Cards Produk */}
                 <div>
-                    <div className="text-3xl font-bold text-center mt-20 mb-10">
-                        Produk Yang Mengandung {ingredientDetail.name}
+                    <div className="text-lg lg:text-3xl font-bold text-center mt-10 lg:mt-20 mb-6 lg:mb-10">
+                        Produk dengan Kandungan {ingredientDetail.name}
                     </div>
                     {/* Product List */}
-                    <div className="max-w-xs sm:max-w-2xl md:max-w-4xl lg:max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 px-2 sm:px-4 md:px-8 pb-100 sm:pb-10">
+                    <div className="max-w-xs sm:max-w-2xl md:max-w-4xl lg:max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 px-2 sm:px-4 md:px-8 sm:pb-10">
                         {ingredientDetail.products.map((product, idx) => (
                             <CardProduct
                                 key={idx}
@@ -232,10 +232,10 @@ export default function DetailBahanAktif() {
                 </div>
 
                 {/* Back Button */}
-                <div className="mx-45 mt-8 text-center">
+                <div className="mx-5 lg:mx-45 mt-8 text-center">
                     <button
                         onClick={() => router.push('/mengenal-bahan-aktif')}
-                        className="bg-[#7092CF] hover:bg-[#5a7bc4] text-white font-semibold py-3 px-8 rounded-full transition text-lg"
+                        className="bg-[#7092CF] hover:bg-[#5a7bc4] text-white font-semibold py-3 px-8 rounded-full transition text-xs lg:text-lg"
                         style={{
                             boxShadow: '0px 4px 0px rgba(90, 123, 196, 1)',
                         }}
@@ -246,7 +246,7 @@ export default function DetailBahanAktif() {
             </div>
 
             {/* Footer */}
-            <div className="Footer pt-15">
+            <div className="Footer pt-10 lg:pt-15">
                 <Footer />
             </div>
         </>

@@ -75,7 +75,7 @@ export default function ProdukBasicSkincare() {
                     />
                 </div>
 
-                <div className="text-white bg-gradient-to-t from-[#B5CBF0] to-[#7293D0] mx-5 lg:mx-35 mt-7 lg:mt-14 mb-10 lg:mb-60 rounded-2xl px-6 py-6 lg:px-14 lg:py-12">
+                <div className="text-white bg-gradient-to-t from-[#B5CBF0] to-[#7293D0] mx-5 lg:mx-35 mt-7 lg:mt-14 mb-10 lg:mb-68 rounded-2xl px-6 py-6 lg:px-14 lg:py-12">
                     <h1 className="text-xl lg:text-4xl font-bold lg:pb-3">
                         Produk Basic Skincare
                     </h1>
@@ -106,7 +106,7 @@ export default function ProdukBasicSkincare() {
                             <img
                                 src={category.image}
                                 alt={category.name}
-                                className="absolute w-35 lg:w-80 h-auto bottom-10 lg:bottom-12 ml-28 lg:ml-3 drop-shadow-[3px_3px_0px_rgba(0,0,0,0.15)] lg:drop-shadow-[8px_8px_0px_rgba(0,0,0,0.15)]"
+                                className="absolute w-35 lg:w-80 h-auto bottom-10 lg:bottom-20 ml-28 lg:ml-3 drop-shadow-[3px_3px_0px_rgba(0,0,0,0.15)] lg:drop-shadow-[8px_8px_0px_rgba(0,0,0,0.15)]"
                             />
                             <button
                                 onClick={() =>

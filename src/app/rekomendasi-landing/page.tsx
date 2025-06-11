@@ -67,7 +67,12 @@ export default function RekomendasiSkincare() {
                 <div className="absolute bg-[#D64F7E] text-white text-xs lg:text-lg font-semibold py-2 px-4 rounded-full ml-35 lg:ml-63 top-25 lg:top-33">
                     Produk Lokal
                 </div>
-                <div className="bg-white mx-9 lg:mx-55 p-6 lg:p-12 rounded-tr-4xl rounded-tl-4xl rounded-bl-4xl lg:w-3xl">
+                <div
+                    className="bg-white mx-9 lg:mx-55 p-6 lg:p-12 rounded-tr-4xl rounded-tl-4xl rounded-bl-4xl lg:w-3xl"
+                    style={{
+                        boxShadow: '5px 5px 0px rgba(185, 203, 232)',
+                    }}
+                >
                     <h1 className="text-xl lg:text-4xl font-bold mb-2 lg:mb-4">
                         Rekomendasi Skincare
                     </h1>

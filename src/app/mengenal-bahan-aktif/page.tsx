@@ -29,7 +29,6 @@ type products = {
 type IngredientType = {
     id: number;
     name: string;
-
 };
 
 type Ingredient = {
@@ -43,6 +42,28 @@ export default function MengenalBahanAktif() {
     const router = useRouter();
     const [ingredients, setIngredients] = useState<Ingredient[]>([]);
 
+    // useEffect(() => {
+    //     const fetchData = async () => {
+    //         try {
+    //             const res = await fetch('/api/mengenal-bahan-aktif');
+    //             const json = await res.json();
+
+    //             // Make sure json.data is actually an array
+    //             if (Array.isArray(json.data)) {
+    //                 setIngredients(json.data);
+    //             } else {
+    //                 console.error('Invalid data format:', json);
+    //                 setIngredients([]); // fallback to empty
+    //             }
+    //         } catch (error) {
+    //             console.error('Error fetching ingredients:', error);
+    //             setIngredients([]); // fallback to empty on error
+    //         }
+    //     };
+
+    //     fetchData();
+    // }, []);
+
     useEffect(() => {
         const fetchData = async () => {
             const res = await fetch('/api/mengenal-bahan-aktif');
@@ -52,30 +73,6 @@ export default function MengenalBahanAktif() {
         fetchData();
         console.log(ingredients);
     }, []);
-
-    // sample data
-    // const listBahanAktif = [
-    //     { id: 1, name: 'Niacinamide' },
-    //     { id: 2, name: 'Hyaluronic Acid' },
-    //     { id: 3, name: 'Ceramide' },
-    //     { id: 4, name: 'Bakuchiol' },
-    //     { id: 5, name: 'AHA' },
-    //     { id: 6, name: 'BHA' },
-    //     { id: 7, name: 'PHA' },
-    //     { id: 8, name: 'Alpha Arbutin' },
-    //     { id: 9, name: 'Panthenol' },
-    //     { id: 10, name: 'Squalane' },
-    //     { id: 11, name: 'Allantoin' },
-    //     { id: 12, name: 'Centella Asiatica' },
-    //     { id: 13, name: 'Tranexamic Acid' },
-    //     { id: 14, name: 'Peptide' },
-    //     { id: 15, name: 'Vitamin C' },
-    //     { id: 16, name: 'Propolis' },
-    //     { id: 17, name: 'Glycerin' },
-    //     { id: 18, name: 'Aloe Vera' },
-    //     { id: 19, name: 'Mugwort' },
-    //     { id: 20, name: 'Oat' },
-    // ];
 
     return (
         <>
@@ -88,7 +85,7 @@ export default function MengenalBahanAktif() {
                 <div className="mx-5 lg:mx-45 my-10">
                     {/* Border */}
                     <div
-                        className="bg-white border-3 border-[#7092CF] rounded-2xl flex items-center justify-center px-6 py-6 lg:px-10 lg:py-4"
+                        className="bg-white border-3 border-[#B9CBE8] rounded-2xl flex items-center justify-center px-6 py-6 lg:px-10 lg:py-4"
                         style={{
                             boxShadow: '4px 4px 0px rgba(185, 203, 232)',
                         }}
