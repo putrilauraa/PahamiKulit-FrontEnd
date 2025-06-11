@@ -3,6 +3,7 @@ import { Montserrat } from 'next/font/google';
 import { Footer } from '@/components/Footer';
 import Link from 'next/link';
 import Image from 'next/image';
+import {Product} from '@/components/CardProduct';
 
 const montserrat = Montserrat({ weight: '500', subsets: ['latin'] });
 
@@ -117,6 +118,10 @@ export default function AboutUs() {
 
                 </div>
 
+            </div>
+
+            <div>
+                <product />
             </div>
 
             {/* Footer */}
