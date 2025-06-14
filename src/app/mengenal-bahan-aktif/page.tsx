@@ -42,28 +42,6 @@ export default function MengenalBahanAktif() {
     const router = useRouter();
     const [ingredients, setIngredients] = useState<Ingredient[]>([]);
 
-    // useEffect(() => {
-    //     const fetchData = async () => {
-    //         try {
-    //             const res = await fetch('/api/mengenal-bahan-aktif');
-    //             const json = await res.json();
-
-    //             // Make sure json.data is actually an array
-    //             if (Array.isArray(json.data)) {
-    //                 setIngredients(json.data);
-    //             } else {
-    //                 console.error('Invalid data format:', json);
-    //                 setIngredients([]); // fallback to empty
-    //             }
-    //         } catch (error) {
-    //             console.error('Error fetching ingredients:', error);
-    //             setIngredients([]); // fallback to empty on error
-    //         }
-    //     };
-
-    //     fetchData();
-    // }, []);
-
     useEffect(() => {
         const fetchData = async () => {
             const res = await fetch('/api/mengenal-bahan-aktif');

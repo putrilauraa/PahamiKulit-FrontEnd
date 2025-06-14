@@ -80,6 +80,7 @@ export default function HasilRekomendasi() {
                                 image={product.image}
                                 tags={[product.product_category.description]}
                                 approvedByDoct={true}
+                                href={`/detail-produk?id=${product.id}`}
                             />
                         ))}
                     </div>

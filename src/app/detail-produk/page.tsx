@@ -33,10 +33,19 @@ export default function DetailProduk() {
     useEffect(() => {
         if (!id) return;
 
+        var endpoint = '';
+
+        const productReceived = localStorage.getItem('product_received_by');
+        if (productReceived == 'produk-basic-skincare') {
+            endpoint = 'product-by-detail';
+        } else if (productReceived == 'hasil-rekomendasi') {
+            endpoint = 'product';
+        }
+
         const fetchProduct = async () => {
             try {
                 const res = await fetch(
-                    `/api/produk-basic-skincare/product/${id}`,
+                    `/api/produk-basic-skincare/${endpoint}/${id}`,
                 );
                 const json = await res.json();
 

@@ -75,6 +75,8 @@ export default function SkincareDetailPage() {
 
     // Navigate to the product page
     const goToProductPage = (productTypeId: number) => {
+        localStorage.setItem('product_received_by', 'produk-basic-skincare');
+
         router.push(`/detail-produk?id=${productTypeId}`);
     };
 

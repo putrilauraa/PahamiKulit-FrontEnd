@@ -5,6 +5,7 @@ import Navbar from '@/components/Navbar';
 import { Montserrat } from 'next/font/google';
 import { Footer } from '@/components/Footer';
 import CardProduct from '@/components/CardProduct';
+// import { hr } from 'framer-motion/client';
 
 const montserrat = Montserrat({ weight: '500', subsets: ['latin'] });
 
@@ -226,6 +227,7 @@ export default function DetailBahanAktif() {
                                 image={product.image}
                                 tags={[product.product_category.description]}
                                 approvedByDoct={true}
+                                href={`/detail-produk?id=${product.id}`}
                             />
                         ))}
                     </div>

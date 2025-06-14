@@ -307,9 +307,9 @@ export default function ProfilKulit() {
                                             key={ingredient.id}
                                             className="flex text-white items-center bg-[#7092CF] justify-center text-center hover:text-white hover:bg-[#405E93] p-5 rounded-2xl"
                                             style={{
-                                    boxShadow:
-                                        '0px 4px 0px rgba(64, 94, 147, 1)',
-                                }}
+                                                boxShadow:
+                                                    '0px 4px 0px rgba(64, 94, 147, 1)',
+                                            }}
                                         >
                                             {ingredient.name}
                                         </Link>
