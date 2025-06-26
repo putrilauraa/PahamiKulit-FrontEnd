@@ -326,6 +326,19 @@ export default function ProfilKulit() {
                         dapat menggantikan pemeriksaan langsung oleh dokter
                         kulit atau profesional di bidang kecantikan.
                     </div>
+
+                    {/* Back Button */}
+                    <div className="mx-5 lg:mx-45 mt-12 text-center">
+                        <button
+                            onClick={() => router.push('/tes-jenis-kulit')}
+                            className="border lg:border-2 border-[#405E93] bg-white hover:bg-[#7092CF] hover:border-[#7092CF] hover:text-white font-semibold text-xs lg:text-lg rounded-full px-8 py-3 mt-6 lg:mt-2 transition"
+                            style={{
+                                boxShadow: '0px 4px 0px rgba(90, 123, 196, 1)',
+                            }}
+                        >
+                            Tes Ulang
+                        </button>
+                    </div>
                 </div>
             </div>
 

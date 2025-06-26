@@ -149,9 +149,9 @@ const Signin = () => {
                             />
                         </form>
 
-                        <div className="text-right text-[#405E93] mt-2 text-sm font-semibold">
+                        {/* <div className="text-right text-[#405E93] mt-2 text-sm font-semibold">
                             <a href="">Lupa Kata Sandi?</a>
-                        </div>
+                        </div> */}
 
                         <AlertDialogAction onClick={handleLogin}>
                             Masuk
