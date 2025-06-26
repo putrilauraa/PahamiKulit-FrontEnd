@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Navbar from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
@@ -66,7 +66,7 @@ export default function DetailProduk() {
 
     if (loading) {
         return (
-            <>
+            <Suspense>
                 <Navbar />
                 <div
                     className={`${montserrat.className} bg-[#E6EEFC] min-h-screen flex items-center justify-center`}
@@ -77,13 +77,13 @@ export default function DetailProduk() {
                     </div>
                 </div>
                 <Footer />
-            </>
+            </Suspense>
         );
     }
 
     if (error || !product) {
         return (
-            <>
+            <Suspense>
                 <Navbar />
                 <div
                     className={`${montserrat.className} bg-[#E6EEFC] min-h-screen flex items-center justify-center`}
@@ -98,12 +98,12 @@ export default function DetailProduk() {
                     </div>
                 </div>
                 <Footer />
-            </>
+            </Suspense>
         );
     }
 
     return (
-        <>
+        <Suspense>
             <Navbar />
             <div
                 className={`${montserrat.className} bg-[#E6EEFC] pb-20 min-h-screen overflow-hidden`}
@@ -203,6 +203,6 @@ export default function DetailProduk() {
                 </div>
             </div>
             <Footer />
-        </>
+        </Suspense>
     );
 }
