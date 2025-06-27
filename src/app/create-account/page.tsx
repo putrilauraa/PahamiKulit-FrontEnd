@@ -8,7 +8,7 @@ import { LOCAL_API_URL } from '@/configs/app';
 
 const montserrat = Montserrat({ weight: '500', subsets: ['latin'] });
 
-const API_URL = `${LOCAL_API_URL}/users`;
+const API_URL = `${LOCAL_API_URL}/users/register`;
 
 export default function Regist() {
     const router = useRouter();
@@ -43,7 +43,8 @@ export default function Regist() {
             const data = await response.json();
 
             if (response.ok) {
-                if (data.success) {
+                // use 'succes' instead of 'success' due to api response is 'succes' not 'success' :>
+                if (data.succes) {
                     setMessage(`User ${data.user} successfully registered!`);
                     console.log('Redirecting to home...');
                     router.push('/'); // Ensure you're calling it after the API succeeds
@@ -62,6 +63,14 @@ export default function Regist() {
             setIsLoading(false);
         }
     };
+
+    // const handleRoutePush = () => {
+    //     if (message.includes('failed')) {
+    //         setMessage('');
+    //     } else {
+    //         router.push('/');
+    //     }
+    // };
 
     return (
         <>
@@ -206,7 +215,6 @@ export default function Regist() {
                                             '0 4px 0px rgba(64, 94, 147, 1)',
                                     }}
                                     disabled={isLoading}
-                                    onClick={() => router.push('/')}
                                 >
                                     {isLoading ? 'Loading...' : 'Daftar'}
                                 </button>
